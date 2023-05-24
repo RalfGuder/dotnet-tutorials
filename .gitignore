@@ -1,0 +1,9 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/HelloWorld/.vs
+/HelloWorld/bin/Debug/net7.0
+/HelloWorld/obj/Debug/net7.0
+/HelloWorld/obj
+/.vs
