@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 
 namespace Gudchensoft
 {
@@ -51,6 +52,8 @@ namespace Gudchensoft
         public static ServiceLoader<T> Load()
         {
             var loader = new ServiceLoader<T>();
+
+            var x1 = AppDomain.CurrentDomain.GetAssemblies();
 
             using (var srm = typeof(T).Assembly.GetManifestResourceStream(typeof(T).FullName!))
             using (var reader = new StreamReader(srm!))

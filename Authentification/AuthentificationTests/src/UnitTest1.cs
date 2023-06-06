@@ -9,6 +9,7 @@ namespace ORPhEuS.Authentification.Service
 			var x = ServiceLoader<IAuthentificationService>.Load();
 			foreach(IAuthentificationService s in x)
 			{
+				Console.WriteLine(s.ToString());
 				serv = s;
 			}
 		}

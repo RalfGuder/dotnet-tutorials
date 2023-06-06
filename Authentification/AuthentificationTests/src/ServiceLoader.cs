@@ -53,27 +53,40 @@ namespace ORPhEuS.Authentification.Service
         {
             var loader = new ServiceLoader<T>();
 
-			using (var srm = Assembly.GetExecutingAssembly().GetManifestResourceStream(Assembly.GetExecutingAssembly().GetName().Name + "." + typeof(T).FullName!))
-            using (var reader = new StreamReader(srm!))
+
+            foreach(Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
-                string? line;
-                while ((line = reader.ReadLine()) != null)
+				using (var srm = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + typeof(T).FullName!))
                 {
-                    line = line.Trim();
-                    if (string.IsNullOrEmpty(line) || line[0] == '#')
-                        continue;
-                    try
+                    if (srm != null)
                     {
-                        var type = Assembly.GetExecutingAssembly().GetType(line);
-                        if (type == null)
-                            continue;
-                        loader.types.Add(type);
-                    }
-                    catch (Exception)
-                    {
-                    }
-                }
-            }
+						using (var reader = new StreamReader(srm))
+						{
+							string? line;
+							while ((line = reader.ReadLine()) != null)
+							{
+								line = line.Trim();
+								if (string.IsNullOrEmpty(line) || line[0] == '#')
+									continue;
+								try
+								{
+									var type = assembly.GetType(line);
+									if (type == null)
+										continue;
+									loader.types.Add(type);
+								}
+								catch (Exception)
+								{
+								}
+							}
+						}
+					}
+
+				}
+
+			}
+
+
             return loader;
         }
 

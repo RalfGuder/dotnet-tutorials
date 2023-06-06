@@ -1,9 +1,8 @@
-﻿namespace ORPhEuS.Authentification.Service
-{
-	public interface IAuthentificationService
-	{
+﻿namespace ORPhEuS.Authentification.Service;
 
-	}
+public interface IAuthentificationService
+{
+
 }
 
 
