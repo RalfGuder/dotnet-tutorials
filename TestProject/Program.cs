@@ -1,4 +1,6 @@
 using System;
+using Gudchensoft;
+
 // Tiere im Streichelzoo
 string[] pettingZoo = 
 {

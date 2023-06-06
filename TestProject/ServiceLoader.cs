@@ -6,7 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-namespace NCDK
+namespace Gudchensoft
 {
     internal class ServiceLoader<T> : IEnumerable<T> 
     {
@@ -20,15 +20,26 @@ namespace NCDK
             foreach (var type in types)
             {
                 bool succeed = false;
-                T o = default(T);
+                T? o = default(T);
                 try
                 {
-                    o = (T)type.GetConstructor(Type.EmptyTypes).Invoke(Array.Empty<object>());
-                    succeed = true;
-                }
+                    if(type is not null)
+                    {
+                        System.Reflection.ConstructorInfo? construcorInfo = type.GetConstructor(Type.EmptyTypes);
+                        if (construcorInfo != null)
+                        {
+							o = (T)construcorInfo.Invoke(Array.Empty<object>());
+							succeed = true;
+						}
+
+
+					}
+
+
+				}
                 catch (Exception)
                 { }
-                if (succeed)
+                if (succeed && o != null)
                     yield return o;
             }
             yield break;
@@ -38,7 +49,7 @@ namespace NCDK
         {
             var loader = new ServiceLoader<T>();
 
-            using (var srm = typeof(T).Assembly.GetManifestResourceStream(typeof(T).FullName))
+            using (var srm = typeof(T).Assembly.GetManifestResourceStream(typeof(T).FullName!))
             using (var reader = new StreamReader(srm))
             {
                 string line;

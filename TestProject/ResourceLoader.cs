@@ -6,11 +6,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace NCDK
+namespace Gudchensoft
 {
     public static class ResourceLoader
     {
-        public static Stream GetAsStream(string name)
+        public static Stream? GetAsStream(string name)
         {
             if (File.Exists(name))
             {
@@ -50,7 +50,7 @@ namespace NCDK
             return null;
         }
 
-        public static Stream GetAsStream(Assembly asm, string name)
+        public static Stream? GetAsStream(Assembly asm, string name)
         {
             var srm = asm.GetManifestResourceStream(name);
             if (srm == null)
@@ -58,7 +58,7 @@ namespace NCDK
             return srm;
         }
 
-        public static Stream GetAsStream(Type type, string name)
+        public static Stream? GetAsStream(Type type, string name)
         {
             var asm = type.Assembly;
             var srm = asm.GetManifestResourceStream(type, name);
