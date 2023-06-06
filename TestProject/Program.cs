@@ -1,7 +1,5 @@
 using System;
-using Gudchensoft;
 
-// Tiere im Streichelzoo
 string[] pettingZoo = 
 {
     "alpacas", "capybaras", "chickens", "ducks", "emus", "geese", 
@@ -9,17 +7,17 @@ string[] pettingZoo =
     "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
 };
 
-// Die erste Aufgabe besteht darin, die Tiere zu randomisieren. Erstellen Sie eine Pseudocodemethode, um die Tiere im Streichelzoo zu randomisieren.
-RandomizeAnimals();
+PlanSchoolVisit("School A");
+PlanSchoolVisit("School B", 3);
+PlanSchoolVisit("School C", 2);
 
-// Erstellen Sie als Nächstes eine Pseudocodemethode, um die Tiergruppen zuzuweisen.
-string[,] group = AssignGroup();
-
-// Sie können den Schulnamen ganz einfach mit Console.Write ausgeben.
-Console.WriteLine("School A");
-
-// Schließlich müssen Sie die Tiergruppen ausgeben.
-// PrintGroup(group);
+void PlanSchoolVisit(string schoolName, int groups = 6) 
+{
+    RandomizeAnimals(); 
+    string[,] group1 = AssignGroup(groups);
+    Console.WriteLine(schoolName);
+    PrintGroup(group1);
+}
 
 void RandomizeAnimals() 
 {
@@ -49,4 +47,17 @@ string[,] AssignGroup(int groups = 6)
     }
 
     return result;
+}
+
+void PrintGroup(string[,] groups) 
+{
+    for (int i = 0; i < groups.GetLength(0); i++) 
+    {
+        Console.Write($"Group {i + 1}: ");
+        for (int j = 0; j < groups.GetLength(1); j++) 
+        {
+            Console.Write($"{groups[i,j]}  ");
+        }
+        Console.WriteLine();
+    }
 }
