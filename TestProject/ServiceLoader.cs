@@ -50,9 +50,9 @@ namespace Gudchensoft
             var loader = new ServiceLoader<T>();
 
             using (var srm = typeof(T).Assembly.GetManifestResourceStream(typeof(T).FullName!))
-            using (var reader = new StreamReader(srm))
+            using (var reader = new StreamReader(srm!))
             {
-                string line;
+                string? line;
                 while ((line = reader.ReadLine()) != null)
                 {
                     line = line.Trim();
