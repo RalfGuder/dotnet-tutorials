@@ -5,8 +5,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 
-namespace Gudchensoft
+namespace ORPhEuS.Authentification.Service
 {
     /**
      * <summary>Willy</summary>
@@ -52,7 +53,7 @@ namespace Gudchensoft
         {
             var loader = new ServiceLoader<T>();
 
-            using (var srm = typeof(T).Assembly.GetManifestResourceStream(typeof(T).FullName!))
+			using (var srm = Assembly.GetExecutingAssembly().GetManifestResourceStream(Assembly.GetExecutingAssembly().GetName().Name + "." + typeof(T).FullName!))
             using (var reader = new StreamReader(srm!))
             {
                 string? line;
@@ -63,7 +64,7 @@ namespace Gudchensoft
                         continue;
                     try
                     {
-                        var type = typeof(T).Assembly.GetType(line);
+                        var type = Assembly.GetExecutingAssembly().GetType(line);
                         if (type == null)
                             continue;
                         loader.types.Add(type);

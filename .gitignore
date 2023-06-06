@@ -21,3 +21,13 @@
 /TestProject/.vs/
 /TestProject/bin/
 /TestProject/obj/
+/Authorization/.vs/
+/Authorization/bin/
+/Authorization/obj/
+/Authentification/.vs/
+/Authentification/AuthentificationApi/.vs/
+/Authentification/AuthentificationApi/bin/
+/Authentification/AuthentificationApi/obj/
+/Authentification/AuthentificationTests/.vs/
+/Authentification/AuthentificationTests/bin/
+/Authentification/AuthentificationTests/obj/
