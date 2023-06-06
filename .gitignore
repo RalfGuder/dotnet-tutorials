@@ -7,4 +7,17 @@
 /HelloWorld/obj/Debug/net7.0
 /HelloWorld/obj
 /.vs/
+/BlazorHybridApp/.vs/
+/BlazorHybridApp/BlazorHybridApp/.vs/
+/BlazorHybridApp/BlazorHybridApp/obj/
+/BlazorHybridApp/BlazorHybridApp/bin/
 /ClassLibraryProjects/.vs/
+/ClassLibraryProjects/ShowCase/.vs/
+/ClassLibraryProjects/ShowCase/bin/
+/ClassLibraryProjects/ShowCase/obj/
+/ClassLibraryProjects/StringLibrary/.vs/
+/ClassLibraryProjects/StringLibrary/bin/
+/ClassLibraryProjects/StringLibrary/obj/
+/TestProject/.vs/
+/TestProject/bin/
+/TestProject/obj/
