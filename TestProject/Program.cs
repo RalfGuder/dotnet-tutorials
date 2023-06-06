@@ -11,4 +11,10 @@ string[] pettingZoo =
 // RandomizeAnimals();
 
 // Erstellen Sie als Nächstes eine Pseudocodemethode, um die Tiergruppen zuzuweisen.
-// AssignGroup();
+// string[,] group = AssignGroup();
+
+// Sie können den Schulnamen ganz einfach mit Console.Write ausgeben.
+Console.WriteLine("School A");
+
+// Schließlich müssen Sie die Tiergruppen ausgeben.
+// PrintGroup(group);
