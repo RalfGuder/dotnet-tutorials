@@ -7,6 +7,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup>
-		<Reference Include="dll\*.dll"/>
+		<Reference Include="dll\*Api.dll"/>
 	</ItemGroup>
 </Project>
