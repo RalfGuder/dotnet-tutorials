@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="EmailType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[^@]+@[^\.]+\..+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="GAEB_Server">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Auftraggeber">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Name" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Abteilung" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Straße" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="PLZ" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Ort" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Telefon" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Telefax" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="E-Mail" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="EmailType">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Vergabestelle">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Name" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Abteilung" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Straße" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="PLZ" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Ort" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Telefon" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Telefax" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="E-Mail" nillable='false'>
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="EmailType">
+											<xsd:attribute type="xsd:boolean" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Projekt_Maßnahme">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Nummer" nillable="false">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Bezeichnung" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>
+										</xsd:extension>	
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Beschreibung" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="PLZ" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Ort" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Währung" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Vergabeeinheit">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Nummer" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Bezeichnung" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Beschreibung" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Mehrwertsteuersatz" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:int">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Schätzwert_Brutto" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:float">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Art_des_Auftrages_National" nillable="false">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:boolean">
+											<xsd:attribute type="xsd:string" name="type"/>
+											<xsd:attribute type="xsd:string" name="nillable"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Art_des_Auftrages_EU" nillable="false">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:boolean">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="CPV-Codes" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Vergabeordnung" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Teilnahmewettbewerb" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:boolean">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Auftragsart" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Vergabeverfahren" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="zusätzliche_Gliederung" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Phase" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:int">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Partnertyp">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Abgabeort">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Termine">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Submission_Datum">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+										 <xsd:attribute type="xsd:string" name="validator"/>
+										 <xsd:attribute type="xsd:string" name="mandatory"/>
+										 <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Submission_Uhrzeit">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+										 <xsd:attribute type="xsd:string" name="validator"/>
+										 <xsd:attribute type="xsd:string" name="mandatory"/>
+										 <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Zuschlagfrist">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+										 <xsd:attribute type="xsd:string" name="validator"/>
+										 <xsd:attribute type="xsd:string" name="mandatory"/>
+										 <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>							
+							<xsd:element name="Anforderungsfrist_Datum">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+										 <xsd:attribute type="xsd:string" name="validator"/>
+										 <xsd:attribute type="xsd:string" name="mandatory"/>
+										 <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Anforderungsfrist_Uhrzeit">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+										 <xsd:attribute type="xsd:string" name="validator"/>
+										 <xsd:attribute type="xsd:string" name="mandatory"/>
+										 <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Veröffentlichungsdatum">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+										 <xsd:attribute type="xsd:string" name="validator"/>
+										 <xsd:attribute type="xsd:string" name="mandatory"/>
+										 <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>							
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="GAEB-Datei">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Angeobtsaufforderung" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Dokumente">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Anzahl" nillable="false">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:int">
+											<xsd:attribute type="xsd:string" name="Kardinalität"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>										
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Dateipfad" nillable="false">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>	
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Dateiname" nillable="false">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Bieter">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Anzahl" nillable="false">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:int">
+                      <xsd:attribute type="xsd:string" name="Kardinalität"/>
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>							  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="BidderNo" nillable="true">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>							  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="_AVAID" nillable="true">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>							  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Name" nillable="false">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Straße" nillable="true">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute type="xsd:string" name="nillable"/>
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Plz" nillable="true">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute type="xsd:string" name="nillable"/>
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Ort" nillable="true">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute type="xsd:string" name="nillable"/>
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>			  
+              <xsd:element name="Telefon" nillable="true">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute type="xsd:string" name="nillable"/>
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Fax" nillable="true">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute type="xsd:string" name="nillable"/>
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-Mail" nillable="true">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="EmailType">
+                      <xsd:attribute type="xsd:string" name="validator"/>
+                      <xsd:attribute type="xsd:string" name="mandatory"/>
+					  <xsd:attribute type="xsd:string" name="wsdl_field"/>					  
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+				<xsd:element name="CompanyImport">
+					<xsd:complexType>
+						<xsd:all>
+						    <xsd:element name="Anzahl" nillable="false">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:int">
+											<xsd:attribute type="xsd:string" name="Kardinalität"/>
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>	
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="platform_company_id" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:int">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="hhv_id " nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:int">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="bidder_nr " nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:int">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="anrede " nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="vname" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="nname" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="ust_id" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="firmenname " nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="strasse" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="plz" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="ort" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="tel" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>											
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>							
+							<xsd:element name="email" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="EmailType">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="land" nillable="true">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute type="xsd:string" name="validator"/>
+											<xsd:attribute type="xsd:string" name="mandatory"/>
+											<xsd:attribute type="xsd:string" name="wsdl_field"/>												
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
