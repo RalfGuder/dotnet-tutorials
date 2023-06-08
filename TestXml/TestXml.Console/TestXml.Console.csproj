@@ -7,6 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup>
-		<Reference Include="dll\*Api.dll"/>
+		<Reference Include="dll\*Api.dll" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="dll\Gudchensoft.TestXml.Api.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="dll\Gudchensoft.TestXml.Parser.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 </Project>

@@ -7,8 +7,8 @@
     <ProjectGuid>{D7B28C0D-73C5-420A-A8B5-989DB86AB399}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestXml.Parser</RootNamespace>
-    <AssemblyName>TestXml.Parser</AssemblyName>
+    <RootNamespace>Gudchensoft.TestXml.Parser</RootNamespace>
+    <AssemblyName>Gudchensoft.TestXml.Parser</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -22,15 +22,16 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\TestXml.Parser.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Gudchensoft.TestXml.Parser.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\TestXml.Console\dll\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\TestXml.Console\dll\Gudchensoft.TestXml.Parser.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -39,6 +40,8 @@
     <AssemblyOriginatorKeyFile>TestXml.Parser.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="dll\*.Api.dll">
+     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,15 +51,15 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+	<ItemGroup>
+	  <None Update="dll\Gudchensoft.TestXml.Api.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TestXml.Api\TestXml.Api.csproj">
-      <Project>{fb88dbcf-a5e9-4863-85c2-35bdcecd4f46}</Project>
-      <Name>TestXml.Api</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="TestXml.Parser.snk" />
