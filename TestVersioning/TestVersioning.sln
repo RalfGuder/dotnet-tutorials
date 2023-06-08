@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicFrameApp", "ClassicFrameApp\ClassicFrameApp.csproj", "{21721DD0-8AB6-4F36-81A2-03AE927DD304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramePluginInterfaces", "FramePluginInterfaces\FramePluginInterfaces.csproj", "{76892B1E-690D-4038-93F2-BC6F452676AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTest", "ModelTest\ModelTest.csproj", "{710BEE34-F64D-4F79-B889-85B010BDB4C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDriver1", "TestDriver1\TestDriver1.csproj", "{8B6E7B99-C9AB-4967-AADE-16ACBFB3D2EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDriver2", "TestDriver2\TestDriver2.csproj", "{F7A9B02A-B3E6-47C0-B5C5-8AEDF5B1E214}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramePluginInterfaces2", "FramePluginInterfaces2\FramePluginInterfaces2.csproj", "{3FF9C011-F73F-4CDC-A226-C2EEF24CEA45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21721DD0-8AB6-4F36-81A2-03AE927DD304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21721DD0-8AB6-4F36-81A2-03AE927DD304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21721DD0-8AB6-4F36-81A2-03AE927DD304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21721DD0-8AB6-4F36-81A2-03AE927DD304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76892B1E-690D-4038-93F2-BC6F452676AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76892B1E-690D-4038-93F2-BC6F452676AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76892B1E-690D-4038-93F2-BC6F452676AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76892B1E-690D-4038-93F2-BC6F452676AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710BEE34-F64D-4F79-B889-85B010BDB4C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710BEE34-F64D-4F79-B889-85B010BDB4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710BEE34-F64D-4F79-B889-85B010BDB4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710BEE34-F64D-4F79-B889-85B010BDB4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B6E7B99-C9AB-4967-AADE-16ACBFB3D2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6E7B99-C9AB-4967-AADE-16ACBFB3D2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6E7B99-C9AB-4967-AADE-16ACBFB3D2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6E7B99-C9AB-4967-AADE-16ACBFB3D2EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7A9B02A-B3E6-47C0-B5C5-8AEDF5B1E214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A9B02A-B3E6-47C0-B5C5-8AEDF5B1E214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A9B02A-B3E6-47C0-B5C5-8AEDF5B1E214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A9B02A-B3E6-47C0-B5C5-8AEDF5B1E214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF9C011-F73F-4CDC-A226-C2EEF24CEA45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF9C011-F73F-4CDC-A226-C2EEF24CEA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF9C011-F73F-4CDC-A226-C2EEF24CEA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF9C011-F73F-4CDC-A226-C2EEF24CEA45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F5EB041-0438-42BF-A946-54203A123F42}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+﻿<Window x:Class="ClassicFrameApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClassicFrameApp"
+        mc:Ignorable="d"
+        Title="Frame App" Width="700" Height="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Stretch" Height="100px">
+            <Button x:Name="ButtonLoadAllDrivers" Width="180" Content="Load all Drivers beyond path" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Click="ButtonLoadAllDrivers_Click" />
+            <Button x:Name="ButtonCheckLoadedAssemblies" Width="180" Content="Check loaded assemblies" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Click="ButtonCheckLoadedAssemblies_Click" />
+            <Button x:Name="ButtonDeleteLog" Width="100" Content="Delete log" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="ButtonDeleteLog_Click" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" Orientation="Vertical">
+            <Label x:Name="TextLabelPath" Margin="10,0,0,0">Drivers path:</Label>
+            <TextBox x:Name="TextBoxStartPath" Margin="10,0,0,0" Text="..\..\..\Drivers"></TextBox>
+        </StackPanel>
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden">
+            <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical" Background="AntiqueWhite">
+                <TextBlock x:Name="TextLog" HorizontalAlignment="Left" TextWrapping="Wrap" Text="-" VerticalAlignment="Top"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
