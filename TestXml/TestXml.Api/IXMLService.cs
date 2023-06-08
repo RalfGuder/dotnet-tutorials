@@ -10,7 +10,7 @@ namespace Gudchensoft.TestXml.Api
 
 	public interface IXmlService
     {
-		IXmlParser GetXmlParsers();
+		IXmlParser[] GetXmlParsers();
 
     }
 }
