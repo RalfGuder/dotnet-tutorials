@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<GAEB_Server>
+<Auftraggeber>
+	<Name mandatory="true" validator='not null' wsdl_field="firmenname"/>
+	<Abteilung mandatory="true" validator='not null' wsdl_field="_Depart"/>
+	<Straße mandatory="true" validator='not null' wsdl_field="strasse"/>
+	<PLZ mandatory="true" validator='not null' wsdl_field="plz"/>
+	<Ort mandatory="true" validator='not null' wsdl_field="ort"/>
+	<Telefon mandatory="true" validator='not null, Numerische-Validatoren' wsdl_field="tell"/>
+	<Telefax mandatory="true" validator='not null, Numerische-Validatoren' wsdl_field="fax"/>
+	<E-Mail validator="ungleich leer; Mailvalidierung" mandatory='true' wsdl_field="email">HornundHirn@software.com</E-Mail>
+</Auftraggeber>
+<Vergabestelle>
+	<Name mandatory="true" validator='not null' wsdl_field=""/>
+	<Abteilung mandatory="true" validator='not null' wsdl_field="tell"/>
+	<Straße mandatory="true" validator='not null' wsdl_field="tell"/>
+	<PLZ mandatory="true" validator='not null,Numerische-Validatoren' wsdl_field=""/>
+	<Ort mandatory="true" validator='not null, Alphabete-Validatoren' wsdl_field=""/>
+	<Telefon mandatory="true" validator='not null, Numerische-Validatoren' wsdl_field=""/>
+	<Telefax mandatory="true" validator='not null, Numerische-Validatoren' wsdl_field=""/>
+	<E-Mail validator="not null; Mailvalidierung" mandatory='true' wsdl_field="">HornundHirn@software.com</E-Mail>
+</Vergabestelle>
+<Projekt_Maßnahme>
+	<Nummer validator="not null" mandatory='true' wsdl_field="NamePrj"/>
+	<Bezeichnung validator="not null" mandatory='true' wsdl_field="LblPrj"/>
+	<Beschreibung validator="" mandatory='false' wsdl_field="Descrip"/>
+	<PLZ validator="Numerische-Validatoren" mandatory='false' wsdl_field="_LocPrj"/>
+	<Ort validator="Alphabete-Validatoren" mandatory='false' wsdl_field="_LocPrj"/>
+	<Währung validator="" mandatory='false' wsdl_field=""/>
+</Projekt_Maßnahme>
+<Vergabeeinheit>
+	<Nummer validator="ungleich leer" mandatory='false' wsdl_field="_NameAward"/>
+	<Bezeichnung validator="nullable validator" mandatory='false' wsdl_field="bezeichnung"/>
+	<Beschreibung validator="nullable validator" mandatory='false' wsdl_field="_ShortDescription"/>
+	<Mehrwertsteuersatz validator="Numerische-Validatoren" mandatory='true' wsdl_field="_EstimValueVat">19</Mehrwertsteuersatz>
+	<Schätzwert_Brutto validator="Dezimaltrennzeichen-Validatoren" mandatory='false' wsdl_field="_EstimValue / _EstimValueGross">123456.78</Schätzwert_Brutto>
+	<Art_des_Auftrages_National validator="boolean validator" mandatory='false' wsdl_field="">false</Art_des_Auftrages_National>
+	<Art_des_Auftrages_EU validator="boolean validator" mandatory='true' wsdl_field="is_eu">true</Art_des_Auftrages_EU>
+	<CPV-Codes validator="nullable validator" mandatory='false' wsdl_field="cpv_bezeichnung"/>
+	<Vergabeordnung validator="nullable validator" mandatory='false' wsdl_field="_SpezVergabeord"/>
+	<Teilnahmewettbewerb validator="boolean validator" mandatory='true' wsdl_field="_TNW">true</Teilnahmewettbewerb>
+	<Auftragsart validator="nullable validator" mandatory='false' wsdl_field=""/>
+	<Vergabeverfahren validator="nullable validator" mandatory='false' wsdl_field="cat"/>
+	<zusätzliche_Gliederung validator="nullable validator" mandatory='false' wsdl_field=""/>
+	<Phase validator="Numerische-Validatoren" mandatory='true' wsdl_field="">1</Phase>
+	<Partnertyp validator="nullable validator" mandatory='false' wsdl_field=""/>
+	<Abgabeort validator="nullable validator" mandatory='false' wsdl_field=""/>
+</Vergabeeinheit>
+<Termine>
+	<Submission_Datum validator="Date(ISO-8601 format c) dd-mm-yyyy" mandatory='false' wsdl_field=""/>
+	<Submission_Uhrzeit validator="Date(ISO-8601 format c) hh:mm" mandatory='false' wsdl_field=""/>
+	<Zuschlagfrist validator="Date(ISO-8601 format c) dd-mm-yyyy" mandatory='false' wsdl_field="end_accept_date"/>
+	<Anforderungsfrist_Datum validator="Date(ISO-8601 format c) dd-mm-yyyy" mandatory='false' wsdl_field=""/>
+	<Anforderungsfrist_Uhrzeit validator="Date(ISO-8601 format c) hh:mm" mandatory='false' wsdl_field=""/>
+	<Veröffentlichungsdatum validator="Date(ISO-8601 format c) dd-mm-yyyy" mandatory='false' wsdl_field=""/>
+</Termine>
+<GAEB-Datei>
+	<Angeobtsaufforderung validator="nullable validator" mandatory='false' wsdl_field="gaebfile"/>
+</GAEB-Datei>
+<Dokumente>
+	<Anzahl Kardinalität="N*Dokumente" validator="Numerische-Validatoren" mandatory='true'  wsdl_field="">7</Anzahl>
+	<Dateipfad validator="Base64, nullable validator" mandatory='false'  wsdl_field=""/>
+	<Dateiname validator="nullable validator" mandatory='false'  wsdl_field=""/>
+</Dokumente>
+<Bieter>
+	<Anzahl Kardinalität="N*Bieter" validator="Numerische-Validatoren" mandatory='true' wsdl_field="">7</Anzahl>
+	<BidderNo validator="Numerische-Validatoren; nullable validator" mandatory='false' wsdl_field=""></BidderNo>
+	<_AVAID validator="Numerische-Validatoren; nullable validator" mandatory='false' wsdl_field=""></_AVAID>
+	<Name validator="nullable validator" mandatory='false' wsdl_field=""></Name>
+	<Straße nillable="true" validator="nullable validator" mandatory='false' wsdl_field="strasse"/>
+	<Plz nillable="true" validator="nullable validator" mandatory='false' wsdl_field="plz"/>
+	<Ort nillable="true" validator="nullable validator" mandatory='false' wsdl_field="ort"/>
+	<Telefon nillable="true" validator="nullable validator" mandatory='false' wsdl_field="tel1"/>
+	<Fax nillable="true" validator="nullable validator" mandatory='false' wsdl_field=""/>
+	<E-Mail validator="not null; Mailvalidierung" mandatory='false' wsdl_field="">HornundHirnBieter@software.com</E-Mail>
+</Bieter>
+<CompanyImport>
+	<Anzahl Kardinalität="N*Bieter" validator="Numerische-Validatoren" mandatory='true' wsdl_field="">7</Anzahl>
+	<platform_company_id validator="Numerische-Validatoren" mandatory='true' wsdl_field="company_id">12345</platform_company_id>
+	<hhv_id  validator="Numerische-Validatoren" mandatory='true' wsdl_field="">12</hhv_id>
+	<bidder_nr validator="Numerische-Validatoren" mandatory='true' wsdl_field="">1</bidder_nr>
+	<anrede validator="nullable validator" mandatory='true' wsdl_field=""/>
+	<vname validator="nullable validator" mandatory='true' wsdl_field=""/>
+	<nname validator="nullable validator" mandatory='true' wsdl_field=""/>
+	<ust_id validator="nullable validator" mandatory='true' wsdl_field="ust_id"/>
+	<firmenname validator="nullable validator" mandatory='true' wsdl_field=""/>
+	<strasse validator="nullable validator" mandatory='true' wsdl_field=""/>
+	<plz validator="nullable validator" mandatory='true' wsdl_field="plz"/>
+	<ort validator="nullable validator" mandatory='true' wsdl_field="ort"/>
+	<tel validator="nullable validator" mandatory='true' wsdl_field="tel1"/>
+	<email validator="ungleich leer; Mailvalidierung" mandatory='true' wsdl_field="">companyimportbieter@software.com</email>
+	<land validator="nullable validator" mandatory='true' wsdl_field=""/>
+</CompanyImport>
+</GAEB_Server>
