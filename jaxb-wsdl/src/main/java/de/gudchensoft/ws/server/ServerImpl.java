@@ -6,7 +6,7 @@ import jakarta.jws.soap.SOAPBinding.Style;
 import jakarta.jws.soap.SOAPBinding.Use;
 
 @WebService(endpointInterface = "de.gudchensoft.ws.server.Server")
-public class ServerImpl implements Server{
+public class ServerImpl implements ServerRpc{
 
   @Override
   public String hallo(String wer) {

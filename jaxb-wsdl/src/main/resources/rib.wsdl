@@ -31,8 +31,7 @@
           <xsd:element name="ust_id" type="xsd:string" />
           <xsd:element name="gepruefte_summe" type="xsd:string" />
           <xsd:element name="auftragsnummer" type="xsd:string" />
-          <xsd:element name="vobag_auswertung_details_id"
-            type="xsd:int" />
+          <xsd:element name="vobag_auswertung_details_id" type="xsd:int" />
           <xsd:element name="vobag_auswertung_id" type="xsd:int" />
           <xsd:element name="vobag_lv_id" type="xsd:int" />
           <xsd:element name="session_id" type="xsd:string" />
@@ -318,18 +317,13 @@
         <xsd:all>
           <xsd:element name="nr" type="xsd:int" />
           <xsd:element name="name" type="xsd:string" />
-          <xsd:element name="gaebfile"
-            type="tns:TenderCreation_Gaeb" />
-          <xsd:element name="_CPV_List"
-            type="tns:ArrayOfTendercreation_cpv" />
+          <xsd:element name="gaebfile" type="tns:TenderCreation_Gaeb" />
+          <xsd:element name="_CPV_List" type="tns:ArrayOfTendercreation_cpv" />
         </xsd:all>
       </xsd:complexType>
-      <xsd:complexType
-        name="ArrayOfTendercreation_lotsdetails">
+      <xsd:complexType name="ArrayOfTendercreation_lotsdetails">
         <xsd:sequence>
-          <xsd:element name="item"
-            type="tns:TenderCreation_LotsDetails" minOccurs="0"
-            maxOccurs="unbounded" />
+          <xsd:element name="item" type="tns:TenderCreation_LotsDetails" minOccurs="0" maxOccurs="unbounded" />
         </xsd:sequence>
       </xsd:complexType>
       <xsd:complexType name="TenderCreation_Lose">
@@ -337,8 +331,7 @@
           <xsd:element name="ag_lose_one" type="xsd:boolean" />
           <xsd:element name="ag_lose_select" type="xsd:boolean" />
           <xsd:element name="ag_lose_all" type="xsd:boolean" />
-          <xsd:element name="Lot_details"
-            type="tns:ArrayOfTendercreation_lotsdetails" />
+          <xsd:element name="Lot_details" type="tns:ArrayOfTendercreation_lotsdetails" />
         </xsd:all>
       </xsd:complexType>
       <xsd:complexType name="Unclassified_Key_Value">
@@ -488,27 +481,19 @@
           <xsd:element name="_SendDate" type="tns:DateTime" />
           <xsd:element name="OpenDateTime" type="tns:DateTime" />
           <xsd:element name="EvalEnd" type="tns:DateTime" />
-          <xsd:element name="_PartCompDateTime"
-            type="tns:DateTime" />
-          <xsd:element name="_ApplyPeriodStart"
-            type="tns:DateTime" />
+          <xsd:element name="_PartCompDateTime" type="tns:DateTime" />
+          <xsd:element name="_ApplyPeriodStart" type="tns:DateTime" />
           <xsd:element name="_ApplyPeriodEnd" type="tns:DateTime" />
-          <xsd:element name="vertragslaufzeit_angabe"
-            type="xsd:string" />
+          <xsd:element name="vertragslaufzeit_angabe" type="xsd:string" />
           <xsd:element name="ag_dauer_einheit" type="xsd:string" />
           <xsd:element name="ag_dauer" type="xsd:int" />
-          <xsd:element name="ag_dauer_spanne_beginn"
-            type="tns:DateTime" />
-          <xsd:element name="ag_dauer_spanne_ende"
-            type="tns:DateTime" />
+          <xsd:element name="ag_dauer_spanne_beginn" type="tns:DateTime" />
+          <xsd:element name="ag_dauer_spanne_ende" type="tns:DateTime" />
           <xsd:element name="_OfferDeadline" type="tns:DateTime" />
           <xsd:element name="fristverkuerzung" type="xsd:int" />
-          <xsd:element name="fristverkuerzung_begruendung"
-            type="xsd:string" />
-          <xsd:element name="frist_schriftl_anfragen"
-            type="tns:DateTime" />
-          <xsd:element name="frist_schrift_frag_tnw_folgend"
-            type="tns:DateTime" />
+          <xsd:element name="fristverkuerzung_begruendung" type="xsd:string" />
+          <xsd:element name="frist_schriftl_anfragen" type="tns:DateTime" />
+          <xsd:element name="frist_schrift_frag_tnw_folgend" type="tns:DateTime" />
         </xsd:all>
       </xsd:complexType>
       <xsd:complexType name="CompanyImport">

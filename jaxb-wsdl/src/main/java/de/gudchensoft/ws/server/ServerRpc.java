@@ -7,7 +7,7 @@ import jakarta.jws.soap.SOAPBinding.Use;
 
 @WebService(name = "TenderCreation")
 @SOAPBinding(style = Style.RPC, use = Use.ENCODED)
-public interface Server {
+public interface ServerRpc {
   public String hallo( @WebParam( name = "wer" ) String wer );
   
   @WebMethod(operationName = "_getTokenVal")
