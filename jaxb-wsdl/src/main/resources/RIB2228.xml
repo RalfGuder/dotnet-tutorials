@@ -1,0 +1,1119 @@
+<?xml version="1.0"?>
+<SPConnector>
+	<Prj>
+		<Product>iTWO_64 V12.0.427</Product>
+		<User>amend</User>
+		<Path>\Samples\M_BIM V2 P3</Path>
+		<Key>M_BIM</Key>
+		<Version>2</Version>
+		<Phase>3</Phase>
+		<Name>Bürocenter Königsstrasse</Name>
+		<Mode>0</Mode>
+		<MasterProjectPath>\Master\DE V1 P1</MasterProjectPath>
+		<WICMasterProject>Samples\M_BIM</WICMasterProject>
+		<WICMasterProjectPath>\Samples\M_BIM V2 P3</WICMasterProjectPath>
+		<Sync>0</Sync>
+		<Desc>Dieses Muster-Projekt wurde in deutscher Sprache aufgestellt. 
+Um die Mehrsprachigkeit zu zeigen, wurden mit einem Übersetzungstool die mehrsprachigen 
+Texte in den Sprachen englisch, französich, italienisch, tschechisch, polnisch, kroatisch, 
+schwedisch, niederländisch, ungarisch, russisch, finnisch und türkisch generiert. 
+Die Qualität der übersetzten Texte ist damit eingeschränkt.
+Somit ist die Nutzung dieses Projektes weder bei Vorführungen oder beim produktiven Einsatz 
+in diesen Sprachen geeignet.</Desc>
+		<Currency>EUR</Currency>
+		<SecondCurrency>USD</SecondCurrency>
+		<ForeignMode>0</ForeignMode>
+		<GermanCountryMode>0</GermanCountryMode>
+		<ProjectManager>Ralf Vollmer</ProjectManager>
+		<ProjectStart>2009-10-02</ProjectStart>
+		<ConstrStart>2009-10-02</ConstrStart>
+		<Status>in Ausführung</Status>
+		<ProjectCat>Neubau</ProjectCat>
+		<ProjectType>43</ProjectType>
+		<ProjectTypeName>Gebäude für Gewerbe, Handel, Garagen</ProjectTypeName>
+		<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2</DocDir>
+		<DBName>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Databases\Samples\M_BIM.P3.V2.rpd</DBName>
+		<DBSize>103809024</DBSize>
+		<GFA>0</GFA>
+		<GRV>0</GRV>
+		<UA>0</UA>
+		<LA>0</LA>
+		<UU>0</UU>
+		<ConstrCosts>0</ConstrCosts>
+		<CostSMGFA>0</CostSMGFA>
+		<CostCMGRV>0</CostCMGRV>
+		<CostSMUA>0</CostSMUA>
+		<CostSMLA>0</CostSMLA>
+		<CostPerUU>0</CostPerUU>
+		<Standard>0</Standard>
+		<Economy>0</Economy>
+		<Region>0</Region>
+		<CostAsOf>2012-03-23</CostAsOf>
+		<LastUse>2023-08-28T11:54:46</LastUse>
+		<RestoreDate>2023-06-16T16:09:52</RestoreDate>
+		<ModelCheckDate>2023-04-11T15:15:43</ModelCheckDate>
+		<DataLoadDate>2023-04-11T15:15:25</DataLoadDate>
+		<DataVerificationDate>2023-04-11T15:15:15</DataVerificationDate>
+		<Adress>
+			<Key>066f4f4e-8683-41ce-afb7-1633e768a911</Key>
+			<Disabled>0</Disabled>
+			<C1>Bürocenter Mühlgasse</C1>
+			<Str>Mühlgasse 19</Str>
+			<Country>D</Country>
+			<Zip>70567</Zip>
+			<City>Stuttgart</City>
+			<IDOrigin>FileImport</IDOrigin>
+			<AddIDs>
+				<AddID>
+					<IDOrigin>FileImport</IDOrigin>
+				</AddID>
+			</AddIDs>
+			<MAC>0</MAC>
+			<SPTaxRate>0</SPTaxRate>
+			<Latitude>48.69186</Latitude>
+			<Longitude>8.955017</Longitude>
+			<Rev>0</Rev>
+			<LC>2021-12-14T17:57:13</LC>
+		</Adress>
+		<Company>
+			<Adress>
+				<Key>a3e945bc-7a68-4b9f-9216-67af69a3401e</Key>
+				<Disabled>0</Disabled>
+				<C1>RIB Software GmbH</C1>
+				<C2>Software AG</C2>
+				<Str>Vaihinger Strasse 151</Str>
+				<Country>D</Country>
+				<Zip>70567</Zip>
+				<City>Stuttgart</City>
+				<Opening>Herr</Opening>
+				<Contact>Mustermann</Contact>
+				<Phone>0711 7873-0</Phone>
+				<Fax>0711 7873-204</Fax>
+				<Mail>info@rib-software.com</Mail>
+				<Web>www.rib-software.com</Web>
+				<Deb>11111</Deb>
+				<Cred>1111</Cred>
+				<IDOrigin>FileImport</IDOrigin>
+				<AddIDs>
+					<AddID>
+						<IDOrigin>FileImport</IDOrigin>
+					</AddID>
+				</AddIDs>
+				<CatchWord>RIB</CatchWord>
+				<Role>Beispiel</Role>
+				<CountyName>Stuttgart</CountyName>
+				<TANr>08-15</TANr>
+				<TAName>Stuttgart</TAName>
+				<TaxNum>4711</TaxNum>
+				<VatID>12345</VatID>
+				<MAC>0</MAC>
+				<SPTaxRate>0</SPTaxRate>
+				<Latitude>48.727851</Latitude>
+				<Longitude>9.134969</Longitude>
+				<Rev>0</Rev>
+				<PA>Stuttgart</PA>
+				<PAMID>5678</PAMID>
+				<Us1>1</Us1>
+				<Us2>1</Us2>
+				<Us3>1</Us3>
+				<Us4>1</Us4>
+				<Us5>EDV</Us5>
+				<LC>2023-04-11T13:06:15</LC>
+			</Adress>
+			<ClientNo>
+				<PropObj>
+					<Prop>
+						<Key>_Mandant_</Key>
+						<Type>Text</Type>
+					</Prop>
+					<PropItem>
+						<Key>901</Key>
+						<Value>Muster Mandant</Value>
+					</PropItem>
+				</PropObj>
+			</ClientNo>
+		</Company>
+		<FurtherAdrs>
+			<FurtherAdr>
+				<Desc>Projektleiter</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>b7123555-8bc5-4640-8917-29123d6f88ab</Key>
+					<Disabled>0</Disabled>
+					<C1>RIB Software GmbH</C1>
+					<C2>Software AG</C2>
+					<Str>Vaihinger Strasse 151</Str>
+					<Country>D</Country>
+					<Zip>70567</Zip>
+					<City>Stuttgart</City>
+					<Opening>Herr</Opening>
+					<Contact>Maier, Markus</Contact>
+					<Phone>0711 7873-9878</Phone>
+					<Fax>0711 7873-204</Fax>
+					<Mail>maier.markus@rib-software.com</Mail>
+					<Web>www.rib-software.com</Web>
+					<Deb>11111</Deb>
+					<Cred>1111</Cred>
+					<AddIDs>
+						<AddID/>
+					</AddIDs>
+					<CatchWord>RIB</CatchWord>
+					<Role>Beispiel</Role>
+					<CountyName>Stuttgart</CountyName>
+					<TANr>08-15</TANr>
+					<TAName>Stuttgart</TAName>
+					<TaxNum>4711</TaxNum>
+					<VatID>12345</VatID>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Latitude>48.727851</Latitude>
+					<Longitude>9.134969</Longitude>
+					<Rev>0</Rev>
+					<PA>Stuttgart</PA>
+					<PAMID>5678</PAMID>
+					<Us1>1</Us1>
+					<Us2>1</Us2>
+					<Us3>1</Us3>
+					<Us4>1</Us4>
+					<Us5>EDV</Us5>
+					<LC>2023-04-11T13:06:13</LC>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Bauleiter</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>5d832dcc-1fe8-4010-8bca-31fcfb84ee80</Key>
+					<Disabled>0</Disabled>
+					<C1>RIB Software GmbH</C1>
+					<C2>Software AG</C2>
+					<Str>Vaihinger Strasse 151</Str>
+					<Country>D</Country>
+					<Zip>70567</Zip>
+					<City>Stuttgart</City>
+					<Opening>Herr</Opening>
+					<Contact>Trapp, Monika</Contact>
+					<Phone>0711 7873-9879</Phone>
+					<Fax>0711 7873-204</Fax>
+					<Mail>trapp.monika@rib-software.com</Mail>
+					<Web>www.rib-software.com</Web>
+					<Deb>11111</Deb>
+					<Cred>1111</Cred>
+					<AddIDs>
+						<AddID/>
+					</AddIDs>
+					<CatchWord>RIB</CatchWord>
+					<Role>Beispiel</Role>
+					<CountyName>Stuttgart</CountyName>
+					<TANr>08-15</TANr>
+					<TAName>Stuttgart</TAName>
+					<TaxNum>4711</TaxNum>
+					<VatID>12345</VatID>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Latitude>48.727851</Latitude>
+					<Longitude>9.134969</Longitude>
+					<Rev>0</Rev>
+					<PA>Stuttgart</PA>
+					<PAMID>5678</PAMID>
+					<Us1>1</Us1>
+					<Us2>1</Us2>
+					<Us3>1</Us3>
+					<Us4>1</Us4>
+					<Us5>EDV</Us5>
+					<LC>2023-04-11T13:06:10</LC>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Tragwerksplaner</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>bcb19931-529f-41c9-9b1c-ccc260a6bb51</Key>
+					<Disabled>0</Disabled>
+					<C1>Ingenieurbüro Uhl</C1>
+					<Str>Böheimstraße 37</Str>
+					<Zip>70199</Zip>
+					<City>Stuttgart</City>
+					<Contact>Uhl, Elmar</Contact>
+					<Phone>0711 9784456-0</Phone>
+					<Mail>uhl.elmar@ib-uhl.eu</Mail>
+					<AddIDs>
+						<AddID/>
+					</AddIDs>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Latitude>48.762134</Latitude>
+					<Longitude>9.164065</Longitude>
+					<Rev>0</Rev>
+					<LC>2022-12-12T07:56:48</LC>
+				</Adress>
+			</FurtherAdr>
+		</FurtherAdrs>
+		<DataHistory>
+			<ID>1</ID>
+			<Date>2023-08-28</Date>
+		</DataHistory>
+		<Documents/>
+	</Prj>
+	<SP>
+		<Path>\Samples\M_BIM V2 P3\PAs\A\SPs\1-0</Path>
+		<Key>1</Key>
+		<Name>Rohbauarbeiten</Name>
+		<Phase>0</Phase>
+		<CurrentSCPackage>1</CurrentSCPackage>
+		<ReadOnly>0</ReadOnly>
+		<Disabled>0</Disabled>
+		<VAT>19</VAT>
+		<VatID>19</VatID>
+		<CU>EUR</CU>
+		<CU2>USD</CU2>
+		<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1</DocDir>
+		<ContractType ID="2" Desc="With total order"/>
+		<BudgetNet>888945.1</BudgetNet>
+		<BudgetGross>1057844.67</BudgetGross>
+		<CostPlanningNet>818516.81</CostPlanningNet>
+		<CostPlanningGross>974035</CostPlanningGross>
+		<AwardMethod>
+			<PropObj>
+				<Prop>
+					<Key>VergabeArt</Key>
+					<Type>Text</Type>
+				</Prop>
+				<PropItem>
+					<Value>02</Value>
+				</PropItem>
+			</PropObj>
+		</AwardMethod>
+		<TenderOpening>2012-03-05T10:00:37</TenderOpening>
+		<AwardDeadline>2012-03-12</AwardDeadline>
+		<ConstStartPlan>2012-05-07</ConstStartPlan>
+		<ConstEndPlan>2012-09-06</ConstEndPlan>
+		<Analysis>5</Analysis>
+		<WarrantyValue>0</WarrantyValue>
+		<WarrantyUnit>1</WarrantyUnit>
+		<PartnerType>Creditor</PartnerType>
+		<AwardFactor>100</AwardFactor>
+		<AwardTarget>888945.09734874</AwardTarget>
+		<LotWise>false</LotWise>
+		<PermitAlternativeTenders>true</PermitAlternativeTenders>
+		<AltTendersMode>1</AltTendersMode>
+		<CostCodes/>
+		<Billing>1</Billing>
+		<CB_Progress>
+			<ContractBasis>
+				<Item ID="n0" Type="16">
+					<OutlineText>Grundbetrag</OutlineText>
+				</Item>
+				<Item ID="n1" Type="19">
+					<OutlineText>Abzgl. Zahl\Rech</OutlineText>
+				</Item>
+				<Item Level="0" ID="n2" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n3" Type="6" DMIsGross="0">
+					<DM>19</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>MwSt</OutlineText>
+				</Item>
+				<Item Level="0" ID="n4" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<EPDiscount>
+					<DueToDays>18</DueToDays>
+					<Disc1Days>0</Disc1Days>
+					<Disc1Percent>0</Disc1Percent>
+					<Disc2Days>0</Disc2Days>
+					<Disc2Percent>0</Disc2Percent>
+				</EPDiscount>
+			</ContractBasis>
+		</CB_Progress>
+		<CB_PartFinal>
+			<ContractBasis>
+				<Item ID="n0" Type="16">
+					<OutlineText>Grundbetrag</OutlineText>
+				</Item>
+				<Item ID="n1" Type="19">
+					<OutlineText>Abzgl. Zahl\Rech</OutlineText>
+				</Item>
+				<Item Level="0" ID="n2" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n3" Type="6" DMIsGross="0">
+					<DM>19</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>MwSt</OutlineText>
+				</Item>
+				<Item Level="0" ID="n4" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<EPDiscount>
+					<DueToDays>60</DueToDays>
+					<Disc1Days>0</Disc1Days>
+					<Disc1Percent>0</Disc1Percent>
+					<Disc2Days>0</Disc2Days>
+					<Disc2Percent>0</Disc2Percent>
+				</EPDiscount>
+			</ContractBasis>
+		</CB_PartFinal>
+		<CB_Final>
+			<ContractBasis>
+				<Item ID="n0" Type="16">
+					<OutlineText>Grundbetrag</OutlineText>
+				</Item>
+				<Item ID="n1" Type="19">
+					<OutlineText>Abzgl. Zahl\Rech</OutlineText>
+				</Item>
+				<Item Level="0" ID="n2" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n3" Type="6" DMIsGross="0">
+					<DM>19</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>MwSt</OutlineText>
+				</Item>
+				<Item Level="0" ID="n4" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<EPDiscount>
+					<DueToDays>60</DueToDays>
+					<Disc1Days>0</Disc1Days>
+					<Disc1Percent>0</Disc1Percent>
+					<Disc2Days>0</Disc2Days>
+					<Disc2Percent>0</Disc2Percent>
+				</EPDiscount>
+			</ContractBasis>
+		</CB_Final>
+		<Guarantees>
+			<Guarantee>
+				<Type>Recieved</Type>
+				<Key>1</Key>
+				<Description>Vertragserfüllung</Description>
+				<OriginalAmount>0</OriginalAmount>
+				<CurrentAmount>0</CurrentAmount>
+				<CUR>EUR</CUR>
+			</Guarantee>
+			<Guarantee>
+				<Type>Recieved</Type>
+				<Key>2</Key>
+				<Description>Gewährleistung</Description>
+				<OriginalAmount>0</OriginalAmount>
+				<CurrentAmount>0</CurrentAmount>
+				<CUR>EUR</CUR>
+			</Guarantee>
+			<Guarantee>
+				<Type>Recieved</Type>
+				<OriginalAmount>0</OriginalAmount>
+				<CurrentAmount>0</CurrentAmount>
+				<CUR>EUR</CUR>
+			</Guarantee>
+			<Guarantee>
+				<Type>Recieved</Type>
+				<OriginalAmount>0</OriginalAmount>
+				<CurrentAmount>0</CurrentAmount>
+				<CUR>EUR</CUR>
+			</Guarantee>
+		</Guarantees>
+		<Docs>
+			<Folder>1</Folder>
+			<Path>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1</Path>
+			<Name>Dokumente</Name>
+			<ShowKey>1</ShowKey>
+			<Docs>
+				<Folder>2</Folder>
+				<Path>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\2</Path>
+				<Name>Pläne</Name>
+				<ShowKey>1</ShowKey>
+				<Doc Archive="0" Publish="1" InProjectStruct="1" Type="File">
+					<Link>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\2\A9_Plan_B.pdf</Link>
+					<Title>A9_Plan_B.pdf</Title>
+				</Doc>
+				<Doc Archive="0" Publish="0" InProjectStruct="1" Type="File">
+					<Link>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\2\A9_Plan_C.pdf</Link>
+					<Title>A9_Plan_C.pdf</Title>
+				</Doc>
+				<Doc Archive="0" Publish="1" InProjectStruct="1" Type="File">
+					<Link>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\2\A9_Plan_A.pdf</Link>
+					<Title>A9_Plan_A.pdf</Title>
+				</Doc>
+			</Docs>
+			<Docs>
+				<Folder>1</Folder>
+				<Path>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\1</Path>
+				<Name>Anlagen</Name>
+				<ShowKey>1</ShowKey>
+				<Doc Archive="0" Publish="1" InProjectStruct="1" Type="File">
+					<Link>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\1\Meine_Bekanntmachung.pdf</Link>
+					<Title>Meine_Bekanntmachung.pdf</Title>
+				</Doc>
+				<Doc Archive="0" Publish="1" InProjectStruct="1" Type="File">
+					<Link>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\1\Blitzschutz_NW.pdf</Link>
+					<Title>Blitzschutz_NW.pdf</Title>
+				</Doc>
+				<Doc Archive="0" Publish="1" InProjectStruct="1" Type="File">
+					<Link>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\1\Bindefrist_Mueller.pdf</Link>
+					<Title>Bindefrist_Mueller.pdf</Title>
+				</Doc>
+				<Doc Archive="0" Publish="1" InProjectStruct="1" Type="File">
+					<Link>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\1\Antwort_auf_Ruege_001.pdf</Link>
+					<Title>Antwort_auf_Ruege_001.pdf</Title>
+				</Doc>
+				<Doc Archive="0" Publish="1" InProjectStruct="1" Type="File">
+					<Link>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\1\1\Anforderung.pdf</Link>
+					<Title>Anforderung.pdf</Title>
+				</Doc>
+			</Docs>
+		</Docs>
+		<WBS>
+			<Path>\Samples\M_BIM V2 P3\PAs\A\SPs\1-0\BoQ 1</Path>
+			<Key>1</Key>
+			<Name>Rohbauarbeiten</Name>
+			<Structure>11PPPPI</Structure>
+			<Type>0</Type>
+			<QTOType>3</QTOType>
+			<Sortmode>0</Sortmode>
+			<Cur>EUR</Cur>
+			<ItemTotal LSUM="0">818516.81</ItemTotal>
+			<ItempTotalDisc>818516.81</ItempTotalDisc>
+			<DataFile>C:\Users\Amend\AppData\Local\Temp\1.X83</DataFile>
+		</WBS>
+		<Bidder>
+			<No>1</No>
+			<ApplicantNo>1</ApplicantNo>
+			<Name>Koch Adolf</Name>
+			<NetUnchecked>0</NetUnchecked>
+			<NetCalculated>0</NetCalculated>
+			<GrossUnchecked>0</GrossUnchecked>
+			<GrossCalculated>0</GrossCalculated>
+			<VatUnchecked>0</VatUnchecked>
+			<VatCalculated>0</VatCalculated>
+			<AbsDiscount>0</AbsDiscount>
+			<PercentDiscount>0</PercentDiscount>
+			<AbsDiscountChecked>0</AbsDiscountChecked>
+			<EPDiscount>0</EPDiscount>
+			<GrossCalculatedEP>0</GrossCalculatedEP>
+			<ContractConditionEscDisc>0</ContractConditionEscDisc>
+			<GrossCalculatedGrandTotal>0</GrossCalculatedGrandTotal>
+			<Complete>false</Complete>
+			<Exclusion>false</Exclusion>
+			<Selected>false</Selected>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\B_1</DocDir>
+			<Recalculation>true</Recalculation>
+			<NumberOfValuationPoints>0</NumberOfValuationPoints>
+			<RankAccording2Recalculation>1</RankAccording2Recalculation>
+			<RankAccording2Valuation>0</RankAccording2Valuation>
+			<ValuationTotal>0</ValuationTotal>
+			<Shortlisted>false</Shortlisted>
+			<Consortium>false</Consortium>
+			<AltTWithoutMainT>false</AltTWithoutMainT>
+			<NumberOfAltTender>0</NumberOfAltTender>
+			<NumberOfValuableAltTender>0</NumberOfValuableAltTender>
+			<Adress>
+				<Key>07170b4f-c475-4466-8570-6b6c76653727</Key>
+				<Disabled>0</Disabled>
+				<C1>Koch Adolf</C1>
+				<C2>Bauunternehmung</C2>
+				<C4>Hoch- und Tiefbau</C4>
+				<Str>Raifeisenstraße 23</Str>
+				<Country>BW</Country>
+				<Zip>70794</Zip>
+				<City>Filderstadt</City>
+				<Opening>Sehr geehrter Herr</Opening>
+				<Contact> Rosenthal</Contact>
+				<Phone>0711/702845</Phone>
+				<Fax>0711/567899</Fax>
+				<Mail>adolf@sdf.de</Mail>
+				<Deb>10011</Deb>
+				<Cred>0011</Cred>
+				<IDOrigin>cobra Adress Plus 8</IDOrigin>
+				<AddIDs>
+					<AddID>
+						<IDOrigin>cobra Adress Plus 8</IDOrigin>
+					</AddID>
+				</AddIDs>
+				<CatchWord>Koch,70794</CatchWord>
+				<TANr>1</TANr>
+				<TAName>Filderstadt</TAName>
+				<TaxNum>12345</TaxNum>
+				<VatID>1235</VatID>
+				<MAC>0</MAC>
+				<SPTaxRate>0</SPTaxRate>
+				<Latitude>48.65662</Latitude>
+				<Longitude>9.22543</Longitude>
+				<Rev>0</Rev>
+				<Bank1>Deutsche Bank AG</Bank1>
+				<BID1>60070024</BID1>
+				<Acc1>987654</Acc1>
+				<Us1>2</Us1>
+				<Us2>1</Us2>
+				<Us3>2</Us3>
+				<Us4>4</Us4>
+				<Us5>Rohbauarbeiten</Us5>
+				<Us6>100</Us6>
+				<LC>2021-12-14T17:56:22</LC>
+			</Adress>
+			<FormSets/>
+		</Bidder>
+		<Bidder>
+			<No>2</No>
+			<ApplicantNo>2</ApplicantNo>
+			<Name>Kurz und Lang</Name>
+			<NetUnchecked>0</NetUnchecked>
+			<NetCalculated>0</NetCalculated>
+			<GrossUnchecked>0</GrossUnchecked>
+			<GrossCalculated>0</GrossCalculated>
+			<VatUnchecked>0</VatUnchecked>
+			<VatCalculated>0</VatCalculated>
+			<AbsDiscount>0</AbsDiscount>
+			<PercentDiscount>0</PercentDiscount>
+			<AbsDiscountChecked>0</AbsDiscountChecked>
+			<EPDiscount>0</EPDiscount>
+			<GrossCalculatedEP>0</GrossCalculatedEP>
+			<ContractConditionEscDisc>0</ContractConditionEscDisc>
+			<GrossCalculatedGrandTotal>0</GrossCalculatedGrandTotal>
+			<Complete>false</Complete>
+			<Exclusion>false</Exclusion>
+			<Selected>false</Selected>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\B_2</DocDir>
+			<Recalculation>true</Recalculation>
+			<NumberOfValuationPoints>0</NumberOfValuationPoints>
+			<RankAccording2Recalculation>1</RankAccording2Recalculation>
+			<RankAccording2Valuation>0</RankAccording2Valuation>
+			<ValuationTotal>0</ValuationTotal>
+			<Shortlisted>false</Shortlisted>
+			<Consortium>false</Consortium>
+			<AltTWithoutMainT>false</AltTWithoutMainT>
+			<NumberOfAltTender>0</NumberOfAltTender>
+			<NumberOfValuableAltTender>0</NumberOfValuableAltTender>
+			<Adress>
+				<Key>ef3c9331-82be-408f-a9c0-d6f281e6eb83</Key>
+				<Disabled>0</Disabled>
+				<C1>Kurz und Lang</C1>
+				<C2>Bauunternehmung</C2>
+				<C4>Tief- und Straßenbau</C4>
+				<Str>Untertürkheimerstr. 34</Str>
+				<Country>BW</Country>
+				<Zip>70327</Zip>
+				<City>Stuttgart</City>
+				<Opening>Sehr geehrte Frau</Opening>
+				<Contact>Lang</Contact>
+				<Phone>0711 / 34567</Phone>
+				<Fax>0711 / 91011</Fax>
+				<Mail>lang@ildfh.de</Mail>
+				<Deb>10012</Deb>
+				<Cred>0012</Cred>
+				<IDOrigin>cobra Adress Plus 8</IDOrigin>
+				<AddIDs>
+					<AddID>
+						<IDOrigin>cobra Adress Plus 8</IDOrigin>
+					</AddID>
+				</AddIDs>
+				<CatchWord>Kurz, 70327</CatchWord>
+				<TANr>12</TANr>
+				<TAName>Stuttgart</TAName>
+				<TaxNum>12346</TaxNum>
+				<VatID>1236</VatID>
+				<MAC>0</MAC>
+				<SPTaxRate>0</SPTaxRate>
+				<Latitude>48.801787</Latitude>
+				<Longitude>9.271766</Longitude>
+				<Rev>0</Rev>
+				<Bank1>LBBW</Bank1>
+				<BID1>60050101</BID1>
+				<Acc1>9887635</Acc1>
+				<Us1>1</Us1>
+				<Us2>1</Us2>
+				<Us3>2</Us3>
+				<Us4>2</Us4>
+				<Us5>Rohbauarbeiten</Us5>
+				<Us6>80</Us6>
+				<LC>2021-12-14T17:56:22</LC>
+			</Adress>
+			<FormSets/>
+		</Bidder>
+		<Bidder>
+			<No>3</No>
+			<ApplicantNo>3</ApplicantNo>
+			<Name>Rosenthal Eugen</Name>
+			<NetUnchecked>0</NetUnchecked>
+			<NetCalculated>0</NetCalculated>
+			<GrossUnchecked>0</GrossUnchecked>
+			<GrossCalculated>0</GrossCalculated>
+			<VatUnchecked>0</VatUnchecked>
+			<VatCalculated>0</VatCalculated>
+			<AbsDiscount>0</AbsDiscount>
+			<PercentDiscount>0</PercentDiscount>
+			<AbsDiscountChecked>0</AbsDiscountChecked>
+			<EPDiscount>0</EPDiscount>
+			<GrossCalculatedEP>0</GrossCalculatedEP>
+			<ContractConditionEscDisc>0</ContractConditionEscDisc>
+			<GrossCalculatedGrandTotal>0</GrossCalculatedGrandTotal>
+			<Complete>false</Complete>
+			<Exclusion>false</Exclusion>
+			<Selected>false</Selected>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1\B_3</DocDir>
+			<Recalculation>true</Recalculation>
+			<NumberOfValuationPoints>0</NumberOfValuationPoints>
+			<RankAccording2Recalculation>1</RankAccording2Recalculation>
+			<RankAccording2Valuation>0</RankAccording2Valuation>
+			<ValuationTotal>0</ValuationTotal>
+			<Shortlisted>false</Shortlisted>
+			<Consortium>false</Consortium>
+			<AltTWithoutMainT>false</AltTWithoutMainT>
+			<NumberOfAltTender>0</NumberOfAltTender>
+			<NumberOfValuableAltTender>0</NumberOfValuableAltTender>
+			<Adress>
+				<Key>f6cac9a0-ee4f-4ba4-811d-fd3808c67e90</Key>
+				<Disabled>0</Disabled>
+				<C1>Rosenthal Eugen</C1>
+				<C2>Hoch und Tiefbau</C2>
+				<C4>Bauunternehmung</C4>
+				<Str>Schillerstraße 10</Str>
+				<Country>BW</Country>
+				<Zip>70749</Zip>
+				<City>Filderstadt</City>
+				<Opening>Sehr geehrter Herr </Opening>
+				<Contact>Rosenthal</Contact>
+				<Phone>0711/452158</Phone>
+				<Fax>0711/455501</Fax>
+				<Mail>Rosenthal@sdf.de</Mail>
+				<Deb>10015</Deb>
+				<Cred>0015</Cred>
+				<IDOrigin>cobra Adress Plus 8</IDOrigin>
+				<AddIDs>
+					<AddID>
+						<IDOrigin>cobra Adress Plus 8</IDOrigin>
+					</AddID>
+				</AddIDs>
+				<CatchWord>Rosenthal, 70749</CatchWord>
+				<TANr>1</TANr>
+				<TAName>Filderstadt</TAName>
+				<TaxNum>12349</TaxNum>
+				<VatID>1239</VatID>
+				<MAC>0</MAC>
+				<SPTaxRate>0</SPTaxRate>
+				<Latitude>48.6551</Latitude>
+				<Longitude>9.19865</Longitude>
+				<Rev>0</Rev>
+				<Us1>2</Us1>
+				<Us2>1</Us2>
+				<Us3>3</Us3>
+				<Us4>3</Us4>
+				<Us5>Rohbauarbeiten</Us5>
+				<Us6>25</Us6>
+				<LC>2021-12-14T17:56:22</LC>
+			</Adress>
+			<FormSets/>
+		</Bidder>
+	</SP>
+	<ObjContext>
+		<Obj>
+			<ID>1-0</ID>
+			<Name>1 (Auss) Rohbauarbeiten</Name>
+			<Title>\Muster\M_BIM V2 (Ausführung) - Projektvarianten - A Variante Massivbau (3D) - Vergabeeinheiten - 1 (Auss) Rohbauarbeiten</Title>
+			<Path>\Samples\M_BIM V2 P3\PAs\A\SPs\1-0</Path>
+			<Class>VergabeEinheitCompItemDocItem</Class>
+			<GUID>244c020e-90bb-4d92-904a-52f7c401fc85</GUID>
+			<User>amend</User>
+			<Computer>RIB-W1245</Computer>
+			<Time>2023-08-28T11:56:52</Time>
+			<TimeUTC>2023-08-28T09:56:52</TimeUTC>
+			<Dirs>
+				<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1</DocDir>
+				<Bin>C:\Program Files\RIB\iTWO_64\2023\Basic\Exe\iTWO\Bin</Bin>
+				<ConnectorData>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Configurations\Connectors</ConnectorData>
+				<ConnectorUserData>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Usersettings\amend\Configurations\Connectors</ConnectorUserData>
+				<Ribbons>C:\Program Files\RIB\iTWO_64\2023\Basic\Exe\iTWO\Components\Ribbons</Ribbons>
+				<Configurations>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Configurations</Configurations>
+				<Layout>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Templates\de</Layout>
+				<Favourites>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Usersettings\amend\Templates\de\Favorites</Favourites>
+				<Templates>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Templates\de</Templates>
+				<ReportTypes>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Templates\de</ReportTypes>
+				<UserTemplates>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Usersettings\amend\Templates\de</UserTemplates>
+				<UserReportTypes>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Usersettings\amend\Templates\de</UserReportTypes>
+				<UserPrintDirSettings>0</UserPrintDirSettings>
+			</Dirs>
+		</Obj>
+		<PrjManager>
+			<Path>\Samples</Path>
+			<Name>Samples</Name>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples</DocDir>
+			<DB>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Databases\Samples\Projectlist.rvd</DB>
+			<OpenProjects>1</OpenProjects>
+			<RelevantSTLKAnalysis>1</RelevantSTLKAnalysis>
+		</PrjManager>
+		<Prj>
+			<Product>iTWO_64 V12.0.427</Product>
+			<User>amend</User>
+			<Path>\Samples\M_BIM V2 P3</Path>
+			<Key>M_BIM</Key>
+			<Version>2</Version>
+			<Phase>3</Phase>
+			<Name>Bürocenter Königsstrasse</Name>
+			<Mode>0</Mode>
+			<MasterProjectPath>\Master\DE V1 P1</MasterProjectPath>
+			<WICMasterProject>Samples\M_BIM</WICMasterProject>
+			<WICMasterProjectPath>\Samples\M_BIM V2 P3</WICMasterProjectPath>
+			<Sync>0</Sync>
+			<Desc>Dieses Muster-Projekt wurde in deutscher Sprache aufgestellt. 
+Um die Mehrsprachigkeit zu zeigen, wurden mit einem Übersetzungstool die mehrsprachigen 
+Texte in den Sprachen englisch, französich, italienisch, tschechisch, polnisch, kroatisch, 
+schwedisch, niederländisch, ungarisch, russisch, finnisch und türkisch generiert. 
+Die Qualität der übersetzten Texte ist damit eingeschränkt.
+Somit ist die Nutzung dieses Projektes weder bei Vorführungen oder beim produktiven Einsatz 
+in diesen Sprachen geeignet.</Desc>
+			<Currency>EUR</Currency>
+			<SecondCurrency>USD</SecondCurrency>
+			<ForeignMode>0</ForeignMode>
+			<GermanCountryMode>0</GermanCountryMode>
+			<ProjectManager>Ralf Vollmer</ProjectManager>
+			<ProjectStart>2009-10-02</ProjectStart>
+			<ConstrStart>2009-10-02</ConstrStart>
+			<Status>in Ausführung</Status>
+			<ProjectCat>Neubau</ProjectCat>
+			<ProjectType>43</ProjectType>
+			<ProjectTypeName>Gebäude für Gewerbe, Handel, Garagen</ProjectTypeName>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2</DocDir>
+			<DBName>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Databases\Samples\M_BIM.P3.V2.rpd</DBName>
+			<DBSize>103809024</DBSize>
+			<GFA>0</GFA>
+			<GRV>0</GRV>
+			<UA>0</UA>
+			<LA>0</LA>
+			<UU>0</UU>
+			<ConstrCosts>0</ConstrCosts>
+			<CostSMGFA>0</CostSMGFA>
+			<CostCMGRV>0</CostCMGRV>
+			<CostSMUA>0</CostSMUA>
+			<CostSMLA>0</CostSMLA>
+			<CostPerUU>0</CostPerUU>
+			<Standard>0</Standard>
+			<Economy>0</Economy>
+			<Region>0</Region>
+			<CostAsOf>2012-03-23</CostAsOf>
+			<LastUse>2023-08-28T11:54:46</LastUse>
+			<RestoreDate>2023-06-16T16:09:52</RestoreDate>
+			<ModelCheckDate>2023-04-11T15:15:43</ModelCheckDate>
+			<DataLoadDate>2023-04-11T15:15:25</DataLoadDate>
+			<DataVerificationDate>2023-04-11T15:15:15</DataVerificationDate>
+			<Adress>
+				<Key>066f4f4e-8683-41ce-afb7-1633e768a911</Key>
+				<Disabled>0</Disabled>
+				<C1>Bürocenter Mühlgasse</C1>
+				<Str>Mühlgasse 19</Str>
+				<Country>D</Country>
+				<Zip>70567</Zip>
+				<City>Stuttgart</City>
+				<IDOrigin>FileImport</IDOrigin>
+				<AddIDs>
+					<AddID>
+						<IDOrigin>FileImport</IDOrigin>
+					</AddID>
+				</AddIDs>
+				<MAC>0</MAC>
+				<SPTaxRate>0</SPTaxRate>
+				<Latitude>48.69186</Latitude>
+				<Longitude>8.955017</Longitude>
+				<Rev>0</Rev>
+				<LC>2021-12-14T17:57:13</LC>
+			</Adress>
+			<Company>
+				<Adress>
+					<Key>a3e945bc-7a68-4b9f-9216-67af69a3401e</Key>
+					<Disabled>0</Disabled>
+					<C1>RIB Software GmbH</C1>
+					<C2>Software AG</C2>
+					<Str>Vaihinger Strasse 151</Str>
+					<Country>D</Country>
+					<Zip>70567</Zip>
+					<City>Stuttgart</City>
+					<Opening>Herr</Opening>
+					<Contact>Mustermann</Contact>
+					<Phone>0711 7873-0</Phone>
+					<Fax>0711 7873-204</Fax>
+					<Mail>info@rib-software.com</Mail>
+					<Web>www.rib-software.com</Web>
+					<Deb>11111</Deb>
+					<Cred>1111</Cred>
+					<IDOrigin>FileImport</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>FileImport</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<CatchWord>RIB</CatchWord>
+					<Role>Beispiel</Role>
+					<CountyName>Stuttgart</CountyName>
+					<TANr>08-15</TANr>
+					<TAName>Stuttgart</TAName>
+					<TaxNum>4711</TaxNum>
+					<VatID>12345</VatID>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Latitude>48.727851</Latitude>
+					<Longitude>9.134969</Longitude>
+					<Rev>0</Rev>
+					<PA>Stuttgart</PA>
+					<PAMID>5678</PAMID>
+					<Us1>1</Us1>
+					<Us2>1</Us2>
+					<Us3>1</Us3>
+					<Us4>1</Us4>
+					<Us5>EDV</Us5>
+					<LC>2023-04-11T13:06:15</LC>
+				</Adress>
+				<ClientNo>
+					<PropObj>
+						<Prop>
+							<Key>_Mandant_</Key>
+							<Type>Text</Type>
+						</Prop>
+						<PropItem>
+							<Key>901</Key>
+							<Value>Muster Mandant</Value>
+						</PropItem>
+					</PropObj>
+				</ClientNo>
+			</Company>
+			<FurtherAdrs>
+				<FurtherAdr>
+					<Desc>Projektleiter</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>b7123555-8bc5-4640-8917-29123d6f88ab</Key>
+						<Disabled>0</Disabled>
+						<C1>RIB Software GmbH</C1>
+						<C2>Software AG</C2>
+						<Str>Vaihinger Strasse 151</Str>
+						<Country>D</Country>
+						<Zip>70567</Zip>
+						<City>Stuttgart</City>
+						<Opening>Herr</Opening>
+						<Contact>Maier, Markus</Contact>
+						<Phone>0711 7873-9878</Phone>
+						<Fax>0711 7873-204</Fax>
+						<Mail>maier.markus@rib-software.com</Mail>
+						<Web>www.rib-software.com</Web>
+						<Deb>11111</Deb>
+						<Cred>1111</Cred>
+						<AddIDs>
+							<AddID/>
+						</AddIDs>
+						<CatchWord>RIB</CatchWord>
+						<Role>Beispiel</Role>
+						<CountyName>Stuttgart</CountyName>
+						<TANr>08-15</TANr>
+						<TAName>Stuttgart</TAName>
+						<TaxNum>4711</TaxNum>
+						<VatID>12345</VatID>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Latitude>48.727851</Latitude>
+						<Longitude>9.134969</Longitude>
+						<Rev>0</Rev>
+						<PA>Stuttgart</PA>
+						<PAMID>5678</PAMID>
+						<Us1>1</Us1>
+						<Us2>1</Us2>
+						<Us3>1</Us3>
+						<Us4>1</Us4>
+						<Us5>EDV</Us5>
+						<LC>2023-04-11T13:06:13</LC>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Bauleiter</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>5d832dcc-1fe8-4010-8bca-31fcfb84ee80</Key>
+						<Disabled>0</Disabled>
+						<C1>RIB Software GmbH</C1>
+						<C2>Software AG</C2>
+						<Str>Vaihinger Strasse 151</Str>
+						<Country>D</Country>
+						<Zip>70567</Zip>
+						<City>Stuttgart</City>
+						<Opening>Herr</Opening>
+						<Contact>Trapp, Monika</Contact>
+						<Phone>0711 7873-9879</Phone>
+						<Fax>0711 7873-204</Fax>
+						<Mail>trapp.monika@rib-software.com</Mail>
+						<Web>www.rib-software.com</Web>
+						<Deb>11111</Deb>
+						<Cred>1111</Cred>
+						<AddIDs>
+							<AddID/>
+						</AddIDs>
+						<CatchWord>RIB</CatchWord>
+						<Role>Beispiel</Role>
+						<CountyName>Stuttgart</CountyName>
+						<TANr>08-15</TANr>
+						<TAName>Stuttgart</TAName>
+						<TaxNum>4711</TaxNum>
+						<VatID>12345</VatID>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Latitude>48.727851</Latitude>
+						<Longitude>9.134969</Longitude>
+						<Rev>0</Rev>
+						<PA>Stuttgart</PA>
+						<PAMID>5678</PAMID>
+						<Us1>1</Us1>
+						<Us2>1</Us2>
+						<Us3>1</Us3>
+						<Us4>1</Us4>
+						<Us5>EDV</Us5>
+						<LC>2023-04-11T13:06:10</LC>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Tragwerksplaner</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>bcb19931-529f-41c9-9b1c-ccc260a6bb51</Key>
+						<Disabled>0</Disabled>
+						<C1>Ingenieurbüro Uhl</C1>
+						<Str>Böheimstraße 37</Str>
+						<Zip>70199</Zip>
+						<City>Stuttgart</City>
+						<Contact>Uhl, Elmar</Contact>
+						<Phone>0711 9784456-0</Phone>
+						<Mail>uhl.elmar@ib-uhl.eu</Mail>
+						<AddIDs>
+							<AddID/>
+						</AddIDs>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Latitude>48.762134</Latitude>
+						<Longitude>9.164065</Longitude>
+						<Rev>0</Rev>
+						<LC>2022-12-12T07:56:48</LC>
+					</Adress>
+				</FurtherAdr>
+			</FurtherAdrs>
+			<DataHistory>
+				<ID>1</ID>
+				<Date>2023-08-28</Date>
+			</DataHistory>
+			<ID>M_BIM</ID>
+			<Integration Company="901"/>
+		</Prj>
+		<PA>
+			<Path>\Samples\M_BIM V2 P3\PAs\A</Path>
+			<Key>A</Key>
+			<Name>Variante Massivbau (3D)</Name>
+			<VAT>19</VAT>
+			<VatID>19</VatID>
+			<CU>EUR</CU>
+			<CU2>USD</CU2>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A</DocDir>
+			<CPIDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\CPI\CPI_Input</CPIDir>
+			<ReportPeriods>
+				<ReportPeriod>
+					<Name>Mai 2012</Name>
+					<StartDate>2012-05-01</StartDate>
+					<EndDate>2012-05-31</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>Juni 2012</Name>
+					<StartDate>2012-06-01</StartDate>
+					<EndDate>2012-06-30</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>Juli 2012</Name>
+					<StartDate>2012-07-01</StartDate>
+					<EndDate>2012-07-31</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>August 2012</Name>
+					<StartDate>2012-08-01</StartDate>
+					<EndDate>2012-08-31</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>September 2012</Name>
+					<StartDate>2012-09-01</StartDate>
+					<EndDate>2012-09-30</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>Oktober 2012</Name>
+					<StartDate>2012-10-01</StartDate>
+					<EndDate>2012-10-31</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>November 2012</Name>
+					<StartDate>2012-11-01</StartDate>
+					<EndDate>2012-11-30</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>Dezember 2012</Name>
+					<StartDate>2012-12-01</StartDate>
+					<EndDate>2012-12-31</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>Januar 2013</Name>
+					<StartDate>2013-01-01</StartDate>
+					<EndDate>2013-01-31</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+				<ReportPeriod>
+					<Name>Februar 2013</Name>
+					<StartDate>2013-02-01</StartDate>
+					<EndDate>2013-02-28</EndDate>
+					<Closed>0</Closed>
+					<AktualDataComplete>0</AktualDataComplete>
+					<AktualHoursComplete>0</AktualHoursComplete>
+					<IQQuantitiesComplete>0</IQQuantitiesComplete>
+				</ReportPeriod>
+			</ReportPeriods>
+		</PA>
+		<SP>
+			<Path>\Samples\M_BIM V2 P3\PAs\A\SPs\1-0</Path>
+			<Key>1</Key>
+			<Name>Rohbauarbeiten</Name>
+			<Phase>0</Phase>
+			<CurrentSCPackage>1</CurrentSCPackage>
+			<ReadOnly>0</ReadOnly>
+			<Disabled>0</Disabled>
+			<VAT>19</VAT>
+			<VatID>19</VatID>
+			<CU>EUR</CU>
+			<CU2>USD</CU2>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2023\iTWOPlanen\Documents\Samples\M_BIM_P3_V2\A\SC\1_P1</DocDir>
+			<ContractType ID="2" Desc="With total order"/>
+		</SP>
+	</ObjContext>
+</SPConnector>
