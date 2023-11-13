@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="windows-1250"?>
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="TenderCreation" targetNamespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin">
 <types>
 <xsd:schema targetNamespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin">

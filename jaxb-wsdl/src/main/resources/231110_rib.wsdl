@@ -1,1141 +1,1142 @@
 <?xml version="1.0" encoding="windows-1250"?>
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="TenderCreation" targetNamespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin">
-<types>
-<xsd:schema targetNamespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin">
-<xsd:complexType name="ArrayOfUnclassified_Key_Value">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Unclassified_Key_Value[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="Unclassified_Key_Value">
-<xsd:all>
-<xsd:element name="key" type="xsd:string"/>
-<xsd:element name="value" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="SuccessfulBidderSearchParams">
-<xsd:all>
-<xsd:element name="project_nr" type="xsd:string"/>
-<xsd:element name="tender_nr" type="xsd:string"/>
-<xsd:element name="losnummer" type="xsd:int"/>
-<xsd:element name="session_id" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="SuccessfulBidderParams">
-<xsd:all>
-<xsd:element name="vobag_vergabe_id" type="xsd:string"/>
-<xsd:element name="firmenname1" type="xsd:string"/>
-<xsd:element name="firmenname2" type="xsd:string"/>
-<xsd:element name="strasse" type="xsd:string"/>
-<xsd:element name="plz" type="xsd:string"/>
-<xsd:element name="ort" type="xsd:string"/>
-<xsd:element name="tel1" type="xsd:string"/>
-<xsd:element name="fax" type="xsd:string"/>
-<xsd:element name="email" type="xsd:string"/>
-<xsd:element name="company_id" type="xsd:string"/>
-<xsd:element name="ust_id" type="xsd:string"/>
-<xsd:element name="gepruefte_summe" type="xsd:string"/>
-<xsd:element name="auftragsnummer" type="xsd:string"/>
-<xsd:element name="vobag_auswertung_details_id" type="xsd:int"/>
-<xsd:element name="vobag_auswertung_id" type="xsd:int"/>
-<xsd:element name="vobag_lv_id" type="xsd:int"/>
-<xsd:element name="session_id" type="xsd:string"/>
-<xsd:element name="error" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="TenderCreationStatus">
-<xsd:all>
-<xsd:element name="code" type="xsd:int"/>
-<xsd:element name="code_text" type="xsd:string"/>
-<xsd:element name="message" type="xsd:string"/>
-<xsd:element name="session_id" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="Export_Search_values">
-<xsd:all>
-<xsd:element name="project_nr" type="xsd:string"/>
-<xsd:element name="tender_nr" type="xsd:string"/>
-<xsd:element name="status_filter" type="xsd:string"/>
-<xsd:element name="status_changed" type="xsd:string"/>
-<xsd:element name="find_deleted" type="xsd:boolean"/>
-<xsd:element name="session_id" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfStatusResultData">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:StatusResultData[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="Status">
-<xsd:all>
-<xsd:element name="status_id" type="xsd:int"/>
-<xsd:element name="beschreibung" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfLot_Tender">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Lot_Tender[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="Company">
-<xsd:all>
-<xsd:element name="Name1" type="xsd:string"/>
-<xsd:element name="Street" type="xsd:string"/>
-<xsd:element name="PCode" type="xsd:string"/>
-<xsd:element name="City" type="xsd:string"/>
-<xsd:element name="_SummeAuftrag" type="xsd:float"/>
-<xsd:element name="_NachlassAngebot" type="xsd:float"/>
-<xsd:element name="_AngebotsDatum" type="xsd:string"/>
-<xsd:element name="ust_id" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="Award">
-<xsd:all>
-<xsd:element name="Auftragnehmer" type="tns:Company"/>
-<xsd:element name="auftragsnummer" type="xsd:string"/>
-<xsd:element name="auftragsversand_datum" type="xsd:string"/>
-<xsd:element name="hoehe_buergschaft" type="xsd:float"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="CPV">
-<xsd:all>
-<xsd:element name="cpv_nr" type="xsd:string"/>
-<xsd:element name="cpv_bezeichnung" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfCPV">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:CPV[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="CSBF">
-<xsd:all>
-<xsd:element name="Koordinator" type="xsd:string"/>
-<xsd:element name="csbf_id" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="Lot_Tender">
-<xsd:all>
-<xsd:element name="Award" type="tns:Award"/>
-<xsd:element name="CPV_haupt" type="tns:CPV"/>
-<xsd:element name="CPV_ergaenzend" type="tns:ArrayOfCPV"/>
-<xsd:element name="losnummer" type="xsd:int"/>
-<xsd:element name="is_aufgehoben" type="xsd:boolean"/>
-<xsd:element name="CSBF" type="tns:CSBF"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="StatusResultData">
-<xsd:all>
-<xsd:element name="project_nr" type="xsd:string"/>
-<xsd:element name="tender_nr" type="xsd:string"/>
-<xsd:element name="bookmark" type="xsd:string"/>
-<xsd:element name="vergabe_status_id" type="xsd:int"/>
-<xsd:element name="vergabe_status_prosa" type="xsd:string"/>
-<xsd:element name="opening_date" type="xsd:string"/>
-<xsd:element name="starting_date" type="xsd:string"/>
-<xsd:element name="end_accept_date" type="xsd:string"/>
-<xsd:element name="regulation" type="xsd:string"/>
-<xsd:element name="EstimValue" type="xsd:float"/>
-<xsd:element name="EstimValueGross" type="xsd:float"/>
-<xsd:element name="ungebundene_vorgesehene_mittel" type="xsd:float"/>
-<xsd:element name="verfuegbare_mittel" type="xsd:float"/>
-<xsd:element name="betrag_kostenkontrolle" type="xsd:float"/>
-<xsd:element name="regulation_id" type="xsd:int"/>
-<xsd:element name="is_eu" type="xsd:boolean"/>
-<xsd:element name="cat" type="xsd:string"/>
-<xsd:element name="cat_id" type="xsd:int"/>
-<xsd:element name="_Reason" type="xsd:string"/>
-<xsd:element name="is_aufgehoben" type="xsd:boolean"/>
-<xsd:element name="_AltOffer" type="xsd:boolean"/>
-<xsd:element name="_LocPrj" type="xsd:string"/>
-<xsd:element name="auftrags_datum" type="xsd:string"/>
-<xsd:element name="Status_csbf" type="tns:Status"/>
-<xsd:element name="tender_deleted" type="xsd:boolean"/>
-<xsd:element name="Lot_Tender" type="tns:ArrayOfLot_Tender"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfCompanyReturn">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:CompanyReturn[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="CompanyReturn">
-<xsd:all>
-<xsd:element name="platform_company_id" type="xsd:int"/>
-<xsd:element name="company_name" type="xsd:string"/>
-<xsd:element name="company_zipcode" type="xsd:string"/>
-<xsd:element name="company_location" type="xsd:string"/>
-<xsd:element name="company_street" type="xsd:string"/>
-<xsd:element name="company_id" type="xsd:int"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfDateConfig_return">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:DateConfig_return[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="DateConfig_return">
-<xsd:all>
-<xsd:element name="field" type="xsd:string"/>
-<xsd:element name="required" type="xsd:boolean"/>
-<xsd:element name="description" type="xsd:string"/>
-<xsd:element name="dattype" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfPublicProcurementLaw">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:PublicProcurementLaw[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="PublicProcurementLaw">
-<xsd:all>
-<xsd:element name="label" type="xsd:string"/>
-<xsd:element name="short" type="xsd:string"/>
-<xsd:element name="id" type="xsd:string"/>
-<xsd:element name="is_eu" type="xsd:boolean"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfTenderRegulation">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderRegulation[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="TenderRegulation">
-<xsd:all>
-<xsd:element name="vergabeverfahren" type="xsd:string"/>
-<xsd:element name="virtual_id" type="xsd:int"/>
-<xsd:element name="is_tnw" type="xsd:boolean"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfSpecificsPublicProcurementLaw">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:SpecificsPublicProcurementLaw[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="SpecificsPublicProcurementLaw">
-<xsd:all>
-<xsd:element name="id" type="xsd:int"/>
-<xsd:element name="label" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfVobag_Vergabe_Bez">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Vobag_Vergabe_Bez[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="Vobag_Vergabe_Bez">
-<xsd:all>
-<xsd:element name="vobag_vergabe_bez_id" type="xsd:int"/>
-<xsd:element name="nr" type="xsd:string"/>
-<xsd:element name="bezeichnung" type="xsd:string"/>
-<xsd:element name="stlb" type="xsd:boolean"/>
-<xsd:element name="vobc" type="xsd:boolean"/>
-<xsd:element name="stlk" type="xsd:boolean"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfTenderConfig_Formsets">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderConfig_Formsets[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="TenderConfig_Formsets">
-<xsd:all>
-<xsd:element name="fs_name" type="xsd:string"/>
-<xsd:element name="fs_id" type="xsd:int"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfRegulationDetail">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:RegulationDetail[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="RegulationDetail">
-<xsd:all>
-<xsd:element name="detail_id" type="xsd:int"/>
-<xsd:element name="regulation_label" type="xsd:string"/>
-<xsd:element name="is_framecontract" type="xsd:boolean"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfTenderConfig_FederalStates">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderConfig_FederalStates[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="TenderConfig_FederalStates">
-<xsd:all>
-<xsd:element name="federal_state" type="xsd:string"/>
-<xsd:element name="id" type="xsd:int"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ProjectConfig">
-<xsd:all>
-<xsd:element name="NamePrj" type="xsd:string"/>
-<xsd:element name="LblPrj" type="xsd:string"/>
-<xsd:element name="Descrip" type="xsd:string"/>
-<xsd:element name="AddText" type="xsd:string"/>
-<xsd:element name="_LocPrj" type="xsd:string"/>
-<xsd:element name="verfuegbare_mittel" type="xsd:float"/>
-<xsd:element name="ungebundene_vorgesehene_mittel" type="xsd:float"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfTenderCreation_CPV">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderCreation_CPV[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="TenderCreation_CPV">
-<xsd:all>
-<xsd:element name="CPV_Code" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfAttachment">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Attachment[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="Attachment">
-<xsd:all>
-<xsd:element name="filename" type="xsd:string"/>
-<xsd:element name="file_content" type="xsd:string"/>
-<xsd:element name="filesize" type="xsd:int"/>
-<xsd:element name="is_folder" type="xsd:boolean"/>
-<xsd:element name="childs" type="tns:ArrayOfAttachment"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfTenderCreation_LotsDetails">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderCreation_LotsDetails[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="TenderCreation_Gaeb">
-<xsd:all>
-<xsd:element name="filename" type="xsd:string"/>
-<xsd:element name="filesize" type="xsd:string"/>
-<xsd:element name="file_content" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="TenderCreation_LotsDetails">
-<xsd:all>
-<xsd:element name="nr" type="xsd:int"/>
-<xsd:element name="name" type="xsd:string"/>
-<xsd:element name="gaebfile" type="tns:TenderCreation_Gaeb"/>
-<xsd:element name="_CPV_List" type="tns:ArrayOfTenderCreation_CPV"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="TenderCreation_Lose">
-<xsd:all>
-<xsd:element name="ag_lose_one" type="xsd:boolean"/>
-<xsd:element name="ag_lose_select" type="xsd:boolean"/>
-<xsd:element name="ag_lose_all" type="xsd:boolean"/>
-<xsd:element name="Lot_details" type="tns:ArrayOfTenderCreation_LotsDetails"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="DateTime">
-<xsd:all/>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfTenderCreation_Nachweise">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderCreation_Nachweise[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="TenderCreation_Nachweise">
-<xsd:all>
-<xsd:element name="nachweis" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfTenderCreation_Kriterien">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderCreation_Kriterien[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="TenderCreation_Kriterien">
-<xsd:all>
-<xsd:element name="kriterium" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="TenderCreation_TNW">
-<xsd:all>
-<xsd:element name="_Nachweise" type="tns:ArrayOfTenderCreation_Nachweise"/>
-<xsd:element name="_Bewerberbogen_Pflicht" type="xsd:boolean"/>
-<xsd:element name="_Kriterien" type="tns:ArrayOfTenderCreation_Kriterien"/>
-<xsd:element name="_Bewertung" type="xsd:string"/>
-<xsd:element name="tvgg_docs_neccessary" type="xsd:boolean"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="TenderCreation_OfferTypes">
-<xsd:all>
-<xsd:element name="ot_advanced_signature" type="xsd:boolean"/>
-<xsd:element name="ot_qualified_signature" type="xsd:boolean"/>
-<xsd:element name="ot_cover_sheet" type="xsd:boolean"/>
-<xsd:element name="ot_paper" type="xsd:boolean"/>
-<xsd:element name="ot_eu_text" type="xsd:boolean"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="Disabled_Items">
-<xsd:all>
-<xsd:element name="LblPrj" type="xsd:boolean"/>
-<xsd:element name="NamePrj" type="xsd:boolean"/>
-<xsd:element name="_NameAward" type="xsd:boolean"/>
-<xsd:element name="_LblAward" type="xsd:boolean"/>
-<xsd:element name="_Lots" type="xsd:boolean"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="TenderConfig">
-<xsd:all>
-<xsd:element name="_Formsatz" type="xsd:int"/>
-<xsd:element name="_NameAward" type="xsd:string"/>
-<xsd:element name="vertragserfuell_buergschaft" type="xsd:float"/>
-<xsd:element name="maengelanspr_buergschaft" type="xsd:float"/>
-<xsd:element name="_LblAward" type="xsd:string"/>
-<xsd:element name="_LocAward" type="xsd:string"/>
-<xsd:element name="_CPV_List" type="tns:ArrayOfTenderCreation_CPV"/>
-<xsd:element name="_Editor" type="xsd:string"/>
-<xsd:element name="attachments" type="tns:ArrayOfAttachment"/>
-<xsd:element name="betrag_kostenkontrolle" type="xsd:float"/>
-<xsd:element name="_Annotation" type="xsd:string"/>
-<xsd:element name="_Lots" type="xsd:boolean"/>
-<xsd:element name="_Lose" type="tns:TenderCreation_Lose"/>
-<xsd:element name="_AltOffer" type="xsd:boolean"/>
-<xsd:element name="_PlacingNotice" type="xsd:boolean"/>
-<xsd:element name="additional_data" type="tns:ArrayOfUnclassified_Key_Value"/>
-<xsd:element name="_EstimValue" type="xsd:float"/>
-<xsd:element name="_EstimValueGross" type="xsd:float"/>
-<xsd:element name="gew_preis" type="xsd:int"/>
-<xsd:element name="gew_leistung" type="xsd:int"/>
-<xsd:element name="_DateAward" type="tns:DateTime"/>
-<xsd:element name="awardDocs_complete" type="xsd:boolean"/>
-<xsd:element name="finalFirm_approve" type="xsd:boolean"/>
-<xsd:element name="InviteBidders" type="xsd:boolean"/>
-<xsd:element name="_Reason" type="xsd:string"/>
-<xsd:element name="_ContractType" type="xsd:int"/>
-<xsd:element name="_ShortDescription" type="xsd:string"/>
-<xsd:element name="_Testvergabe" type="xsd:boolean"/>
-<xsd:element name="_EstimValueVat" type="xsd:int"/>
-<xsd:element name="show_discount_at_price_list" type="xsd:string"/>
-<xsd:element name="_TNW" type="tns:TenderCreation_TNW"/>
-<xsd:element name="_OfferTypes" type="tns:TenderCreation_OfferTypes"/>
-<xsd:element name="_Depart" type="xsd:string"/>
-<xsd:element name="_PercentQuotaNational" type="xsd:boolean"/>
-<xsd:element name="_AltOffer_ha" type="xsd:boolean"/>
-<xsd:element name="_is_tx_client" type="xsd:boolean"/>
-<xsd:element name="_is_hasta" type="xsd:boolean"/>
-<xsd:element name="virtual_va_id" type="xsd:int"/>
-<xsd:element name="_ZusGliederung" type="xsd:int"/>
-<xsd:element name="_SpezVergabeord" type="xsd:int"/>
-<xsd:element name="public_access" type="xsd:boolean"/>
-<xsd:element name="public_access_begruendung" type="xsd:string"/>
-<xsd:element name="_OfferWithoutAvasign" type="xsd:boolean"/>
-<xsd:element name="mit_preisen" type="xsd:boolean"/>
-<xsd:element name="gaebfile" type="tns:TenderCreation_Gaeb"/>
-<xsd:element name="_FederalState" type="xsd:int"/>
-<xsd:element name="Disabled_Items" type="tns:Disabled_Items"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="DatesConfig">
-<xsd:all>
-<xsd:element name="CnstStart" type="xsd:string"/>
-<xsd:element name="CnstEnd" type="xsd:string"/>
-<xsd:element name="_SendDate" type="tns:DateTime"/>
-<xsd:element name="OpenDateTime" type="tns:DateTime"/>
-<xsd:element name="EvalEnd" type="tns:DateTime"/>
-<xsd:element name="_PartCompDateTime" type="tns:DateTime"/>
-<xsd:element name="_ApplyPeriodStart" type="tns:DateTime"/>
-<xsd:element name="_ApplyPeriodEnd" type="tns:DateTime"/>
-<xsd:element name="vertragslaufzeit_angabe" type="xsd:string"/>
-<xsd:element name="ag_dauer_einheit" type="xsd:string"/>
-<xsd:element name="ag_dauer" type="xsd:int"/>
-<xsd:element name="ag_dauer_spanne_beginn" type="tns:DateTime"/>
-<xsd:element name="ag_dauer_spanne_ende" type="tns:DateTime"/>
-<xsd:element name="_OfferDeadline" type="tns:DateTime"/>
-<xsd:element name="fristverkuerzung" type="xsd:int"/>
-<xsd:element name="fristverkuerzung_begruendung" type="xsd:string"/>
-<xsd:element name="frist_schriftl_anfragen" type="tns:DateTime"/>
-<xsd:element name="frist_schrift_frag_tnw_folgend" type="tns:DateTime"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfCompanyImport">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:CompanyImport[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="CompanyImport">
-<xsd:all>
-<xsd:element name="platform_company_id" type="xsd:int"/>
-<xsd:element name="hhv_id" type="xsd:int"/>
-<xsd:element name="bidder_nr" type="xsd:int"/>
-<xsd:element name="anrede" type="xsd:string"/>
-<xsd:element name="vname" type="xsd:string"/>
-<xsd:element name="nname" type="xsd:string"/>
-<xsd:element name="ust_id" type="xsd:string"/>
-<xsd:element name="firmenname" type="xsd:string"/>
-<xsd:element name="strasse" type="xsd:string"/>
-<xsd:element name="plz" type="xsd:string"/>
-<xsd:element name="ort" type="xsd:string"/>
-<xsd:element name="tel" type="xsd:string"/>
-<xsd:element name="email" type="xsd:string"/>
-<xsd:element name="land" type="xsd:string"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="Bidder_Config">
-<xsd:all>
-<xsd:element name="CompanyImport" type="tns:ArrayOfCompanyImport"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="TenderCreationObject">
-<xsd:all>
-<xsd:element name="Project_Config" type="tns:ProjectConfig"/>
-<xsd:element name="Tender_Config" type="tns:TenderConfig"/>
-<xsd:element name="Dates_Config" type="tns:DatesConfig"/>
-<xsd:element name="Bidder_Config" type="tns:Bidder_Config"/>
-<xsd:element name="session_id" type="xsd:string"/>
-<xsd:element name="is_auto_tender" type="xsd:boolean"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="ArrayOfGaeb_return">
-<xsd:complexContent>
-<xsd:restriction base="soap-enc:Array">
-<xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Gaeb_return[]"/>
-</xsd:restriction>
-</xsd:complexContent>
-</xsd:complexType>
-<xsd:complexType name="Gaeb_return">
-<xsd:all>
-<xsd:element name="filename" type="xsd:string"/>
-<xsd:element name="vobag_anh_id" type="xsd:int"/>
-<xsd:element name="losnummer" type="xsd:int"/>
-<xsd:element name="los_anh_id" type="xsd:int"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="OfferDocument_return">
-<xsd:all>
-<xsd:element name="filename" type="xsd:string"/>
-<xsd:element name="vobag_anh_id" type="xsd:int"/>
-</xsd:all>
-</xsd:complexType>
-<xsd:complexType name="InfosForContentXml">
-<xsd:all>
-<xsd:element name="Gaeb_return" type="tns:ArrayOfGaeb_return"/>
-<xsd:element name="OfferDocument_return" type="tns:OfferDocument_return"/>
-<xsd:element name="vobag_lv_id" type="xsd:int"/>
-</xsd:all>
-</xsd:complexType>
-</xsd:schema>
-</types>
-<portType name="TenderCreationPort">
-<operation name="_getTokenVal">
-<documentation>erstellt den Token, welcher als schneller Nachweis des Logins des Clients dient</documentation>
-<input message="tns:_getTokenValIn"/>
-<output message="tns:_getTokenValOut"/>
-</operation>
-<operation name="getVergabeordnungMapping">
-<documentation>@soap</documentation>
-<input message="tns:getVergabeordnungMappingIn"/>
-<output message="tns:getVergabeordnungMappingOut"/>
-</operation>
-<operation name="showExportStatusValues">
-<documentation>@soap</documentation>
-<input message="tns:showExportStatusValuesIn"/>
-<output message="tns:showExportStatusValuesOut"/>
-</operation>
-<operation name="getSuccessfulCompany">
-<documentation>@soap</documentation>
-<input message="tns:getSuccessfulCompanyIn"/>
-<output message="tns:getSuccessfulCompanyOut"/>
-</operation>
-<operation name="updateSuccessfulCompany">
-<documentation>@soap</documentation>
-<input message="tns:updateSuccessfulCompanyIn"/>
-<output message="tns:updateSuccessfulCompanyOut"/>
-</operation>
-<operation name="getTenderExport">
-<documentation>@soap</documentation>
-<input message="tns:getTenderExportIn"/>
-<output message="tns:getTenderExportOut"/>
-</operation>
-<operation name="authenticate">
-<documentation>@soap</documentation>
-<input message="tns:authenticateIn"/>
-<output message="tns:authenticateOut"/>
-</operation>
-<operation name="bidderSearch">
-<documentation>@soap</documentation>
-<input message="tns:bidderSearchIn"/>
-<output message="tns:bidderSearchOut"/>
-</operation>
-<operation name="checkTenderNumber">
-<documentation>@soap</documentation>
-<input message="tns:checkTenderNumberIn"/>
-<output message="tns:checkTenderNumberOut"/>
-</operation>
-<operation name="releaseTNW">
-<documentation>@soap</documentation>
-<input message="tns:releaseTNWIn"/>
-<output message="tns:releaseTNWOut"/>
-</operation>
-<operation name="crypt">
-<documentation>@soap</documentation>
-<input message="tns:cryptIn"/>
-<output message="tns:cryptOut"/>
-</operation>
-<operation name="finalFirm_approve">
-<documentation>@soap</documentation>
-<input message="tns:finalFirm_approveIn"/>
-<output message="tns:finalFirm_approveOut"/>
-</operation>
-<operation name="inviteBidders">
-<documentation>@soap</documentation>
-<input message="tns:inviteBiddersIn"/>
-<output message="tns:inviteBiddersOut"/>
-</operation>
-<operation name="setVobagUser">
-<documentation>Selenium - Funktion</documentation>
-<input message="tns:setVobagUserIn"/>
-</operation>
-<operation name="setLvId">
-<documentation>fĂĽr die Bookmark - Actions</documentation>
-<input message="tns:setLvIdIn"/>
-<output message="tns:setLvIdOut"/>
-</operation>
-<operation name="openingAction">
-<documentation>Selenium Funktion</documentation>
-<input message="tns:openingActionIn"/>
-<output message="tns:openingActionOut"/>
-</operation>
-<operation name="getDatesConfig">
-<documentation>@soap</documentation>
-<input message="tns:getDatesConfigIn"/>
-<output message="tns:getDatesConfigOut"/>
-</operation>
-<operation name="getPublicProcurementLaw">
-<documentation>@soap</documentation>
-<input message="tns:getPublicProcurementLawIn"/>
-<output message="tns:getPublicProcurementLawOut"/>
-</operation>
-<operation name="getTenderRegulations">
-<documentation>@soap</documentation>
-<input message="tns:getTenderRegulationsIn"/>
-<output message="tns:getTenderRegulationsOut"/>
-</operation>
-<operation name="getSpecificPublicProcurementLaw">
-<documentation>@soap</documentation>
-<input message="tns:getSpecificPublicProcurementLawIn"/>
-<output message="tns:getSpecificPublicProcurementLawOut"/>
-</operation>
-<operation name="getTenderLabelTemplates">
-<documentation>@nillable</documentation>
-<input message="tns:getTenderLabelTemplatesIn"/>
-<output message="tns:getTenderLabelTemplatesOut"/>
-</operation>
-<operation name="getFormsatzIds">
-<documentation>@soap</documentation>
-<input message="tns:getFormsatzIdsIn"/>
-<output message="tns:getFormsatzIdsOut"/>
-</operation>
-<operation name="getTenderRegulationDetails">
-<documentation>@soap</documentation>
-<input message="tns:getTenderRegulationDetailsIn"/>
-<output message="tns:getTenderRegulationDetailsOut"/>
-</operation>
-<operation name="getFederalStates">
-<documentation>@soap</documentation>
-<input message="tns:getFederalStatesIn"/>
-<output message="tns:getFederalStatesOut"/>
-</operation>
-<operation name="createTender">
-<documentation>@soap</documentation>
-<input message="tns:createTenderIn"/>
-<output message="tns:createTenderOut"/>
-</operation>
-<operation name="getTnwAddFilesData">
-<documentation>@soap</documentation>
-<input message="tns:getTnwAddFilesDataIn"/>
-<output message="tns:getTnwAddFilesDataOut"/>
-</operation>
-<operation name="getOfferDocInfos">
-<documentation>@soap</documentation>
-<input message="tns:getOfferDocInfosIn"/>
-<output message="tns:getOfferDocInfosOut"/>
-</operation>
-<operation name="generateTokenSession">
-<documentation>generateTokenSession</documentation>
-<input message="tns:generateTokenSessionIn"/>
-</operation>
-</portType>
-<binding name="TenderCreationBinding" type="tns:TenderCreationPort">
-<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-<operation name="_getTokenVal">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#_getTokenVal"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getVergabeordnungMapping">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getVergabeordnungMapping"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="showExportStatusValues">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#showExportStatusValues"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getSuccessfulCompany">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getSuccessfulCompany"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="updateSuccessfulCompany">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#updateSuccessfulCompany"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getTenderExport">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTenderExport"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="authenticate">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#authenticate"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="bidderSearch">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#bidderSearch"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="checkTenderNumber">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#checkTenderNumber"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="releaseTNW">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#releaseTNW"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="crypt">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#crypt"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="finalFirm_approve">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#finalFirm_approve"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="inviteBidders">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#inviteBidders"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="setVobagUser">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#setVobagUser"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="setLvId">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#setLvId"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="openingAction">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#openingAction"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getDatesConfig">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getDatesConfig"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getPublicProcurementLaw">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getPublicProcurementLaw"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getTenderRegulations">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTenderRegulations"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getSpecificPublicProcurementLaw">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getSpecificPublicProcurementLaw"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getTenderLabelTemplates">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTenderLabelTemplates"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getFormsatzIds">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getFormsatzIds"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getTenderRegulationDetails">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTenderRegulationDetails"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getFederalStates">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getFederalStates"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="createTender">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#createTender"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getTnwAddFilesData">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTnwAddFilesData"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="getOfferDocInfos">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getOfferDocInfos"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-<operation name="generateTokenSession">
-<soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#generateTokenSession"/>
-<input>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</input>
-<output>
-<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</output>
-</operation>
-</binding>
-<service name="TenderCreationService">
-<port name="TenderCreationPort" binding="tns:TenderCreationBinding">
-<soap:address location="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
-</port>
-</service>
-<message name="_getTokenValIn">
-<part name="Vobag_user" type="xsd:anyType"/>
-<part name="hex" type="xsd:string"/>
-</message>
-<message name="_getTokenValOut">
-<part name="return" type="xsd:string"/>
-</message>
-<message name="getVergabeordnungMappingIn"/>
-<message name="getVergabeordnungMappingOut">
-<part name="return" type="tns:ArrayOfUnclassified_Key_Value"/>
-</message>
-<message name="showExportStatusValuesIn"/>
-<message name="showExportStatusValuesOut">
-<part name="return" type="tns:ArrayOfUnclassified_Key_Value"/>
-</message>
-<message name="getSuccessfulCompanyIn">
-<part name="params" type="tns:SuccessfulBidderSearchParams"/>
-</message>
-<message name="getSuccessfulCompanyOut">
-<part name="return" type="tns:SuccessfulBidderParams"/>
-</message>
-<message name="updateSuccessfulCompanyIn">
-<part name="params" type="tns:SuccessfulBidderParams"/>
-</message>
-<message name="updateSuccessfulCompanyOut">
-<part name="return" type="tns:TenderCreationStatus"/>
-</message>
-<message name="getTenderExportIn">
-<part name="params" type="tns:Export_Search_values"/>
-</message>
-<message name="getTenderExportOut">
-<part name="return" type="tns:ArrayOfStatusResultData"/>
-</message>
-<message name="authenticateIn">
-<part name="username" type="xsd:string"/>
-<part name="password" type="xsd:string"/>
-<part name="language" type="xsd:string"/>
-</message>
-<message name="authenticateOut">
-<part name="return" type="tns:TenderCreationStatus"/>
-</message>
-<message name="bidderSearchIn">
-<part name="name_part" type="xsd:string"/>
-<part name="session_id" type="xsd:string"/>
-</message>
-<message name="bidderSearchOut">
-<part name="return" type="tns:ArrayOfCompanyReturn"/>
-</message>
-<message name="checkTenderNumberIn">
-<part name="_NameAward" type="xsd:string"/>
-<part name="NamePrj" type="xsd:string"/>
-<part name="session_id" type="xsd:string"/>
-</message>
-<message name="checkTenderNumberOut">
-<part name="return" type="tns:TenderCreationStatus"/>
-</message>
-<message name="releaseTNWIn">
-<part name="token" type="xsd:string"/>
-<part name="ag_lv_id" type="xsd:int"/>
-</message>
-<message name="releaseTNWOut">
-<part name="return" type="xsd:boolean"/>
-</message>
-<message name="cryptIn">
-<part name="stream" type="xsd:string"/>
-<part name="token" type="xsd:string"/>
-</message>
-<message name="cryptOut">
-<part name="return" type="xsd:string"/>
-</message>
-<message name="finalFirm_approveIn">
-<part name="token" type="xsd:string"/>
-<part name="ag_lv_id" type="xsd:int"/>
-</message>
-<message name="finalFirm_approveOut">
-<part name="return" type="xsd:boolean"/>
-</message>
-<message name="inviteBiddersIn">
-<part name="token" type="xsd:string"/>
-<part name="ag_lv_id" type="xsd:int"/>
-</message>
-<message name="inviteBiddersOut">
-<part name="return" type="xsd:boolean"/>
-</message>
-<message name="setVobagUserIn">
-<part name="Vobag_user" type="xsd:anyType"/>
-<part name="token" type="xsd:string"/>
-</message>
-<message name="setLvIdIn">
-<part name="ag_lv_id" type="xsd:int"/>
-<part name="projekt_id" type="xsd:int"/>
-<part name="token" type="xsd:string"/>
-</message>
-<message name="setLvIdOut">
-<part name="return" type="xsd:boolean"/>
-</message>
-<message name="openingActionIn">
-<part name="ag_lv_id" type="xsd:int"/>
-<part name="token" type="xsd:anyType"/>
-<part name="add_paper_bidders" type="xsd:anyType"/>
-<part name="finish_opening" type="xsd:anyType"/>
-<part name="Vobag_user" type="xsd:anyType"/>
-</message>
-<message name="openingActionOut">
-<part name="return" type="xsd:string"/>
-</message>
-<message name="getDatesConfigIn">
-<part name="virtual_va_id" type="xsd:int"/>
-<part name="session_id" type="xsd:string"/>
-</message>
-<message name="getDatesConfigOut">
-<part name="return" type="tns:ArrayOfDateConfig_return"/>
-</message>
-<message name="getPublicProcurementLawIn">
-<part name="session_id" type="xsd:string"/>
-</message>
-<message name="getPublicProcurementLawOut">
-<part name="return" type="tns:ArrayOfPublicProcurementLaw"/>
-</message>
-<message name="getTenderRegulationsIn">
-<part name="vv_id" type="xsd:int"/>
-<part name="session_id" type="xsd:string"/>
-</message>
-<message name="getTenderRegulationsOut">
-<part name="return" type="tns:ArrayOfTenderRegulation"/>
-</message>
-<message name="getSpecificPublicProcurementLawIn">
-<part name="vv_id" type="xsd:int"/>
-<part name="session_id" type="xsd:string"/>
-</message>
-<message name="getSpecificPublicProcurementLawOut">
-<part name="return" type="tns:ArrayOfSpecificsPublicProcurementLaw"/>
-</message>
-<message name="getTenderLabelTemplatesIn">
-<part name="area" type="xsd:string"/>
-</message>
-<message name="getTenderLabelTemplatesOut">
-<part name="return" type="tns:ArrayOfVobag_Vergabe_Bez"/>
-</message>
-<message name="getFormsatzIdsIn">
-<part name="virtual_va_id" type="xsd:int"/>
-<part name="lots" type="xsd:boolean"/>
-<part name="session_id" type="xsd:string"/>
-</message>
-<message name="getFormsatzIdsOut">
-<part name="return" type="tns:ArrayOfTenderConfig_Formsets"/>
-</message>
-<message name="getTenderRegulationDetailsIn">
-<part name="virtual_va_id" type="xsd:int"/>
-<part name="session_id" type="xsd:string"/>
-</message>
-<message name="getTenderRegulationDetailsOut">
-<part name="return" type="tns:ArrayOfRegulationDetail"/>
-</message>
-<message name="getFederalStatesIn"/>
-<message name="getFederalStatesOut">
-<part name="return" type="tns:ArrayOfTenderConfig_FederalStates"/>
-</message>
-<message name="createTenderIn">
-<part name="TenderCreationObject" type="tns:TenderCreationObject"/>
-</message>
-<message name="createTenderOut">
-<part name="return" type="tns:TenderCreationStatus"/>
-</message>
-<message name="getTnwAddFilesDataIn">
-<part name="token" type="xsd:string"/>
-</message>
-<message name="getTnwAddFilesDataOut">
-<part name="return" type="tns:InfosForContentXml"/>
-</message>
-<message name="getOfferDocInfosIn">
-<part name="token" type="xsd:string"/>
-</message>
-<message name="getOfferDocInfosOut">
-<part name="return" type="tns:InfosForContentXml"/>
-</message>
-<message name="generateTokenSessionIn">
-<part name="Vobag_user" type="xsd:anyType"/>
-</message>
+  <types>
+    <xsd:schema targetNamespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <xsd:import schemaLocation="soapenc.xsd" namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <xsd:complexType name="ArrayOfUnclassified_Key_Value">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Unclassified_Key_Value[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Unclassified_Key_Value">
+        <xsd:all>
+          <xsd:element name="key" type="xsd:string"/>
+          <xsd:element name="value" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SuccessfulBidderSearchParams">
+        <xsd:all>
+          <xsd:element name="project_nr" type="xsd:string"/>
+          <xsd:element name="tender_nr" type="xsd:string"/>
+          <xsd:element name="losnummer" type="xsd:int"/>
+          <xsd:element name="session_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SuccessfulBidderParams">
+        <xsd:all>
+          <xsd:element name="vobag_vergabe_id" type="xsd:string"/>
+          <xsd:element name="firmenname1" type="xsd:string"/>
+          <xsd:element name="firmenname2" type="xsd:string"/>
+          <xsd:element name="strasse" type="xsd:string"/>
+          <xsd:element name="plz" type="xsd:string"/>
+          <xsd:element name="ort" type="xsd:string"/>
+          <xsd:element name="tel1" type="xsd:string"/>
+          <xsd:element name="fax" type="xsd:string"/>
+          <xsd:element name="email" type="xsd:string"/>
+          <xsd:element name="company_id" type="xsd:string"/>
+          <xsd:element name="ust_id" type="xsd:string"/>
+          <xsd:element name="gepruefte_summe" type="xsd:string"/>
+          <xsd:element name="auftragsnummer" type="xsd:string"/>
+          <xsd:element name="vobag_auswertung_details_id" type="xsd:int"/>
+          <xsd:element name="vobag_auswertung_id" type="xsd:int"/>
+          <xsd:element name="vobag_lv_id" type="xsd:int"/>
+          <xsd:element name="session_id" type="xsd:string"/>
+          <xsd:element name="error" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreationStatus">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:int"/>
+          <xsd:element name="code_text" type="xsd:string"/>
+          <xsd:element name="message" type="xsd:string"/>
+          <xsd:element name="session_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Export_Search_values">
+        <xsd:all>
+          <xsd:element name="project_nr" type="xsd:string"/>
+          <xsd:element name="tender_nr" type="xsd:string"/>
+          <xsd:element name="status_filter" type="xsd:string"/>
+          <xsd:element name="status_changed" type="xsd:string"/>
+          <xsd:element name="find_deleted" type="xsd:boolean"/>
+          <xsd:element name="session_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfStatusResultData">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:StatusResultData[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Status">
+        <xsd:all>
+          <xsd:element name="status_id" type="xsd:int"/>
+          <xsd:element name="beschreibung" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfLot_Tender">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Lot_Tender[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Company">
+        <xsd:all>
+          <xsd:element name="Name1" type="xsd:string"/>
+          <xsd:element name="Street" type="xsd:string"/>
+          <xsd:element name="PCode" type="xsd:string"/>
+          <xsd:element name="City" type="xsd:string"/>
+          <xsd:element name="_SummeAuftrag" type="xsd:float"/>
+          <xsd:element name="_NachlassAngebot" type="xsd:float"/>
+          <xsd:element name="_AngebotsDatum" type="xsd:string"/>
+          <xsd:element name="ust_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Award">
+        <xsd:all>
+          <xsd:element name="Auftragnehmer" type="tns:Company"/>
+          <xsd:element name="auftragsnummer" type="xsd:string"/>
+          <xsd:element name="auftragsversand_datum" type="xsd:string"/>
+          <xsd:element name="hoehe_buergschaft" type="xsd:float"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="CPV">
+        <xsd:all>
+          <xsd:element name="cpv_nr" type="xsd:string"/>
+          <xsd:element name="cpv_bezeichnung" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCPV">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:CPV[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="CSBF">
+        <xsd:all>
+          <xsd:element name="Koordinator" type="xsd:string"/>
+          <xsd:element name="csbf_id" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Lot_Tender">
+        <xsd:all>
+          <xsd:element name="Award" type="tns:Award"/>
+          <xsd:element name="CPV_haupt" type="tns:CPV"/>
+          <xsd:element name="CPV_ergaenzend" type="tns:ArrayOfCPV"/>
+          <xsd:element name="losnummer" type="xsd:int"/>
+          <xsd:element name="is_aufgehoben" type="xsd:boolean"/>
+          <xsd:element name="CSBF" type="tns:CSBF"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StatusResultData">
+        <xsd:all>
+          <xsd:element name="project_nr" type="xsd:string"/>
+          <xsd:element name="tender_nr" type="xsd:string"/>
+          <xsd:element name="bookmark" type="xsd:string"/>
+          <xsd:element name="vergabe_status_id" type="xsd:int"/>
+          <xsd:element name="vergabe_status_prosa" type="xsd:string"/>
+          <xsd:element name="opening_date" type="xsd:string"/>
+          <xsd:element name="starting_date" type="xsd:string"/>
+          <xsd:element name="end_accept_date" type="xsd:string"/>
+          <xsd:element name="regulation" type="xsd:string"/>
+          <xsd:element name="EstimValue" type="xsd:float"/>
+          <xsd:element name="EstimValueGross" type="xsd:float"/>
+          <xsd:element name="ungebundene_vorgesehene_mittel" type="xsd:float"/>
+          <xsd:element name="verfuegbare_mittel" type="xsd:float"/>
+          <xsd:element name="betrag_kostenkontrolle" type="xsd:float"/>
+          <xsd:element name="regulation_id" type="xsd:int"/>
+          <xsd:element name="is_eu" type="xsd:boolean"/>
+          <xsd:element name="cat" type="xsd:string"/>
+          <xsd:element name="cat_id" type="xsd:int"/>
+          <xsd:element name="_Reason" type="xsd:string"/>
+          <xsd:element name="is_aufgehoben" type="xsd:boolean"/>
+          <xsd:element name="_AltOffer" type="xsd:boolean"/>
+          <xsd:element name="_LocPrj" type="xsd:string"/>
+          <xsd:element name="auftrags_datum" type="xsd:string"/>
+          <xsd:element name="Status_csbf" type="tns:Status"/>
+          <xsd:element name="tender_deleted" type="xsd:boolean"/>
+          <xsd:element name="Lot_Tender" type="tns:ArrayOfLot_Tender"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCompanyReturn">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:CompanyReturn[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="CompanyReturn">
+        <xsd:all>
+          <xsd:element name="platform_company_id" type="xsd:int"/>
+          <xsd:element name="company_name" type="xsd:string"/>
+          <xsd:element name="company_zipcode" type="xsd:string"/>
+          <xsd:element name="company_location" type="xsd:string"/>
+          <xsd:element name="company_street" type="xsd:string"/>
+          <xsd:element name="company_id" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfDateConfig_return">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:DateConfig_return[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="DateConfig_return">
+        <xsd:all>
+          <xsd:element name="field" type="xsd:string"/>
+          <xsd:element name="required" type="xsd:boolean"/>
+          <xsd:element name="description" type="xsd:string"/>
+          <xsd:element name="dattype" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfPublicProcurementLaw">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:PublicProcurementLaw[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PublicProcurementLaw">
+        <xsd:all>
+          <xsd:element name="label" type="xsd:string"/>
+          <xsd:element name="short" type="xsd:string"/>
+          <xsd:element name="id" type="xsd:string"/>
+          <xsd:element name="is_eu" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTenderRegulation">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderRegulation[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TenderRegulation">
+        <xsd:all>
+          <xsd:element name="vergabeverfahren" type="xsd:string"/>
+          <xsd:element name="virtual_id" type="xsd:int"/>
+          <xsd:element name="is_tnw" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSpecificsPublicProcurementLaw">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:SpecificsPublicProcurementLaw[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SpecificsPublicProcurementLaw">
+        <xsd:all>
+          <xsd:element name="id" type="xsd:int"/>
+          <xsd:element name="label" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfVobag_Vergabe_Bez">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Vobag_Vergabe_Bez[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Vobag_Vergabe_Bez">
+        <xsd:all>
+          <xsd:element name="vobag_vergabe_bez_id" type="xsd:int"/>
+          <xsd:element name="nr" type="xsd:string"/>
+          <xsd:element name="bezeichnung" type="xsd:string"/>
+          <xsd:element name="stlb" type="xsd:boolean"/>
+          <xsd:element name="vobc" type="xsd:boolean"/>
+          <xsd:element name="stlk" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTenderConfig_Formsets">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderConfig_Formsets[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TenderConfig_Formsets">
+        <xsd:all>
+          <xsd:element name="fs_name" type="xsd:string"/>
+          <xsd:element name="fs_id" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfRegulationDetail">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:RegulationDetail[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="RegulationDetail">
+        <xsd:all>
+          <xsd:element name="detail_id" type="xsd:int"/>
+          <xsd:element name="regulation_label" type="xsd:string"/>
+          <xsd:element name="is_framecontract" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTenderConfig_FederalStates">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderConfig_FederalStates[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TenderConfig_FederalStates">
+        <xsd:all>
+          <xsd:element name="federal_state" type="xsd:string"/>
+          <xsd:element name="id" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ProjectConfig">
+        <xsd:all>
+          <xsd:element name="NamePrj" type="xsd:string"/>
+          <xsd:element name="LblPrj" type="xsd:string"/>
+          <xsd:element name="Descrip" type="xsd:string"/>
+          <xsd:element name="AddText" type="xsd:string"/>
+          <xsd:element name="_LocPrj" type="xsd:string"/>
+          <xsd:element name="verfuegbare_mittel" type="xsd:float"/>
+          <xsd:element name="ungebundene_vorgesehene_mittel" type="xsd:float"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTenderCreation_CPV">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderCreation_CPV[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreation_CPV">
+        <xsd:all>
+          <xsd:element name="CPV_Code" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAttachment">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Attachment[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Attachment">
+        <xsd:all>
+          <xsd:element name="filename" type="xsd:string"/>
+          <xsd:element name="file_content" type="xsd:string"/>
+          <xsd:element name="filesize" type="xsd:int"/>
+          <xsd:element name="is_folder" type="xsd:boolean"/>
+          <xsd:element name="childs" type="tns:ArrayOfAttachment"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTenderCreation_LotsDetails">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderCreation_LotsDetails[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreation_Gaeb">
+        <xsd:all>
+          <xsd:element name="filename" type="xsd:string"/>
+          <xsd:element name="filesize" type="xsd:string"/>
+          <xsd:element name="file_content" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreation_LotsDetails">
+        <xsd:all>
+          <xsd:element name="nr" type="xsd:int"/>
+          <xsd:element name="name" type="xsd:string"/>
+          <xsd:element name="gaebfile" type="tns:TenderCreation_Gaeb"/>
+          <xsd:element name="_CPV_List" type="tns:ArrayOfTenderCreation_CPV"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreation_Lose">
+        <xsd:all>
+          <xsd:element name="ag_lose_one" type="xsd:boolean"/>
+          <xsd:element name="ag_lose_select" type="xsd:boolean"/>
+          <xsd:element name="ag_lose_all" type="xsd:boolean"/>
+          <xsd:element name="Lot_details" type="tns:ArrayOfTenderCreation_LotsDetails"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="DateTime">
+        <xsd:all/>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTenderCreation_Nachweise">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderCreation_Nachweise[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreation_Nachweise">
+        <xsd:all>
+          <xsd:element name="nachweis" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfTenderCreation_Kriterien">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:TenderCreation_Kriterien[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreation_Kriterien">
+        <xsd:all>
+          <xsd:element name="kriterium" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreation_TNW">
+        <xsd:all>
+          <xsd:element name="_Nachweise" type="tns:ArrayOfTenderCreation_Nachweise"/>
+          <xsd:element name="_Bewerberbogen_Pflicht" type="xsd:boolean"/>
+          <xsd:element name="_Kriterien" type="tns:ArrayOfTenderCreation_Kriterien"/>
+          <xsd:element name="_Bewertung" type="xsd:string"/>
+          <xsd:element name="tvgg_docs_neccessary" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreation_OfferTypes">
+        <xsd:all>
+          <xsd:element name="ot_advanced_signature" type="xsd:boolean"/>
+          <xsd:element name="ot_qualified_signature" type="xsd:boolean"/>
+          <xsd:element name="ot_cover_sheet" type="xsd:boolean"/>
+          <xsd:element name="ot_paper" type="xsd:boolean"/>
+          <xsd:element name="ot_eu_text" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Disabled_Items">
+        <xsd:all>
+          <xsd:element name="LblPrj" type="xsd:boolean"/>
+          <xsd:element name="NamePrj" type="xsd:boolean"/>
+          <xsd:element name="_NameAward" type="xsd:boolean"/>
+          <xsd:element name="_LblAward" type="xsd:boolean"/>
+          <xsd:element name="_Lots" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="TenderConfig">
+        <xsd:all>
+          <xsd:element name="_Formsatz" type="xsd:int"/>
+          <xsd:element name="_NameAward" type="xsd:string"/>
+          <xsd:element name="vertragserfuell_buergschaft" type="xsd:float"/>
+          <xsd:element name="maengelanspr_buergschaft" type="xsd:float"/>
+          <xsd:element name="_LblAward" type="xsd:string"/>
+          <xsd:element name="_LocAward" type="xsd:string"/>
+          <xsd:element name="_CPV_List" type="tns:ArrayOfTenderCreation_CPV"/>
+          <xsd:element name="_Editor" type="xsd:string"/>
+          <xsd:element name="attachments" type="tns:ArrayOfAttachment"/>
+          <xsd:element name="betrag_kostenkontrolle" type="xsd:float"/>
+          <xsd:element name="_Annotation" type="xsd:string"/>
+          <xsd:element name="_Lots" type="xsd:boolean"/>
+          <xsd:element name="_Lose" type="tns:TenderCreation_Lose"/>
+          <xsd:element name="_AltOffer" type="xsd:boolean"/>
+          <xsd:element name="_PlacingNotice" type="xsd:boolean"/>
+          <xsd:element name="additional_data" type="tns:ArrayOfUnclassified_Key_Value"/>
+          <xsd:element name="_EstimValue" type="xsd:float"/>
+          <xsd:element name="_EstimValueGross" type="xsd:float"/>
+          <xsd:element name="gew_preis" type="xsd:int"/>
+          <xsd:element name="gew_leistung" type="xsd:int"/>
+          <xsd:element name="_DateAward" type="tns:DateTime"/>
+          <xsd:element name="awardDocs_complete" type="xsd:boolean"/>
+          <xsd:element name="finalFirm_approve" type="xsd:boolean"/>
+          <xsd:element name="InviteBidders" type="xsd:boolean"/>
+          <xsd:element name="_Reason" type="xsd:string"/>
+          <xsd:element name="_ContractType" type="xsd:int"/>
+          <xsd:element name="_ShortDescription" type="xsd:string"/>
+          <xsd:element name="_Testvergabe" type="xsd:boolean"/>
+          <xsd:element name="_EstimValueVat" type="xsd:int"/>
+          <xsd:element name="show_discount_at_price_list" type="xsd:string"/>
+          <xsd:element name="_TNW" type="tns:TenderCreation_TNW"/>
+          <xsd:element name="_OfferTypes" type="tns:TenderCreation_OfferTypes"/>
+          <xsd:element name="_Depart" type="xsd:string"/>
+          <xsd:element name="_PercentQuotaNational" type="xsd:boolean"/>
+          <xsd:element name="_AltOffer_ha" type="xsd:boolean"/>
+          <xsd:element name="_is_tx_client" type="xsd:boolean"/>
+          <xsd:element name="_is_hasta" type="xsd:boolean"/>
+          <xsd:element name="virtual_va_id" type="xsd:int"/>
+          <xsd:element name="_ZusGliederung" type="xsd:int"/>
+          <xsd:element name="_SpezVergabeord" type="xsd:int"/>
+          <xsd:element name="public_access" type="xsd:boolean"/>
+          <xsd:element name="public_access_begruendung" type="xsd:string"/>
+          <xsd:element name="_OfferWithoutAvasign" type="xsd:boolean"/>
+          <xsd:element name="mit_preisen" type="xsd:boolean"/>
+          <xsd:element name="gaebfile" type="tns:TenderCreation_Gaeb"/>
+          <xsd:element name="_FederalState" type="xsd:int"/>
+          <xsd:element name="Disabled_Items" type="tns:Disabled_Items"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="DatesConfig">
+        <xsd:all>
+          <xsd:element name="CnstStart" type="xsd:string"/>
+          <xsd:element name="CnstEnd" type="xsd:string"/>
+          <xsd:element name="_SendDate" type="tns:DateTime"/>
+          <xsd:element name="OpenDateTime" type="tns:DateTime"/>
+          <xsd:element name="EvalEnd" type="tns:DateTime"/>
+          <xsd:element name="_PartCompDateTime" type="tns:DateTime"/>
+          <xsd:element name="_ApplyPeriodStart" type="tns:DateTime"/>
+          <xsd:element name="_ApplyPeriodEnd" type="tns:DateTime"/>
+          <xsd:element name="vertragslaufzeit_angabe" type="xsd:string"/>
+          <xsd:element name="ag_dauer_einheit" type="xsd:string"/>
+          <xsd:element name="ag_dauer" type="xsd:int"/>
+          <xsd:element name="ag_dauer_spanne_beginn" type="tns:DateTime"/>
+          <xsd:element name="ag_dauer_spanne_ende" type="tns:DateTime"/>
+          <xsd:element name="_OfferDeadline" type="tns:DateTime"/>
+          <xsd:element name="fristverkuerzung" type="xsd:int"/>
+          <xsd:element name="fristverkuerzung_begruendung" type="xsd:string"/>
+          <xsd:element name="frist_schriftl_anfragen" type="tns:DateTime"/>
+          <xsd:element name="frist_schrift_frag_tnw_folgend" type="tns:DateTime"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCompanyImport">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:CompanyImport[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="CompanyImport">
+        <xsd:all>
+          <xsd:element name="platform_company_id" type="xsd:int"/>
+          <xsd:element name="hhv_id" type="xsd:int"/>
+          <xsd:element name="bidder_nr" type="xsd:int"/>
+          <xsd:element name="anrede" type="xsd:string"/>
+          <xsd:element name="vname" type="xsd:string"/>
+          <xsd:element name="nname" type="xsd:string"/>
+          <xsd:element name="ust_id" type="xsd:string"/>
+          <xsd:element name="firmenname" type="xsd:string"/>
+          <xsd:element name="strasse" type="xsd:string"/>
+          <xsd:element name="plz" type="xsd:string"/>
+          <xsd:element name="ort" type="xsd:string"/>
+          <xsd:element name="tel" type="xsd:string"/>
+          <xsd:element name="email" type="xsd:string"/>
+          <xsd:element name="land" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Bidder_Config">
+        <xsd:all>
+          <xsd:element name="CompanyImport" type="tns:ArrayOfCompanyImport"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="TenderCreationObject">
+        <xsd:all>
+          <xsd:element name="Project_Config" type="tns:ProjectConfig"/>
+          <xsd:element name="Tender_Config" type="tns:TenderConfig"/>
+          <xsd:element name="Dates_Config" type="tns:DatesConfig"/>
+          <xsd:element name="Bidder_Config" type="tns:Bidder_Config"/>
+          <xsd:element name="session_id" type="xsd:string"/>
+          <xsd:element name="is_auto_tender" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfGaeb_return">
+        <xsd:complexContent>
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute ref="soap-enc:arrayType" wsdl:arrayType="tns:Gaeb_return[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Gaeb_return">
+        <xsd:all>
+          <xsd:element name="filename" type="xsd:string"/>
+          <xsd:element name="vobag_anh_id" type="xsd:int"/>
+          <xsd:element name="losnummer" type="xsd:int"/>
+          <xsd:element name="los_anh_id" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="OfferDocument_return">
+        <xsd:all>
+          <xsd:element name="filename" type="xsd:string"/>
+          <xsd:element name="vobag_anh_id" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="InfosForContentXml">
+        <xsd:all>
+          <xsd:element name="Gaeb_return" type="tns:ArrayOfGaeb_return"/>
+          <xsd:element name="OfferDocument_return" type="tns:OfferDocument_return"/>
+          <xsd:element name="vobag_lv_id" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <portType name="TenderCreationPort">
+    <operation name="_getTokenVal">
+      <documentation>erstellt den Token, welcher als schneller Nachweis des Logins des Clients dient</documentation>
+      <input message="tns:_getTokenValIn"/>
+      <output message="tns:_getTokenValOut"/>
+    </operation>
+    <operation name="getVergabeordnungMapping">
+      <documentation>@soap</documentation>
+      <input message="tns:getVergabeordnungMappingIn"/>
+      <output message="tns:getVergabeordnungMappingOut"/>
+    </operation>
+    <operation name="showExportStatusValues">
+      <documentation>@soap</documentation>
+      <input message="tns:showExportStatusValuesIn"/>
+      <output message="tns:showExportStatusValuesOut"/>
+    </operation>
+    <operation name="getSuccessfulCompany">
+      <documentation>@soap</documentation>
+      <input message="tns:getSuccessfulCompanyIn"/>
+      <output message="tns:getSuccessfulCompanyOut"/>
+    </operation>
+    <operation name="updateSuccessfulCompany">
+      <documentation>@soap</documentation>
+      <input message="tns:updateSuccessfulCompanyIn"/>
+      <output message="tns:updateSuccessfulCompanyOut"/>
+    </operation>
+    <operation name="getTenderExport">
+      <documentation>@soap</documentation>
+      <input message="tns:getTenderExportIn"/>
+      <output message="tns:getTenderExportOut"/>
+    </operation>
+    <operation name="authenticate">
+      <documentation>@soap</documentation>
+      <input message="tns:authenticateIn"/>
+      <output message="tns:authenticateOut"/>
+    </operation>
+    <operation name="bidderSearch">
+      <documentation>@soap</documentation>
+      <input message="tns:bidderSearchIn"/>
+      <output message="tns:bidderSearchOut"/>
+    </operation>
+    <operation name="checkTenderNumber">
+      <documentation>@soap</documentation>
+      <input message="tns:checkTenderNumberIn"/>
+      <output message="tns:checkTenderNumberOut"/>
+    </operation>
+    <operation name="releaseTNW">
+      <documentation>@soap</documentation>
+      <input message="tns:releaseTNWIn"/>
+      <output message="tns:releaseTNWOut"/>
+    </operation>
+    <operation name="crypt">
+      <documentation>@soap</documentation>
+      <input message="tns:cryptIn"/>
+      <output message="tns:cryptOut"/>
+    </operation>
+    <operation name="finalFirm_approve">
+      <documentation>@soap</documentation>
+      <input message="tns:finalFirm_approveIn"/>
+      <output message="tns:finalFirm_approveOut"/>
+    </operation>
+    <operation name="inviteBidders">
+      <documentation>@soap</documentation>
+      <input message="tns:inviteBiddersIn"/>
+      <output message="tns:inviteBiddersOut"/>
+    </operation>
+    <operation name="setVobagUser">
+      <documentation>Selenium - Funktion</documentation>
+      <input message="tns:setVobagUserIn"/>
+    </operation>
+    <operation name="setLvId">
+      <documentation>für die Bookmark - Actions</documentation>
+      <input message="tns:setLvIdIn"/>
+      <output message="tns:setLvIdOut"/>
+    </operation>
+    <operation name="openingAction">
+      <documentation>Selenium Funktion</documentation>
+      <input message="tns:openingActionIn"/>
+      <output message="tns:openingActionOut"/>
+    </operation>
+    <operation name="getDatesConfig">
+      <documentation>@soap</documentation>
+      <input message="tns:getDatesConfigIn"/>
+      <output message="tns:getDatesConfigOut"/>
+    </operation>
+    <operation name="getPublicProcurementLaw">
+      <documentation>@soap</documentation>
+      <input message="tns:getPublicProcurementLawIn"/>
+      <output message="tns:getPublicProcurementLawOut"/>
+    </operation>
+    <operation name="getTenderRegulations">
+      <documentation>@soap</documentation>
+      <input message="tns:getTenderRegulationsIn"/>
+      <output message="tns:getTenderRegulationsOut"/>
+    </operation>
+    <operation name="getSpecificPublicProcurementLaw">
+      <documentation>@soap</documentation>
+      <input message="tns:getSpecificPublicProcurementLawIn"/>
+      <output message="tns:getSpecificPublicProcurementLawOut"/>
+    </operation>
+    <operation name="getTenderLabelTemplates">
+      <documentation>@nillable</documentation>
+      <input message="tns:getTenderLabelTemplatesIn"/>
+      <output message="tns:getTenderLabelTemplatesOut"/>
+    </operation>
+    <operation name="getFormsatzIds">
+      <documentation>@soap</documentation>
+      <input message="tns:getFormsatzIdsIn"/>
+      <output message="tns:getFormsatzIdsOut"/>
+    </operation>
+    <operation name="getTenderRegulationDetails">
+      <documentation>@soap</documentation>
+      <input message="tns:getTenderRegulationDetailsIn"/>
+      <output message="tns:getTenderRegulationDetailsOut"/>
+    </operation>
+    <operation name="getFederalStates">
+      <documentation>@soap</documentation>
+      <input message="tns:getFederalStatesIn"/>
+      <output message="tns:getFederalStatesOut"/>
+    </operation>
+    <operation name="createTender">
+      <documentation>@soap</documentation>
+      <input message="tns:createTenderIn"/>
+      <output message="tns:createTenderOut"/>
+    </operation>
+    <operation name="getTnwAddFilesData">
+      <documentation>@soap</documentation>
+      <input message="tns:getTnwAddFilesDataIn"/>
+      <output message="tns:getTnwAddFilesDataOut"/>
+    </operation>
+    <operation name="getOfferDocInfos">
+      <documentation>@soap</documentation>
+      <input message="tns:getOfferDocInfosIn"/>
+      <output message="tns:getOfferDocInfosOut"/>
+    </operation>
+    <operation name="generateTokenSession">
+      <documentation>generateTokenSession</documentation>
+      <input message="tns:generateTokenSessionIn"/>
+    </operation>
+  </portType>
+  <binding name="TenderCreationBinding" type="tns:TenderCreationPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="_getTokenVal">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#_getTokenVal"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getVergabeordnungMapping">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getVergabeordnungMapping"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="showExportStatusValues">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#showExportStatusValues"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getSuccessfulCompany">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getSuccessfulCompany"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="updateSuccessfulCompany">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#updateSuccessfulCompany"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getTenderExport">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTenderExport"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="authenticate">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#authenticate"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="bidderSearch">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#bidderSearch"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="checkTenderNumber">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#checkTenderNumber"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="releaseTNW">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#releaseTNW"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="crypt">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#crypt"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="finalFirm_approve">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#finalFirm_approve"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="inviteBidders">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#inviteBidders"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="setVobagUser">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#setVobagUser"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="setLvId">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#setLvId"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="openingAction">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#openingAction"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getDatesConfig">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getDatesConfig"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getPublicProcurementLaw">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getPublicProcurementLaw"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getTenderRegulations">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTenderRegulations"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getSpecificPublicProcurementLaw">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getSpecificPublicProcurementLaw"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getTenderLabelTemplates">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTenderLabelTemplates"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getFormsatzIds">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getFormsatzIds"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getTenderRegulationDetails">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTenderRegulationDetails"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getFederalStates">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getFederalStates"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="createTender">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#createTender"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getTnwAddFilesData">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getTnwAddFilesData"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="getOfferDocInfos">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#getOfferDocInfos"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+    <operation name="generateTokenSession">
+      <soap:operation soapAction="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin#generateTokenSession"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="TenderCreationService">
+    <port name="TenderCreationPort" binding="tns:TenderCreationBinding">
+      <soap:address location="https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin"/>
+    </port>
+  </service>
+  <message name="_getTokenValIn">
+    <part name="Vobag_user" type="xsd:anyType"/>
+    <part name="hex" type="xsd:string"/>
+  </message>
+  <message name="_getTokenValOut">
+    <part name="return" type="xsd:string"/>
+  </message>
+  <message name="getVergabeordnungMappingIn"/>
+  <message name="getVergabeordnungMappingOut">
+    <part name="return" type="tns:ArrayOfUnclassified_Key_Value"/>
+  </message>
+  <message name="showExportStatusValuesIn"/>
+  <message name="showExportStatusValuesOut">
+    <part name="return" type="tns:ArrayOfUnclassified_Key_Value"/>
+  </message>
+  <message name="getSuccessfulCompanyIn">
+    <part name="params" type="tns:SuccessfulBidderSearchParams"/>
+  </message>
+  <message name="getSuccessfulCompanyOut">
+    <part name="return" type="tns:SuccessfulBidderParams"/>
+  </message>
+  <message name="updateSuccessfulCompanyIn">
+    <part name="params" type="tns:SuccessfulBidderParams"/>
+  </message>
+  <message name="updateSuccessfulCompanyOut">
+    <part name="return" type="tns:TenderCreationStatus"/>
+  </message>
+  <message name="getTenderExportIn">
+    <part name="params" type="tns:Export_Search_values"/>
+  </message>
+  <message name="getTenderExportOut">
+    <part name="return" type="tns:ArrayOfStatusResultData"/>
+  </message>
+  <message name="authenticateIn">
+    <part name="username" type="xsd:string"/>
+    <part name="password" type="xsd:string"/>
+    <part name="language" type="xsd:string"/>
+  </message>
+  <message name="authenticateOut">
+    <part name="return" type="tns:TenderCreationStatus"/>
+  </message>
+  <message name="bidderSearchIn">
+    <part name="name_part" type="xsd:string"/>
+    <part name="session_id" type="xsd:string"/>
+  </message>
+  <message name="bidderSearchOut">
+    <part name="return" type="tns:ArrayOfCompanyReturn"/>
+  </message>
+  <message name="checkTenderNumberIn">
+    <part name="_NameAward" type="xsd:string"/>
+    <part name="NamePrj" type="xsd:string"/>
+    <part name="session_id" type="xsd:string"/>
+  </message>
+  <message name="checkTenderNumberOut">
+    <part name="return" type="tns:TenderCreationStatus"/>
+  </message>
+  <message name="releaseTNWIn">
+    <part name="token" type="xsd:string"/>
+    <part name="ag_lv_id" type="xsd:int"/>
+  </message>
+  <message name="releaseTNWOut">
+    <part name="return" type="xsd:boolean"/>
+  </message>
+  <message name="cryptIn">
+    <part name="stream" type="xsd:string"/>
+    <part name="token" type="xsd:string"/>
+  </message>
+  <message name="cryptOut">
+    <part name="return" type="xsd:string"/>
+  </message>
+  <message name="finalFirm_approveIn">
+    <part name="token" type="xsd:string"/>
+    <part name="ag_lv_id" type="xsd:int"/>
+  </message>
+  <message name="finalFirm_approveOut">
+    <part name="return" type="xsd:boolean"/>
+  </message>
+  <message name="inviteBiddersIn">
+    <part name="token" type="xsd:string"/>
+    <part name="ag_lv_id" type="xsd:int"/>
+  </message>
+  <message name="inviteBiddersOut">
+    <part name="return" type="xsd:boolean"/>
+  </message>
+  <message name="setVobagUserIn">
+    <part name="Vobag_user" type="xsd:anyType"/>
+    <part name="token" type="xsd:string"/>
+  </message>
+  <message name="setLvIdIn">
+    <part name="ag_lv_id" type="xsd:int"/>
+    <part name="projekt_id" type="xsd:int"/>
+    <part name="token" type="xsd:string"/>
+  </message>
+  <message name="setLvIdOut">
+    <part name="return" type="xsd:boolean"/>
+  </message>
+  <message name="openingActionIn">
+    <part name="ag_lv_id" type="xsd:int"/>
+    <part name="token" type="xsd:anyType"/>
+    <part name="add_paper_bidders" type="xsd:anyType"/>
+    <part name="finish_opening" type="xsd:anyType"/>
+    <part name="Vobag_user" type="xsd:anyType"/>
+  </message>
+  <message name="openingActionOut">
+    <part name="return" type="xsd:string"/>
+  </message>
+  <message name="getDatesConfigIn">
+    <part name="virtual_va_id" type="xsd:int"/>
+    <part name="session_id" type="xsd:string"/>
+  </message>
+  <message name="getDatesConfigOut">
+    <part name="return" type="tns:ArrayOfDateConfig_return"/>
+  </message>
+  <message name="getPublicProcurementLawIn">
+    <part name="session_id" type="xsd:string"/>
+  </message>
+  <message name="getPublicProcurementLawOut">
+    <part name="return" type="tns:ArrayOfPublicProcurementLaw"/>
+  </message>
+  <message name="getTenderRegulationsIn">
+    <part name="vv_id" type="xsd:int"/>
+    <part name="session_id" type="xsd:string"/>
+  </message>
+  <message name="getTenderRegulationsOut">
+    <part name="return" type="tns:ArrayOfTenderRegulation"/>
+  </message>
+  <message name="getSpecificPublicProcurementLawIn">
+    <part name="vv_id" type="xsd:int"/>
+    <part name="session_id" type="xsd:string"/>
+  </message>
+  <message name="getSpecificPublicProcurementLawOut">
+    <part name="return" type="tns:ArrayOfSpecificsPublicProcurementLaw"/>
+  </message>
+  <message name="getTenderLabelTemplatesIn">
+    <part name="area" type="xsd:string"/>
+  </message>
+  <message name="getTenderLabelTemplatesOut">
+    <part name="return" type="tns:ArrayOfVobag_Vergabe_Bez"/>
+  </message>
+  <message name="getFormsatzIdsIn">
+    <part name="virtual_va_id" type="xsd:int"/>
+    <part name="lots" type="xsd:boolean"/>
+    <part name="session_id" type="xsd:string"/>
+  </message>
+  <message name="getFormsatzIdsOut">
+    <part name="return" type="tns:ArrayOfTenderConfig_Formsets"/>
+  </message>
+  <message name="getTenderRegulationDetailsIn">
+    <part name="virtual_va_id" type="xsd:int"/>
+    <part name="session_id" type="xsd:string"/>
+  </message>
+  <message name="getTenderRegulationDetailsOut">
+    <part name="return" type="tns:ArrayOfRegulationDetail"/>
+  </message>
+  <message name="getFederalStatesIn"/>
+  <message name="getFederalStatesOut">
+    <part name="return" type="tns:ArrayOfTenderConfig_FederalStates"/>
+  </message>
+  <message name="createTenderIn">
+    <part name="TenderCreationObject" type="tns:TenderCreationObject"/>
+  </message>
+  <message name="createTenderOut">
+    <part name="return" type="tns:TenderCreationStatus"/>
+  </message>
+  <message name="getTnwAddFilesDataIn">
+    <part name="token" type="xsd:string"/>
+  </message>
+  <message name="getTnwAddFilesDataOut">
+    <part name="return" type="tns:InfosForContentXml"/>
+  </message>
+  <message name="getOfferDocInfosIn">
+    <part name="token" type="xsd:string"/>
+  </message>
+  <message name="getOfferDocInfosOut">
+    <part name="return" type="tns:InfosForContentXml"/>
+  </message>
+  <message name="generateTokenSessionIn">
+    <part name="Vobag_user" type="xsd:anyType"/>
+  </message>
 </definitions>
