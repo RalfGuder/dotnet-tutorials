@@ -11,7 +11,7 @@ import javax.xml.namespace.QName;
 
 @WebService(name = "CountryServiceImplService", 
   targetNamespace = "https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin", 
-  wsdlLocation = "https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin&action=wsdl")
+  wsdlLocation = "http://localhost:4434/tender?wsdl")
 public class TenderCreationServiceImpl extends Service {
 
   private final static URL COUNTRYSERVICEIMPLSERVICE_WSDL_LOCATION;
@@ -23,7 +23,7 @@ public class TenderCreationServiceImpl extends Service {
       URL url = null;
       WebServiceException e = null;
       try {
-          url = new URL("file:////C:/Users/10170328/git/dotnet-tutorials/jaxb-wsdl/src/main/resources/rib.wsdl");
+          url = new URL("http://localhost:4434/tender?wsdl");
       } catch (MalformedURLException ex) {
           e = new WebServiceException(ex);
       }
@@ -50,4 +50,10 @@ public class TenderCreationServiceImpl extends Service {
       return COUNTRYSERVICEIMPLSERVICE_WSDL_LOCATION;
   }
 
+  public static void main(String[] args) {
+    TenderCreationServiceImpl service = new TenderCreationServiceImpl();
+    TenderCreationService tenderCreationService = service.getTenderCreationServiceImplPort();
+    tenderCreationService.authenticate("liertka", "kkk", "de");
+    
+  }
 }
