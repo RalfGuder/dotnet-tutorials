@@ -20,11 +20,11 @@ import https.test_arriba_net_de.dispatcher.TenderCreationPort;
 import https.test_arriba_net_de.dispatcher.TenderCreationStatus;
 import jakarta.jws.WebService;
 import jakarta.xml.ws.Endpoint;
+import jakarta.xml.ws.WebEndpoint;
+import javax.xml.namespace.QName;
 
-@WebService(endpointInterface = "https.test_arriba_net_de.dispatcher.TenderCreationPort",targetNamespace = "https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin")
-public class TenderCreation implements TenderCreationPort{
-
-
+@WebService(endpointInterface = "https.test_arriba_net_de.dispatcher.TenderCreationService",targetNamespace = "https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin")
+public class TenderCreationServer implements TenderCreationPort{
 
   @Override
   public TenderCreationStatus authenticate(String username, String password, String language) {
@@ -37,9 +37,13 @@ public class TenderCreation implements TenderCreationPort{
     return xx;
   }
   
+  @WebEndpoint(name = "TenderCreationPort")
+  public TenderCreationPort getTenderCreationPort() {
+    return this;
+}
   public static void main(String[] args) {
     String url = ( args.length > 0 ) ? args[0] : "http://localhost:4434/tender";
-    Endpoint.publish( url, new TenderCreation());
+    Endpoint.publish( url, new TenderCreationServer());
   }
 
   @Override

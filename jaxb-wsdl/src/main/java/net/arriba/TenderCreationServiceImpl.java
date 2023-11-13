@@ -9,7 +9,7 @@ import java.net.URL;
 import javax.xml.namespace.QName;
 
 
-@WebService(name = "CountryServiceImplService", 
+@WebService(name = "TenderCreationService", 
   targetNamespace = "https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin", 
   wsdlLocation = "http://localhost:4434/tender?wsdl")
 public class TenderCreationServiceImpl extends Service {
