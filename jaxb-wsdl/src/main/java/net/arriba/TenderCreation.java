@@ -4,10 +4,12 @@ import com.sun.xml.ws.api.message.Header;
 import com.sun.xml.ws.api.message.HeaderList;
 import jakarta.annotation.Resource;
 import jakarta.jws.WebService;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.xml.ws.Endpoint;
 import jakarta.xml.ws.WebServiceContext;
 import jakarta.xml.ws.WebServiceException;
 import jakarta.xml.ws.handler.MessageContext;
+import java.io.IOException;
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
@@ -64,7 +66,7 @@ public class TenderCreation implements TenderCreationPort {
   @Override
   public TenderCreationStatus createTender(TenderCreationObject tenderCreationObject) {
 
-    Object xx = getUsername();
+    checkSessionId();
 
     if (tenderCreationObject != null && tenderCreationObject.getSessionId().equals(SESSION_ID)) {
       return new TenderCreationStatus();
@@ -72,7 +74,22 @@ public class TenderCreation implements TenderCreationPort {
     throw new WebServiceException();
   }
 
-  private String getUsername() {
+  private void checkSessionId() {
+    if(!getSeesionId().equals(SESSION_ID)) {
+      MessageContext ctx = context.getMessageContext();
+      HttpServletResponse response =  (HttpServletResponse) ctx.get(MessageContext.SERVLET_RESPONSE);
+      try {
+        response.sendError(401, " You want it!");
+      } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+    }
+    
+    
+  }
+
+  private String getSeesionId() {
     MessageContext mc = context.getMessageContext();
     HeaderList headers = (HeaderList) mc.get("com.sun.xml.ws.api.message.HeaderList");
     Header header = headers.get(MYHEADER, false);
