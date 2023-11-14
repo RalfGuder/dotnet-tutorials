@@ -206,9 +206,16 @@ public class TenderCreation implements TenderCreationPort {
 
   @Override
   public ArrayOfPublicProcurementLaw getPublicProcurementLaw(String sessionId) {
+    System.out.println("getPublicProcurementLaw(sessionId:" + sessionId + ")");
     if (checkSessionId(sessionId)) {
       ArrayOfPublicProcurementLaw result = new ArrayOfPublicProcurementLaw();
       result.add(new PublicProcurementLaw("Bauleistungen1", "VOB/Aed", "387", false));
+      result.add(new PublicProcurementLaw("Vergabe- und Vertragsordnung für Bauleistungen (VOB)", "VOB/EU", "390", true));
+      result.add(new PublicProcurementLaw("ABCD - Vergabe- und Vertragsordnung. für Leistungen", "VOL/A", "47", false));
+      result.add(new PublicProcurementLaw("Vergabe- und Vertragsordnung. für Leistungen (VOL)", "VOL/EU", "437", true));
+      result.add(new PublicProcurementLaw("Vergabe- und Vertragsordnung. für frei. Leistungen", "LHO", "169", false));
+      result.add(new PublicProcurementLaw("Vergabe- und Vertragsordnung. für frei. Leistungen (VgV)", "VgV", "484", true));
+      result.add(new PublicProcurementLaw("Unterschwellenvergabeordnung (UVgO)", "UVgO", "604", false));
       return result;
     } 
     throw new HTTPException(HttpServletResponse.SC_UNAUTHORIZED);
@@ -216,6 +223,7 @@ public class TenderCreation implements TenderCreationPort {
 
   @Override
   public ArrayOfTenderRegulation getTenderRegulations(int vvId, String sessionId) {
+    System.out.println("getTenderRegulations(vvId:" + vvId + ", sessionId:" + sessionId + ")");
     if (checkSessionId(sessionId)) {
       ArrayOfTenderRegulation result = new ArrayOfTenderRegulation();
       result.add(new TenderRegulation("Öffentliche Ausschreibung", 200,  true));
@@ -246,6 +254,7 @@ public class TenderCreation implements TenderCreationPort {
 
   @Override
   public ArrayOfRegulationDetail getTenderRegulationDetails(int virtualVaId, String sessionId) {
+    System.out.println("getTenderRegulationDetails(virtualVaId:" + virtualVaId + ", sessionId" + sessionId + ")");
     if (checkSessionId(sessionId)) {
       ArrayOfRegulationDetail result = new ArrayOfRegulationDetail();
       result.add(new RegulationDetail(839, "Planung und Ausführung",  true));
