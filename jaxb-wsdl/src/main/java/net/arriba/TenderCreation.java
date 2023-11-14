@@ -1,19 +1,39 @@
 package net.arriba;
 
-import com.sun.xml.ws.api.message.*;
+import com.sun.xml.ws.api.message.Header;
+import com.sun.xml.ws.api.message.HeaderList;
 import jakarta.annotation.Resource;
 import jakarta.jws.WebService;
 import jakarta.xml.ws.Endpoint;
 import jakarta.xml.ws.WebServiceContext;
 import jakarta.xml.ws.WebServiceException;
 import jakarta.xml.ws.handler.MessageContext;
-import java.util.List;
-import java.util.Map;
 import javax.xml.namespace.QName;
-import localhost._4434.tender.*;
+import javax.xml.stream.XMLStreamConstants;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
+import localhost._4434.tender.ArrayOfCompanyReturn;
+import localhost._4434.tender.ArrayOfDateConfigReturn;
+import localhost._4434.tender.ArrayOfPublicProcurementLaw;
+import localhost._4434.tender.ArrayOfRegulationDetail;
+import localhost._4434.tender.ArrayOfSpecificsPublicProcurementLaw;
+import localhost._4434.tender.ArrayOfStatusResultData;
+import localhost._4434.tender.ArrayOfTenderConfigFederalStates;
+import localhost._4434.tender.ArrayOfTenderConfigFormsets;
+import localhost._4434.tender.ArrayOfTenderRegulation;
+import localhost._4434.tender.ArrayOfUnclassifiedKeyValue;
+import localhost._4434.tender.ArrayOfVobagVergabeBez;
+import localhost._4434.tender.ExportSearchValues;
+import localhost._4434.tender.InfosForContentXml;
+import localhost._4434.tender.SuccessfulBidderParams;
+import localhost._4434.tender.SuccessfulBidderSearchParams;
+import localhost._4434.tender.TenderCreationObject;
+import localhost._4434.tender.TenderCreationPort;
+import localhost._4434.tender.TenderCreationStatus;
 
-@WebService(endpointInterface = "localhost._4434.tender.TenderCreationPort", targetNamespace = TenderCreation.NAMESPACE)
-public class TenderCreation implements TenderCreationPort{
+@WebService(endpointInterface = "localhost._4434.tender.TenderCreationPort",
+    targetNamespace = TenderCreation.NAMESPACE)
+public class TenderCreation implements TenderCreationPort {
 
   @Resource
   WebServiceContext context;
@@ -25,7 +45,7 @@ public class TenderCreation implements TenderCreationPort{
   @Override
   public TenderCreationStatus authenticate(String username, String password, String language) {
     System.out.println("Username: " + username);
-    if(username != null && username.equals("s-lierka")) {
+    if (username != null && username.equals("s-lierka")) {
       TenderCreationStatus xx = new TenderCreationStatus();
       xx.setCode(0);
       xx.setCodeText("");
@@ -35,31 +55,45 @@ public class TenderCreation implements TenderCreationPort{
     }
     throw new WebServiceException();
   }
-  
+
   public static void main(String[] args) {
-    String url = ( args.length > 0 ) ? args[0] : NAMESPACE;
-    Endpoint.publish( url, new TenderCreation());
+    String url = (args.length > 0) ? args[0] : NAMESPACE;
+    Endpoint.publish(url, new TenderCreation());
   }
 
   @Override
   public TenderCreationStatus createTender(TenderCreationObject tenderCreationObject) {
-    
+
     Object xx = getUsername();
-    
-    if(tenderCreationObject != null && tenderCreationObject.getSessionId().equals(SESSION_ID)) {
+
+    if (tenderCreationObject != null && tenderCreationObject.getSessionId().equals(SESSION_ID)) {
       return new TenderCreationStatus();
     }
-   throw new WebServiceException();
+    throw new WebServiceException();
   }
-  
-  private String getUsername()
-  {
+
+  private String getUsername() {
     MessageContext mc = context.getMessageContext();
-    Map headers = (Map)mc.get("com.sun.xml.ws.api.message.HeaderList");
-    List Users = (List)headers.get("PHPSESSID");
-    return Users.get(0).toString();
+    HeaderList headers = (HeaderList) mc.get("com.sun.xml.ws.api.message.HeaderList");
+    Header header = headers.get(MYHEADER, false);
+    XMLStreamReader reader;
+    try {
+      reader = header.readHeader();
+      while (reader.hasNext()) {
+        if (reader.next() == XMLStreamConstants.START_ELEMENT
+            && reader.getLocalName().equals("PHPSESSID")) {
+          return reader.getElementText();
+        }
+      }
+    } catch (XMLStreamException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+
+    return "";
   }
-  
+
+
 
   @Override
   public String getTokenVal(Object vobagUser, String hex) {
@@ -137,7 +171,7 @@ public class TenderCreation implements TenderCreationPort{
   @Override
   public void setVobagUser(Object vobagUser, String token) {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
@@ -218,7 +252,7 @@ public class TenderCreation implements TenderCreationPort{
   @Override
   public void generateTokenSession(Object vobagUser) {
     // TODO Auto-generated method stub
-    
+
   }
 
 }
