@@ -2,6 +2,7 @@ package net.arriba;
 
 import jakarta.jws.WebService;
 import jakarta.xml.ws.Endpoint;
+import javax.xml.ws.WebServiceException;
 import localhost._4434.tender.*;
 
 @WebService(endpointInterface = "localhost._4434.tender.TenderCreationPort", targetNamespace = TenderCreation.HTTP_LOCALHOST_4434_TENDER)
@@ -14,12 +15,15 @@ public class TenderCreation implements TenderCreationPort{
   @Override
   public TenderCreationStatus authenticate(String username, String password, String language) {
     System.out.println("Username: " + username);
-    TenderCreationStatus xx = new TenderCreationStatus();
-    xx.setCode(0);
-    xx.setCodeText("");
-    xx.setMessage("ok");
-    xx.setSessionId("swd33");
-    return xx;
+    if(username.equals("-s-lierka")) {
+      TenderCreationStatus xx = new TenderCreationStatus();
+      xx.setCode(0);
+      xx.setCodeText("");
+      xx.setMessage("OK");
+      xx.setSessionId("5085182de37b3495267d22c12fdb7aed");
+      return xx;
+    }
+    throw new WebServiceException("(401) Unauthorized Access");
   }
   
   public static void main(String[] args) {
