@@ -1,30 +1,15 @@
 package net.arriba;
 
-import https.test_arriba_net_de.dispatcher.ArrayOfCompanyReturn;
-import https.test_arriba_net_de.dispatcher.ArrayOfDateConfigReturn;
-import https.test_arriba_net_de.dispatcher.ArrayOfPublicProcurementLaw;
-import https.test_arriba_net_de.dispatcher.ArrayOfRegulationDetail;
-import https.test_arriba_net_de.dispatcher.ArrayOfSpecificsPublicProcurementLaw;
-import https.test_arriba_net_de.dispatcher.ArrayOfStatusResultData;
-import https.test_arriba_net_de.dispatcher.ArrayOfTenderConfigFederalStates;
-import https.test_arriba_net_de.dispatcher.ArrayOfTenderConfigFormsets;
-import https.test_arriba_net_de.dispatcher.ArrayOfTenderRegulation;
-import https.test_arriba_net_de.dispatcher.ArrayOfUnclassifiedKeyValue;
-import https.test_arriba_net_de.dispatcher.ArrayOfVobagVergabeBez;
-import https.test_arriba_net_de.dispatcher.ExportSearchValues;
-import https.test_arriba_net_de.dispatcher.InfosForContentXml;
-import https.test_arriba_net_de.dispatcher.SuccessfulBidderParams;
-import https.test_arriba_net_de.dispatcher.SuccessfulBidderSearchParams;
-import https.test_arriba_net_de.dispatcher.TenderCreationObject;
-import https.test_arriba_net_de.dispatcher.TenderCreationPort;
-import https.test_arriba_net_de.dispatcher.TenderCreationStatus;
 import jakarta.jws.WebService;
 import jakarta.xml.ws.Endpoint;
+import localhost._4434.tender.*;
 
-@WebService(endpointInterface = "https.test_arriba_net_de.dispatcher.TenderCreationPort",targetNamespace = "https://test.arriba-net.de/dispatcher.php?plugin=TenderCreationPlugin")
+@WebService(endpointInterface = "localhost._4434.tender.TenderCreationPort", targetNamespace = TenderCreation.HTTP_LOCALHOST_4434_TENDER)
 public class TenderCreation implements TenderCreationPort{
 
 
+
+  static final String HTTP_LOCALHOST_4434_TENDER = "http://localhost:4434/tender";
 
   @Override
   public TenderCreationStatus authenticate(String username, String password, String language) {
@@ -38,7 +23,7 @@ public class TenderCreation implements TenderCreationPort{
   }
   
   public static void main(String[] args) {
-    String url = ( args.length > 0 ) ? args[0] : "http://localhost:4434/tender";
+    String url = ( args.length > 0 ) ? args[0] : HTTP_LOCALHOST_4434_TENDER;
     Endpoint.publish( url, new TenderCreation());
   }
 

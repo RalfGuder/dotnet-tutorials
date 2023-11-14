@@ -52,7 +52,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<wsdlLocation>/test.wsdl</wsdlLocation>
+				  <wsdlLocation>/test.wsdl</wsdlLocation>
 					<wsdlDirectory>${project.basedir}/src/main/resources/</wsdlDirectory>
 					<extension>true</extension>
 				</configuration>
