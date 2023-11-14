@@ -1,12 +1,14 @@
 package net.arriba;
 
 import com.sun.xml.ws.api.message.*;
-import com.sun.xml.ws.developer.JAXWSProperties;
 import jakarta.annotation.Resource;
 import jakarta.jws.WebService;
 import jakarta.xml.ws.Endpoint;
 import jakarta.xml.ws.WebServiceContext;
 import jakarta.xml.ws.WebServiceException;
+import jakarta.xml.ws.handler.MessageContext;
+import java.util.List;
+import java.util.Map;
 import javax.xml.namespace.QName;
 import localhost._4434.tender.*;
 
@@ -41,13 +43,23 @@ public class TenderCreation implements TenderCreationPort{
 
   @Override
   public TenderCreationStatus createTender(TenderCreationObject tenderCreationObject) {
-    HeaderList hl = (HeaderList) context.getMessageContext().get(JAXWSProperties.INBOUND_HEADER_LIST_PROPERTY);
-    Header h = hl.get(MYHEADER);
+    
+    Object xx = getUsername();
+    
     if(tenderCreationObject != null && tenderCreationObject.getSessionId().equals(SESSION_ID)) {
       return new TenderCreationStatus();
     }
    throw new WebServiceException();
   }
+  
+  private String getUsername()
+  {
+    MessageContext mc = context.getMessageContext();
+    Map headers = (Map)mc.get("com.sun.xml.ws.api.message.HeaderList");
+    List Users = (List)headers.get("PHPSESSID");
+    return Users.get(0).toString();
+  }
+  
 
   @Override
   public String getTokenVal(Object vobagUser, String hex) {
