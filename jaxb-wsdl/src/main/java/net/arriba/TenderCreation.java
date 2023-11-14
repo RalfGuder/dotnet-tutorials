@@ -1,20 +1,24 @@
 package net.arriba;
 
+import com.sun.xml.ws.api.message.*;
+import com.sun.xml.ws.developer.JAXWSProperties;
 import jakarta.annotation.Resource;
 import jakarta.jws.WebService;
 import jakarta.xml.ws.Endpoint;
 import jakarta.xml.ws.WebServiceContext;
 import jakarta.xml.ws.WebServiceException;
+import javax.xml.namespace.QName;
 import localhost._4434.tender.*;
 
-@WebService(endpointInterface = "localhost._4434.tender.TenderCreationPort", targetNamespace = TenderCreation.HTTP_LOCALHOST_4434_TENDER)
+@WebService(endpointInterface = "localhost._4434.tender.TenderCreationPort", targetNamespace = TenderCreation.NAMESPACE)
 public class TenderCreation implements TenderCreationPort{
 
   @Resource
   WebServiceContext context;
 
   private static final String SESSION_ID = "5085182de37b3495267d22c12fdb7aed";
-  static final String HTTP_LOCALHOST_4434_TENDER = "http://localhost:4434/tender";
+  static final String NAMESPACE = "http://localhost:4434/tender";
+  private static final QName MYHEADER = new QName(NAMESPACE, "SessionHeader");
 
   @Override
   public TenderCreationStatus authenticate(String username, String password, String language) {
@@ -31,12 +35,14 @@ public class TenderCreation implements TenderCreationPort{
   }
   
   public static void main(String[] args) {
-    String url = ( args.length > 0 ) ? args[0] : HTTP_LOCALHOST_4434_TENDER;
+    String url = ( args.length > 0 ) ? args[0] : NAMESPACE;
     Endpoint.publish( url, new TenderCreation());
   }
 
   @Override
   public TenderCreationStatus createTender(TenderCreationObject tenderCreationObject) {
+    HeaderList hl = (HeaderList) context.getMessageContext().get(JAXWSProperties.INBOUND_HEADER_LIST_PROPERTY);
+    Header h = hl.get(MYHEADER);
     if(tenderCreationObject != null && tenderCreationObject.getSessionId().equals(SESSION_ID)) {
       return new TenderCreationStatus();
     }
