@@ -9,6 +9,7 @@ import jakarta.xml.ws.Endpoint;
 import jakarta.xml.ws.WebServiceContext;
 import jakarta.xml.ws.WebServiceException;
 import jakarta.xml.ws.handler.MessageContext;
+import jakarta.xml.ws.http.HTTPException;
 import java.io.IOException;
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLStreamConstants;
@@ -76,14 +77,7 @@ public class TenderCreation implements TenderCreationPort {
 
   private void checkSessionId() {
     if(!getSeesionId().equals(SESSION_ID)) {
-      MessageContext ctx = context.getMessageContext();
-      HttpServletResponse response =  (HttpServletResponse) ctx.get(MessageContext.SERVLET_RESPONSE);
-      try {
-        response.sendError(401, " You want it!");
-      } catch (IOException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-      }
+      throw new HTTPException(401);
     }
     
     
@@ -93,6 +87,7 @@ public class TenderCreation implements TenderCreationPort {
     MessageContext mc = context.getMessageContext();
     HeaderList headers = (HeaderList) mc.get("com.sun.xml.ws.api.message.HeaderList");
     Header header = headers.get(MYHEADER, false);
+    if (header == null) return "";
     XMLStreamReader reader;
     try {
       reader = header.readHeader();
