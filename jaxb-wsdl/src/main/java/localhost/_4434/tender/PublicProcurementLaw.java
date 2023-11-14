@@ -44,6 +44,22 @@ public class PublicProcurementLaw {
     @XmlElement(name = "is_eu")
     protected boolean isEu;
 
+    public PublicProcurementLaw() {
+      super();
+    }
+    
+    
+    
+    public PublicProcurementLaw(String label, String _short, String id, boolean isEu) {
+      super();
+      this.label = label;
+      this._short = _short;
+      this.id = id;
+      this.isEu = isEu;
+    }
+
+
+
     /**
      * Ruft den Wert der label-Eigenschaft ab.
      * 

@@ -3,7 +3,10 @@ package https.test_arriba_net_de.dispatcher;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 import org.xmlsoap.schemas.soap.encoding.Array;
 
 
@@ -30,5 +33,16 @@ public class ArrayOfPublicProcurementLaw
     extends Array
 {
 
+  @XmlElement(name = "item")
+  private List<PublicProcurementLaw> item;
 
+  @Override
+  public List<?> getAny() {
+    if(this.item == null) {
+      this.item = new ArrayList<PublicProcurementLaw>();
+    }
+    return this.item;
+  }
+  
+  
 }

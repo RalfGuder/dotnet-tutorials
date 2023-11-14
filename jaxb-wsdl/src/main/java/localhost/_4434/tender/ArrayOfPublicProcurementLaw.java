@@ -3,7 +3,10 @@ package localhost._4434.tender;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 import org.xmlsoap.schemas.soap.encoding.Array;
 
 
@@ -29,6 +32,26 @@ import org.xmlsoap.schemas.soap.encoding.Array;
 public class ArrayOfPublicProcurementLaw
     extends Array
 {
+  
+  @XmlElement(name = "item")
+  private List<PublicProcurementLaw> items;
+
+  
+  
+  public ArrayOfPublicProcurementLaw() {
+    super();
+    this.items = new ArrayList<PublicProcurementLaw>();
+  }
+
+  @Override
+  public List<?> getAny() {
+    return this.items;
+  }
+
+  public void add(PublicProcurementLaw item) {
+    this.items.add(item);
+  }
+  
 
 
 }

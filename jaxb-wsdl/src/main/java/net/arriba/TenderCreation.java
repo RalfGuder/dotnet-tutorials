@@ -28,6 +28,7 @@ import localhost._4434.tender.ArrayOfUnclassifiedKeyValue;
 import localhost._4434.tender.ArrayOfVobagVergabeBez;
 import localhost._4434.tender.ExportSearchValues;
 import localhost._4434.tender.InfosForContentXml;
+import localhost._4434.tender.PublicProcurementLaw;
 import localhost._4434.tender.SuccessfulBidderParams;
 import localhost._4434.tender.SuccessfulBidderSearchParams;
 import localhost._4434.tender.TenderCreationObject;
@@ -67,19 +68,14 @@ public class TenderCreation implements TenderCreationPort {
   @Override
   public TenderCreationStatus createTender(TenderCreationObject tenderCreationObject) {
 
-    checkSessionId();
-
-    if (tenderCreationObject != null && tenderCreationObject.getSessionId().equals(SESSION_ID)) {
+    if (tenderCreationObject != null &&  checkSessionId(tenderCreationObject.getSessionId())) {
       return new TenderCreationStatus();
     }
-    throw new WebServiceException();
+    throw new HTTPException(HttpServletResponse.SC_UNAUTHORIZED);
   }
 
-  private void checkSessionId() {
-    if(!getSeesionId().equals(SESSION_ID)) {
-      throw new HTTPException(401);
-    }
-    
+  private boolean checkSessionId(String sessionId) {
+    return getSeesionId().equals(sessionId);
     
   }
 
@@ -207,8 +203,12 @@ public class TenderCreation implements TenderCreationPort {
 
   @Override
   public ArrayOfPublicProcurementLaw getPublicProcurementLaw(String sessionId) {
-    // TODO Auto-generated method stub
-    return null;
+    if(checkSessionId(sessionId)) {
+      ArrayOfPublicProcurementLaw result = new ArrayOfPublicProcurementLaw();
+      result.add(new PublicProcurementLaw("Bauleistungen1", "VOB/Aed", "387", false));
+          
+    };
+    throw new HTTPException(HttpServletResponse.SC_UNAUTHORIZED);
   }
 
   @Override
