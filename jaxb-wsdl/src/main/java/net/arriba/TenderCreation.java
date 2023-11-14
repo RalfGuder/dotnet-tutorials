@@ -10,6 +10,7 @@ public class TenderCreation implements TenderCreationPort{
 
 
 
+  private static final String SESSION_ID = "5085182de37b3495267d22c12fdb7aed";
   static final String HTTP_LOCALHOST_4434_TENDER = "http://localhost:4434/tender";
 
   @Override
@@ -20,7 +21,7 @@ public class TenderCreation implements TenderCreationPort{
       xx.setCode(0);
       xx.setCodeText("");
       xx.setMessage("OK");
-      xx.setSessionId("5085182de37b3495267d22c12fdb7aed");
+      xx.setSessionId(SESSION_ID);
       return xx;
     }
     throw new WebServiceException();
@@ -32,9 +33,11 @@ public class TenderCreation implements TenderCreationPort{
   }
 
   @Override
-  public TenderCreationStatus createTender(TenderCreationObject TenderCreationObject) {
-    // TODO Auto-generated method stub
-    return null;
+  public TenderCreationStatus createTender(TenderCreationObject tenderCreationObject) {
+    if(tenderCreationObject != null && tenderCreationObject.getSessionId().equals(SESSION_ID)) {
+      return new TenderCreationStatus();
+    }
+   throw new WebServiceException();
   }
 
   @Override
