@@ -68,7 +68,7 @@ public class TenderCreation implements TenderCreationPort {
   @Override
   public TenderCreationStatus createTender(TenderCreationObject tenderCreationObject) {
 
-    if (tenderCreationObject != null &&  checkSessionId(tenderCreationObject.getSessionId())) {
+    if (tenderCreationObject != null && checkSessionId(tenderCreationObject.getSessionId())) {
       return new TenderCreationStatus();
     }
     throw new HTTPException(HttpServletResponse.SC_UNAUTHORIZED);
@@ -76,14 +76,15 @@ public class TenderCreation implements TenderCreationPort {
 
   private boolean checkSessionId(String sessionId) {
     return getSeesionId().equals(sessionId);
-    
+
   }
 
   private String getSeesionId() {
     MessageContext mc = context.getMessageContext();
     HeaderList headers = (HeaderList) mc.get("com.sun.xml.ws.api.message.HeaderList");
     Header header = headers.get(MYHEADER, false);
-    if (header == null) return "";
+    if (header == null)
+      return "";
     XMLStreamReader reader;
     try {
       reader = header.readHeader();
@@ -203,11 +204,11 @@ public class TenderCreation implements TenderCreationPort {
 
   @Override
   public ArrayOfPublicProcurementLaw getPublicProcurementLaw(String sessionId) {
-    if(checkSessionId(sessionId)) {
+    if (checkSessionId(sessionId)) {
       ArrayOfPublicProcurementLaw result = new ArrayOfPublicProcurementLaw();
       result.add(new PublicProcurementLaw("Bauleistungen1", "VOB/Aed", "387", false));
-          
-    };
+      return result;
+    } 
     throw new HTTPException(HttpServletResponse.SC_UNAUTHORIZED);
   }
 
