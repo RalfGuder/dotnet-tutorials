@@ -1,14 +1,17 @@
 package net.arriba;
 
+import jakarta.annotation.Resource;
 import jakarta.jws.WebService;
 import jakarta.xml.ws.Endpoint;
+import jakarta.xml.ws.WebServiceContext;
 import jakarta.xml.ws.WebServiceException;
 import localhost._4434.tender.*;
 
 @WebService(endpointInterface = "localhost._4434.tender.TenderCreationPort", targetNamespace = TenderCreation.HTTP_LOCALHOST_4434_TENDER)
 public class TenderCreation implements TenderCreationPort{
 
-
+  @Resource
+  WebServiceContext context;
 
   private static final String SESSION_ID = "5085182de37b3495267d22c12fdb7aed";
   static final String HTTP_LOCALHOST_4434_TENDER = "http://localhost:4434/tender";
