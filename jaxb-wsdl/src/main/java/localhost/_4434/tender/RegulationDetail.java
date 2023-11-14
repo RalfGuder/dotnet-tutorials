@@ -41,6 +41,20 @@ public class RegulationDetail {
     @XmlElement(name = "is_framecontract")
     protected boolean isFramecontract;
 
+    
+    
+    
+    public RegulationDetail() {
+      super();
+    }
+
+    public RegulationDetail(int detailId, String regulationLabel, boolean isFramecontract) {
+      super();
+      this.detailId = detailId;
+      this.regulationLabel = regulationLabel;
+      this.isFramecontract = isFramecontract;
+    }
+
     /**
      * Ruft den Wert der detailId-Eigenschaft ab.
      * 

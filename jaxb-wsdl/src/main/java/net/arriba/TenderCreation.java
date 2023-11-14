@@ -29,11 +29,13 @@ import localhost._4434.tender.ArrayOfVobagVergabeBez;
 import localhost._4434.tender.ExportSearchValues;
 import localhost._4434.tender.InfosForContentXml;
 import localhost._4434.tender.PublicProcurementLaw;
+import localhost._4434.tender.RegulationDetail;
 import localhost._4434.tender.SuccessfulBidderParams;
 import localhost._4434.tender.SuccessfulBidderSearchParams;
 import localhost._4434.tender.TenderCreationObject;
 import localhost._4434.tender.TenderCreationPort;
 import localhost._4434.tender.TenderCreationStatus;
+import localhost._4434.tender.TenderRegulation;
 
 @WebService(endpointInterface = "localhost._4434.tender.TenderCreationPort",
     targetNamespace = TenderCreation.NAMESPACE)
@@ -214,8 +216,12 @@ public class TenderCreation implements TenderCreationPort {
 
   @Override
   public ArrayOfTenderRegulation getTenderRegulations(int vvId, String sessionId) {
-    // TODO Auto-generated method stub
-    return null;
+    if (checkSessionId(sessionId)) {
+      ArrayOfTenderRegulation result = new ArrayOfTenderRegulation();
+      result.add(new TenderRegulation("Öffentliche Ausschreibung", 200,  true));
+      return result;
+    } 
+    throw new HTTPException(HttpServletResponse.SC_UNAUTHORIZED);
   }
 
   @Override
@@ -240,8 +246,12 @@ public class TenderCreation implements TenderCreationPort {
 
   @Override
   public ArrayOfRegulationDetail getTenderRegulationDetails(int virtualVaId, String sessionId) {
-    // TODO Auto-generated method stub
-    return null;
+    if (checkSessionId(sessionId)) {
+      ArrayOfRegulationDetail result = new ArrayOfRegulationDetail();
+      result.add(new RegulationDetail(839, "Planung und Ausführung",  true));
+      return result;
+    } 
+    throw new HTTPException(HttpServletResponse.SC_UNAUTHORIZED);
   }
 
   @Override

@@ -41,6 +41,19 @@ public class TenderRegulation {
     @XmlElement(name = "is_tnw")
     protected boolean isTnw;
 
+
+
+    public TenderRegulation() {
+      super();
+    }
+
+    public TenderRegulation(String vergabeverfahren, int virtualId, boolean isTnw) {
+      super();
+      this.vergabeverfahren = vergabeverfahren;
+      this.virtualId = virtualId;
+      this.isTnw = isTnw;
+    }
+
     /**
      * Ruft den Wert der vergabeverfahren-Eigenschaft ab.
      * 

@@ -3,7 +3,10 @@ package localhost._4434.tender;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 import org.xmlsoap.schemas.soap.encoding.Array;
 
 
@@ -30,5 +33,23 @@ public class ArrayOfRegulationDetail
     extends Array
 {
 
+  @XmlElement(name = "item")
+  private List<RegulationDetail> items;
+
+  
+  
+  public ArrayOfRegulationDetail() {
+    super();
+    this.items = new ArrayList<RegulationDetail>();
+  }
+
+  @Override
+  public List<?> getAny() {
+    return this.items;
+  }
+
+  public void add(RegulationDetail item) {
+    this.items.add(item);
+  }
 
 }

@@ -3,7 +3,10 @@ package localhost._4434.tender;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 import org.xmlsoap.schemas.soap.encoding.Array;
 
 
@@ -29,6 +32,25 @@ import org.xmlsoap.schemas.soap.encoding.Array;
 public class ArrayOfTenderRegulation
     extends Array
 {
+
+  @XmlElement(name = "item")
+  private List<TenderRegulation> items;
+
+  
+  
+  public ArrayOfTenderRegulation() {
+    super();
+    this.items = new ArrayList<TenderRegulation>();
+  }
+
+  @Override
+  public List<?> getAny() {
+    return this.items;
+  }
+
+  public void add(TenderRegulation item) {
+    this.items.add(item);
+  }
 
 
 }
