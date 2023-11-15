@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SPConnector">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Prj">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product" type="xs:string" />
+              <xs:element name="User" type="xs:string" />
+              <xs:element name="Path" type="xs:string" />
+              <xs:element name="Key" type="xs:string" />
+              <xs:element name="Version" type="xs:unsignedByte" />
+              <xs:element name="Phase" type="xs:unsignedByte" />
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Mode" type="xs:unsignedByte" />
+              <xs:element name="MasterProjectPath" type="xs:string" />
+              <xs:element name="WICMasterProject" type="xs:string" />
+              <xs:element name="Sync" type="xs:unsignedByte" />
+              <xs:element name="Desc" type="xs:string" />
+              <xs:element name="Currency" type="xs:string" />
+              <xs:element name="SecondCurrency" type="xs:string" />
+              <xs:element name="ForeignMode" type="xs:unsignedByte" />
+              <xs:element name="GermanCountryMode" type="xs:unsignedByte" />
+              <xs:element name="ProjectManager" type="xs:string" />
+              <xs:element name="ProjectStart" type="xs:date" />
+              <xs:element name="ConstrStart" type="xs:date" />
+              <xs:element name="Status" type="xs:string" />
+              <xs:element name="ProjectCat" type="xs:string" />
+              <xs:element name="ProjectType" type="xs:unsignedByte" />
+              <xs:element name="ProjectTypeName" type="xs:string" />
+              <xs:element name="DocDir" type="xs:string" />
+              <xs:element name="DBName" type="xs:string" />
+              <xs:element name="DBSize" type="xs:unsignedInt" />
+              <xs:element name="GFA" type="xs:decimal" />
+              <xs:element name="GRV" type="xs:decimal" />
+              <xs:element name="UA" type="xs:decimal" />
+              <xs:element name="LA" type="xs:unsignedByte" />
+              <xs:element name="UU" type="xs:unsignedByte" />
+              <xs:element name="UUText" type="xs:string" />
+              <xs:element name="ConstrCosts" type="xs:decimal" />
+              <xs:element name="CostSMGFA" type="xs:decimal" />
+              <xs:element name="CostCMGRV" type="xs:decimal" />
+              <xs:element name="CostSMUA" type="xs:decimal" />
+              <xs:element name="CostSMLA" type="xs:decimal" />
+              <xs:element name="CostPerUU" type="xs:decimal" />
+              <xs:element name="Standard" type="xs:unsignedByte" />
+              <xs:element name="Economy" type="xs:unsignedByte" />
+              <xs:element name="Region" type="xs:unsignedByte" />
+              <xs:element name="CostAsOf" type="xs:date" />
+              <xs:element name="LastUse" type="xs:dateTime" />
+              <xs:element name="RestoreDate" type="xs:dateTime" />
+              <xs:element name="ModelCheckDate" type="xs:dateTime" />
+              <xs:element name="DataLoadDate" type="xs:dateTime" />
+              <xs:element name="DataVerificationDate" type="xs:dateTime" />
+              <xs:element name="Adress">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Key" type="xs:string" />
+                    <xs:element name="Disabled" type="xs:unsignedByte" />
+                    <xs:element name="C1" type="xs:string" />
+                    <xs:element name="C4" type="xs:string" />
+                    <xs:element name="Str" type="xs:string" />
+                    <xs:element name="Country" type="xs:string" />
+                    <xs:element name="Zip" type="xs:unsignedInt" />
+                    <xs:element name="City" type="xs:string" />
+                    <xs:element name="Opening" type="xs:string" />
+                    <xs:element name="Contact" type="xs:string" />
+                    <xs:element name="Phone" type="xs:string" />
+                    <xs:element name="Fax" type="xs:string" />
+                    <xs:element name="Mail" type="xs:string" />
+                    <xs:element name="IDOrigin" type="xs:string" />
+                    <xs:element name="AddIDs">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="AddID">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="IDOrigin" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CountyName" type="xs:string" />
+                    <xs:element name="MAC" type="xs:unsignedByte" />
+                    <xs:element name="SPTaxRate" type="xs:unsignedByte" />
+                    <xs:element name="Latitude" type="xs:decimal" />
+                    <xs:element name="Longitude" type="xs:decimal" />
+                    <xs:element name="Rev" type="xs:unsignedByte" />
+                    <xs:element name="LC" type="xs:dateTime" />
+                    <xs:element name="ConfVars">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Var">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" type="xs:string" />
+                                <xs:element name="Val" type="xs:string" />
+                                <xs:element name="ValKey" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Company">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Adress">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Key" type="xs:string" />
+                          <xs:element name="Disabled" type="xs:unsignedByte" />
+                          <xs:element name="C1" type="xs:string" />
+                          <xs:element name="C2" type="xs:string" />
+                          <xs:element name="C4" type="xs:string" />
+                          <xs:element name="Str" type="xs:string" />
+                          <xs:element name="Country" type="xs:string" />
+                          <xs:element name="Zip" type="xs:unsignedInt" />
+                          <xs:element name="City" type="xs:string" />
+                          <xs:element name="Opening" type="xs:string" />
+                          <xs:element name="Contact" type="xs:string" />
+                          <xs:element name="Phone" type="xs:string" />
+                          <xs:element name="Fax" type="xs:string" />
+                          <xs:element name="Mail" type="xs:string" />
+                          <xs:element name="Deb" type="xs:unsignedShort" />
+                          <xs:element name="Cred" type="xs:unsignedByte" />
+                          <xs:element name="IDOrigin" type="xs:string" />
+                          <xs:element name="AddIDs">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="AddID">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="IDOrigin" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="TANr" type="xs:unsignedByte" />
+                          <xs:element name="TAName" type="xs:string" />
+                          <xs:element name="TaxNum" type="xs:unsignedInt" />
+                          <xs:element name="VatID" type="xs:unsignedShort" />
+                          <xs:element name="MAC" type="xs:unsignedByte" />
+                          <xs:element name="SPTaxRate" type="xs:unsignedByte" />
+                          <xs:element name="Latitude" type="xs:decimal" />
+                          <xs:element name="Longitude" type="xs:decimal" />
+                          <xs:element name="Rev" type="xs:unsignedByte" />
+                          <xs:element name="Bank1" type="xs:string" />
+                          <xs:element name="BID1" type="xs:unsignedInt" />
+                          <xs:element name="Acc1" type="xs:unsignedInt" />
+                          <xs:element name="LC" type="xs:dateTime" />
+                          <xs:element name="ConfVars">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Var">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Key" type="xs:string" />
+                                      <xs:element name="Val" type="xs:string" />
+                                      <xs:element name="ValKey" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="BranchOffice">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PropObj">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Prop">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Key" type="xs:string" />
+                                      <xs:element name="Type" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="PropItem" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Department">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PropObj">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Prop">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Key" type="xs:string" />
+                                      <xs:element name="Type" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="PropItem" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CostCenter">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PropObj">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Prop">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Key" type="xs:string" />
+                                      <xs:element name="Type" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="PropItem" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Vars">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="PropObj">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Prop">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" type="xs:string" />
+                                <xs:element name="Type" type="xs:string" />
+                                <xs:element name="Desc" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PropItem">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Value" type="xs:string" />
+                                <xs:element minOccurs="0" name="Detail" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FurtherAdrs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="FurtherAdr">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Desc" type="xs:string" />
+                          <xs:element name="Consortium" type="xs:boolean" />
+                          <xs:element minOccurs="0" name="Adress">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" type="xs:string" />
+                                <xs:element name="Disabled" type="xs:unsignedByte" />
+                                <xs:element name="C1" type="xs:string" />
+                                <xs:element minOccurs="0" name="C2" type="xs:string" />
+                                <xs:element minOccurs="0" name="C4" type="xs:string" />
+                                <xs:element name="Str" type="xs:string" />
+                                <xs:element name="Country" type="xs:string" />
+                                <xs:element name="Zip" type="xs:unsignedInt" />
+                                <xs:element name="City" type="xs:string" />
+                                <xs:element minOccurs="0" name="Contact" type="xs:string" />
+                                <xs:element minOccurs="0" name="Phone" type="xs:string" />
+                                <xs:element minOccurs="0" name="Fax" type="xs:string" />
+                                <xs:element minOccurs="0" name="Mail" type="xs:string" />
+                                <xs:element minOccurs="0" name="Web" type="xs:string" />
+                                <xs:element name="IDOrigin" type="xs:string" />
+                                <xs:element name="AddIDs">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="AddID">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="IDOrigin" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="VatID" type="xs:string" />
+                                <xs:element name="MAC" type="xs:unsignedByte" />
+                                <xs:element name="SPTaxRate" type="xs:unsignedByte" />
+                                <xs:element name="Rev" type="xs:unsignedByte" />
+                                <xs:element name="LC" type="xs:dateTime" />
+                                <xs:element minOccurs="0" name="ConfVars">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element maxOccurs="unbounded" name="Var">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Key" type="xs:string" />
+                                            <xs:element minOccurs="0" name="Val" type="xs:string" />
+                                            <xs:element minOccurs="0" name="ValKey" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DataHistory">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ID" type="xs:unsignedByte" />
+                    <xs:element name="Date" type="xs:date" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Documents" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Path" type="xs:string" />
+              <xs:element name="Key" type="xs:decimal" />
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Phase" type="xs:unsignedByte" />
+              <xs:element name="CurrentSCPackage" type="xs:unsignedByte" />
+              <xs:element name="ReadOnly" type="xs:unsignedByte" />
+              <xs:element name="Disabled" type="xs:unsignedByte" />
+              <xs:element name="VAT" type="xs:unsignedByte" />
+              <xs:element name="VatID" type="xs:unsignedByte" />
+              <xs:element name="CU" type="xs:string" />
+              <xs:element name="CU2" type="xs:string" />
+              <xs:element name="DocDir" type="xs:string" />
+              <xs:element name="ContractType">
+                <xs:complexType>
+                  <xs:attribute name="ID" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="Desc" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="BudgetNet" type="xs:unsignedShort" />
+              <xs:element name="BudgetGross" type="xs:unsignedShort" />
+              <xs:element name="CostPlanningNet" type="xs:unsignedShort" />
+              <xs:element name="CostPlanningGross" type="xs:decimal" />
+              <xs:element name="ContractNet" type="xs:unsignedShort" />
+              <xs:element name="ContractGross" type="xs:decimal" />
+              <xs:element name="ChgOrderApprNet" type="xs:unsignedByte" />
+              <xs:element name="ChgOrderApprGross" type="xs:unsignedByte" />
+              <xs:element name="ChgOrderNotApprNet" type="xs:unsignedByte" />
+              <xs:element name="ChgOrderNotApprGross" type="xs:unsignedByte" />
+              <xs:element name="ReserveNet" type="xs:unsignedByte" />
+              <xs:element name="ReserveGross" type="xs:unsignedByte" />
+              <xs:element name="TotalNet" type="xs:unsignedShort" />
+              <xs:element name="TotalGross" type="xs:decimal" />
+              <xs:element name="Reference" type="xs:unsignedShort" />
+              <xs:element name="AwardNo" type="xs:string" />
+              <xs:element name="AwardMethod">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PropObj">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Prop">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" type="xs:string" />
+                                <xs:element name="Type" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PropItem">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Value" type="xs:unsignedByte" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ContractRegulation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PropObj">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Prop">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" type="xs:string" />
+                                <xs:element name="Type" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PropItem">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Value" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="TenderOpening" type="xs:dateTime" />
+              <xs:element name="AwardDeadline" type="xs:date" />
+              <xs:element name="TenderLocation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PropObj">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Prop">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" type="xs:string" />
+                                <xs:element name="Type" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PropItem">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Value" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Publication" type="xs:date" />
+              <xs:element name="ContractDate" type="xs:date" />
+              <xs:element name="ConstStartPlan" type="xs:date" />
+              <xs:element name="ConstEndPlan" type="xs:date" />
+              <xs:element name="Analysis" type="xs:unsignedByte" />
+              <xs:element name="AcceptanceMethod" type="xs:string" />
+              <xs:element name="WarrantyValue" type="xs:unsignedByte" />
+              <xs:element name="WarrantyUnit" type="xs:unsignedByte" />
+              <xs:element name="PartnerType" type="xs:string" />
+              <xs:element name="AwardFactor" type="xs:decimal" />
+              <xs:element name="AwardTarget" type="xs:decimal" />
+              <xs:element name="LotWise" type="xs:boolean" />
+              <xs:element name="PermitAlternativeTenders" type="xs:boolean" />
+              <xs:element name="AltTendersMode" type="xs:unsignedByte" />
+              <xs:element name="WCs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="CatElement">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Key" type="xs:unsignedByte" />
+                          <xs:element name="Desc" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CPVs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="PropObj">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Prop">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" type="xs:string" />
+                                <xs:element name="Type" type="xs:string" />
+                                <xs:element name="CatRef">
+                                  <xs:complexType>
+                                    <xs:attribute name="Key" type="xs:string" use="required" />
+                                    <xs:attribute name="Desc" type="xs:string" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PropItem" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Client">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Adress">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Key" type="xs:string" />
+                          <xs:element name="Disabled" type="xs:unsignedByte" />
+                          <xs:element name="C1" type="xs:string" />
+                          <xs:element name="C4" type="xs:string" />
+                          <xs:element name="Str" type="xs:string" />
+                          <xs:element name="Country" type="xs:string" />
+                          <xs:element name="Zip" type="xs:unsignedInt" />
+                          <xs:element name="City" type="xs:string" />
+                          <xs:element name="Opening" type="xs:string" />
+                          <xs:element name="Contact" type="xs:string" />
+                          <xs:element name="Phone" type="xs:string" />
+                          <xs:element name="Fax" type="xs:string" />
+                          <xs:element name="IDOrigin" type="xs:string" />
+                          <xs:element name="AddIDs">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="AddID">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="IDOrigin" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="MAC" type="xs:unsignedByte" />
+                          <xs:element name="SPTaxRate" type="xs:unsignedByte" />
+                          <xs:element name="Rev" type="xs:unsignedByte" />
+                          <xs:element name="LC" type="xs:dateTime" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Contractor">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Consortium" type="xs:boolean" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CostCodes" />
+              <xs:element name="Billing" type="xs:unsignedByte" />
+              <xs:element name="CB_Progress">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ContractBasis">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Item">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="DM" type="xs:unsignedByte" />
+                                <xs:element minOccurs="0" name="Percentage" type="xs:unsignedByte" />
+                                <xs:element name="OutlineText" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="ID" type="xs:string" use="required" />
+                              <xs:attribute name="Type" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="Level" type="xs:unsignedByte" use="optional" />
+                              <xs:attribute name="DMIsGross" type="xs:unsignedByte" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CB_PartFinal">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ContractBasis">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Item">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="DM" type="xs:unsignedByte" />
+                                <xs:element minOccurs="0" name="Percentage" type="xs:unsignedByte" />
+                                <xs:element name="OutlineText" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="ID" type="xs:string" use="required" />
+                              <xs:attribute name="Type" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="Level" type="xs:unsignedByte" use="optional" />
+                              <xs:attribute name="DMIsGross" type="xs:unsignedByte" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CB_Final">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ContractBasis">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Item">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="DM" type="xs:unsignedByte" />
+                                <xs:element minOccurs="0" name="Percentage" type="xs:unsignedByte" />
+                                <xs:element name="OutlineText" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="ID" type="xs:string" use="required" />
+                              <xs:attribute name="Type" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="Level" type="xs:unsignedByte" use="optional" />
+                              <xs:attribute name="DMIsGross" type="xs:unsignedByte" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Guarantees">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Guarantee">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Type" type="xs:string" />
+                          <xs:element minOccurs="0" name="Key" type="xs:unsignedByte" />
+                          <xs:element minOccurs="0" name="Description" type="xs:string" />
+                          <xs:element name="OriginalAmount" type="xs:unsignedByte" />
+                          <xs:element name="CurrentAmount" type="xs:unsignedByte" />
+                          <xs:element name="CUR" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="WBS">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Path" type="xs:string" />
+                    <xs:element name="Key" type="xs:unsignedByte" />
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="Structure" type="xs:string" />
+                    <xs:element name="Type" type="xs:unsignedByte" />
+                    <xs:element name="QTOType" type="xs:unsignedByte" />
+                    <xs:element name="Sortmode" type="xs:unsignedByte" />
+                    <xs:element name="Cur" type="xs:string" />
+                    <xs:element name="ItemTotal">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:unsignedShort">
+                            <xs:attribute name="LSUM" type="xs:unsignedByte" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ItempTotalDisc" type="xs:unsignedShort" />
+                    <xs:element name="DataFile" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SCApplicInvoice">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Invoices">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Invoice">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Path" type="xs:string" />
+                                <xs:element name="ID" type="xs:unsignedByte" />
+                                <xs:element name="Description" type="xs:string" />
+                                <xs:element name="CUR" type="xs:string" />
+                                <xs:element name="DestAcc" type="xs:unsignedByte" />
+                                <xs:element name="BPNo" type="xs:unsignedByte" />
+                                <xs:element name="LastModified" type="xs:dateTime" />
+                                <xs:element name="ModifiedBy" type="xs:string" />
+                                <xs:element name="DataSource" type="xs:string" />
+                                <xs:element name="Type" type="xs:string" />
+                                <xs:element name="Package" type="xs:string" />
+                                <xs:element name="Direction" type="xs:string" />
+                                <xs:element name="Reversal" type="xs:unsignedByte" />
+                                <xs:element name="Date" type="xs:date" />
+                                <xs:element name="StartDate" type="xs:date" />
+                                <xs:element name="StartDateBP" type="xs:date" />
+                                <xs:element name="Printed" type="xs:unsignedByte" />
+                                <xs:element name="Original">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="DiscountBaseAmount" type="xs:unsignedByte" />
+                                      <xs:element name="TotalNet" type="xs:unsignedByte" />
+                                      <xs:element name="TotalVAT" type="xs:unsignedByte" />
+                                      <xs:element name="TotalGross" type="xs:unsignedByte" />
+                                      <xs:element name="ReleaseOfPaymentNet" type="xs:unsignedByte" />
+                                      <xs:element name="ReleaseOfPaymentVAT" type="xs:unsignedByte" />
+                                      <xs:element name="ReleaseOfPaymentGross" type="xs:unsignedByte" />
+                                      <xs:element name="UncheckedAmountNet" type="xs:unsignedByte" />
+                                      <xs:element name="UncheckedAmountVAT" type="xs:unsignedByte" />
+                                      <xs:element name="UncheckedAmountGross" type="xs:unsignedByte" />
+                                      <xs:element name="ApplicationSummary">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element maxOccurs="unbounded" name="Row">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" type="xs:unsignedByte" />
+                                                  <xs:element name="Text" type="xs:string" />
+                                                  <xs:element name="RowType" type="xs:string" />
+                                                  <xs:element name="Amount" type="xs:unsignedByte" />
+                                                  <xs:element name="ExToEnt" type="xs:unsignedByte" />
+                                                  <xs:element name="EscalateDiscount" type="xs:unsignedByte" />
+                                                  <xs:element name="Percent" type="xs:unsignedByte" />
+                                                  <xs:element name="DIVISION" type="xs:byte" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="RetentionEndDate" type="xs:date" />
+                                <xs:element name="BPCount" type="xs:unsignedByte" />
+                                <xs:element name="VATRate" type="xs:unsignedByte" />
+                                <xs:element name="VatID" type="xs:unsignedByte" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="QTO">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:choice maxOccurs="unbounded">
+                      <xs:element name="Path" type="xs:string" />
+                      <xs:element name="Name" type="xs:unsignedByte" />
+                      <xs:element name="Title" type="xs:string" />
+                      <xs:element name="Type" type="xs:unsignedByte" />
+                      <xs:element name="Norm" type="xs:unsignedByte" />
+                      <xs:element name="Winkelmass" type="xs:unsignedByte" />
+                      <xs:element name="OZMaske" type="xs:string" />
+                      <xs:element name="_RIB_AdressLaenge" type="xs:unsignedByte" />
+                      <xs:element name="_RIB_BlattLaenge" type="xs:unsignedByte" />
+                      <xs:element name="_RIB_FormelFrei" type="xs:unsignedByte" />
+                      <xs:element name="_RIB_Formel98" type="xs:unsignedByte" />
+                      <xs:element name="_RIB_NegativeWerte" type="xs:unsignedByte" />
+                      <xs:element name="_RIB_BeliebigerUmbruch" type="xs:unsignedByte" />
+                      <xs:element name="AufmassNorm" type="xs:string" />
+                      <xs:element name="AufmassWinkelmass" type="xs:string" />
+                      <xs:element name="Act">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="AzNr" type="xs:unsignedByte" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:choice>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObjContext">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Obj">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ID" type="xs:string" />
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="Title" type="xs:string" />
+                    <xs:element name="Path" type="xs:string" />
+                    <xs:element name="Class" type="xs:string" />
+                    <xs:element name="GUID" type="xs:string" />
+                    <xs:element name="User" type="xs:string" />
+                    <xs:element name="Computer" type="xs:string" />
+                    <xs:element name="Time" type="xs:dateTime" />
+                    <xs:element name="TimeUTC" type="xs:dateTime" />
+                    <xs:element name="Dirs">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="DocDir" type="xs:string" />
+                          <xs:element name="Bin" type="xs:string" />
+                          <xs:element name="ConnectorData" type="xs:string" />
+                          <xs:element name="ConnectorUserData" type="xs:string" />
+                          <xs:element name="ReportDescriptions" type="xs:string" />
+                          <xs:element name="Ribbons" type="xs:string" />
+                          <xs:element name="Configurations" type="xs:string" />
+                          <xs:element name="Layout" type="xs:string" />
+                          <xs:element name="Favourites" type="xs:string" />
+                          <xs:element name="Templates" type="xs:string" />
+                          <xs:element name="ReportTypes" type="xs:string" />
+                          <xs:element name="UserTemplates" type="xs:string" />
+                          <xs:element name="UserReportTypes" type="xs:string" />
+                          <xs:element name="UserPrintDirSettings" type="xs:unsignedByte" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PrjManager">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Path" type="xs:string" />
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="DocDir" type="xs:string" />
+                    <xs:element name="DB" type="xs:string" />
+                    <xs:element name="OpenProjects" type="xs:unsignedByte" />
+                    <xs:element name="RelevantSTLKAnalysis" type="xs:unsignedByte" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Prj">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Product" type="xs:string" />
+                    <xs:element name="User" type="xs:string" />
+                    <xs:element name="Path" type="xs:string" />
+                    <xs:element name="Key" type="xs:string" />
+                    <xs:element name="Version" type="xs:unsignedByte" />
+                    <xs:element name="Phase" type="xs:unsignedByte" />
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="Mode" type="xs:unsignedByte" />
+                    <xs:element name="MasterProjectPath" type="xs:string" />
+                    <xs:element name="WICMasterProject" type="xs:string" />
+                    <xs:element name="Sync" type="xs:unsignedByte" />
+                    <xs:element name="Desc" type="xs:string" />
+                    <xs:element name="Currency" type="xs:string" />
+                    <xs:element name="SecondCurrency" type="xs:string" />
+                    <xs:element name="ForeignMode" type="xs:unsignedByte" />
+                    <xs:element name="GermanCountryMode" type="xs:unsignedByte" />
+                    <xs:element name="ProjectManager" type="xs:string" />
+                    <xs:element name="ProjectStart" type="xs:date" />
+                    <xs:element name="ConstrStart" type="xs:date" />
+                    <xs:element name="Status" type="xs:string" />
+                    <xs:element name="ProjectCat" type="xs:string" />
+                    <xs:element name="ProjectType" type="xs:unsignedByte" />
+                    <xs:element name="ProjectTypeName" type="xs:string" />
+                    <xs:element name="DocDir" type="xs:string" />
+                    <xs:element name="DBName" type="xs:string" />
+                    <xs:element name="DBSize" type="xs:unsignedInt" />
+                    <xs:element name="GFA" type="xs:decimal" />
+                    <xs:element name="GRV" type="xs:decimal" />
+                    <xs:element name="UA" type="xs:decimal" />
+                    <xs:element name="LA" type="xs:unsignedByte" />
+                    <xs:element name="UU" type="xs:unsignedByte" />
+                    <xs:element name="UUText" type="xs:string" />
+                    <xs:element name="ConstrCosts" type="xs:decimal" />
+                    <xs:element name="CostSMGFA" type="xs:decimal" />
+                    <xs:element name="CostCMGRV" type="xs:decimal" />
+                    <xs:element name="CostSMUA" type="xs:decimal" />
+                    <xs:element name="CostSMLA" type="xs:decimal" />
+                    <xs:element name="CostPerUU" type="xs:decimal" />
+                    <xs:element name="Standard" type="xs:unsignedByte" />
+                    <xs:element name="Economy" type="xs:unsignedByte" />
+                    <xs:element name="Region" type="xs:unsignedByte" />
+                    <xs:element name="CostAsOf" type="xs:date" />
+                    <xs:element name="LastUse" type="xs:dateTime" />
+                    <xs:element name="RestoreDate" type="xs:dateTime" />
+                    <xs:element name="ModelCheckDate" type="xs:dateTime" />
+                    <xs:element name="DataLoadDate" type="xs:dateTime" />
+                    <xs:element name="DataVerificationDate" type="xs:dateTime" />
+                    <xs:element name="Adress">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Key" type="xs:string" />
+                          <xs:element name="Disabled" type="xs:unsignedByte" />
+                          <xs:element name="C1" type="xs:string" />
+                          <xs:element name="C4" type="xs:string" />
+                          <xs:element name="Str" type="xs:string" />
+                          <xs:element name="Country" type="xs:string" />
+                          <xs:element name="Zip" type="xs:unsignedInt" />
+                          <xs:element name="City" type="xs:string" />
+                          <xs:element name="Opening" type="xs:string" />
+                          <xs:element name="Contact" type="xs:string" />
+                          <xs:element name="Phone" type="xs:string" />
+                          <xs:element name="Fax" type="xs:string" />
+                          <xs:element name="Mail" type="xs:string" />
+                          <xs:element name="IDOrigin" type="xs:string" />
+                          <xs:element name="AddIDs">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="AddID">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="IDOrigin" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="CountyName" type="xs:string" />
+                          <xs:element name="MAC" type="xs:unsignedByte" />
+                          <xs:element name="SPTaxRate" type="xs:unsignedByte" />
+                          <xs:element name="Latitude" type="xs:decimal" />
+                          <xs:element name="Longitude" type="xs:decimal" />
+                          <xs:element name="Rev" type="xs:unsignedByte" />
+                          <xs:element name="LC" type="xs:dateTime" />
+                          <xs:element name="ConfVars">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Var">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Key" type="xs:string" />
+                                      <xs:element name="Val" type="xs:string" />
+                                      <xs:element name="ValKey" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Company">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Adress">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" type="xs:string" />
+                                <xs:element name="Disabled" type="xs:unsignedByte" />
+                                <xs:element name="C1" type="xs:string" />
+                                <xs:element name="C2" type="xs:string" />
+                                <xs:element name="C4" type="xs:string" />
+                                <xs:element name="Str" type="xs:string" />
+                                <xs:element name="Country" type="xs:string" />
+                                <xs:element name="Zip" type="xs:unsignedInt" />
+                                <xs:element name="City" type="xs:string" />
+                                <xs:element name="Opening" type="xs:string" />
+                                <xs:element name="Contact" type="xs:string" />
+                                <xs:element name="Phone" type="xs:string" />
+                                <xs:element name="Fax" type="xs:string" />
+                                <xs:element name="Mail" type="xs:string" />
+                                <xs:element name="Deb" type="xs:unsignedShort" />
+                                <xs:element name="Cred" type="xs:unsignedByte" />
+                                <xs:element name="IDOrigin" type="xs:string" />
+                                <xs:element name="AddIDs">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="AddID">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="IDOrigin" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="TANr" type="xs:unsignedByte" />
+                                <xs:element name="TAName" type="xs:string" />
+                                <xs:element name="TaxNum" type="xs:unsignedInt" />
+                                <xs:element name="VatID" type="xs:unsignedShort" />
+                                <xs:element name="MAC" type="xs:unsignedByte" />
+                                <xs:element name="SPTaxRate" type="xs:unsignedByte" />
+                                <xs:element name="Latitude" type="xs:decimal" />
+                                <xs:element name="Longitude" type="xs:decimal" />
+                                <xs:element name="Rev" type="xs:unsignedByte" />
+                                <xs:element name="Bank1" type="xs:string" />
+                                <xs:element name="BID1" type="xs:unsignedInt" />
+                                <xs:element name="Acc1" type="xs:unsignedInt" />
+                                <xs:element name="LC" type="xs:dateTime" />
+                                <xs:element name="ConfVars">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Var">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Key" type="xs:string" />
+                                            <xs:element name="Val" type="xs:string" />
+                                            <xs:element name="ValKey" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="BranchOffice">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PropObj">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Prop">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Key" type="xs:string" />
+                                            <xs:element name="Type" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="PropItem" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Department">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PropObj">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Prop">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Key" type="xs:string" />
+                                            <xs:element name="Type" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="PropItem" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="CostCenter">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PropObj">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Prop">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Key" type="xs:string" />
+                                            <xs:element name="Type" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="PropItem" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Vars">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="PropObj">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Prop">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Key" type="xs:string" />
+                                      <xs:element name="Type" type="xs:string" />
+                                      <xs:element name="Desc" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="PropItem">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Value" type="xs:string" />
+                                      <xs:element minOccurs="0" name="Detail" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="FurtherAdrs">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="FurtherAdr">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Desc" type="xs:string" />
+                                <xs:element name="Consortium" type="xs:boolean" />
+                                <xs:element minOccurs="0" name="Adress">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Key" type="xs:string" />
+                                      <xs:element name="Disabled" type="xs:unsignedByte" />
+                                      <xs:element name="C1" type="xs:string" />
+                                      <xs:element minOccurs="0" name="C2" type="xs:string" />
+                                      <xs:element minOccurs="0" name="C4" type="xs:string" />
+                                      <xs:element name="Str" type="xs:string" />
+                                      <xs:element name="Country" type="xs:string" />
+                                      <xs:element name="Zip" type="xs:unsignedInt" />
+                                      <xs:element name="City" type="xs:string" />
+                                      <xs:element minOccurs="0" name="Contact" type="xs:string" />
+                                      <xs:element minOccurs="0" name="Phone" type="xs:string" />
+                                      <xs:element minOccurs="0" name="Fax" type="xs:string" />
+                                      <xs:element minOccurs="0" name="Mail" type="xs:string" />
+                                      <xs:element minOccurs="0" name="Web" type="xs:string" />
+                                      <xs:element name="IDOrigin" type="xs:string" />
+                                      <xs:element name="AddIDs">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="AddID">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="IDOrigin" type="xs:string" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element minOccurs="0" name="VatID" type="xs:string" />
+                                      <xs:element name="MAC" type="xs:unsignedByte" />
+                                      <xs:element name="SPTaxRate" type="xs:unsignedByte" />
+                                      <xs:element name="Rev" type="xs:unsignedByte" />
+                                      <xs:element name="LC" type="xs:dateTime" />
+                                      <xs:element minOccurs="0" name="ConfVars">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element maxOccurs="unbounded" name="Var">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Key" type="xs:string" />
+                                                  <xs:element minOccurs="0" name="Val" type="xs:string" />
+                                                  <xs:element minOccurs="0" name="ValKey" type="xs:string" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DataHistory">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:unsignedByte" />
+                          <xs:element name="Date" type="xs:date" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ID" type="xs:string" />
+                    <xs:element name="Integration" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PA">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Path" type="xs:string" />
+                    <xs:element name="Key" type="xs:unsignedByte" />
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="Remarks" type="xs:string" />
+                    <xs:element name="VAT" type="xs:unsignedByte" />
+                    <xs:element name="VatID" type="xs:unsignedByte" />
+                    <xs:element name="CU" type="xs:string" />
+                    <xs:element name="CU2" type="xs:string" />
+                    <xs:element name="DocDir" type="xs:string" />
+                    <xs:element name="CPIDir" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SP">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Path" type="xs:string" />
+                    <xs:element name="Key" type="xs:decimal" />
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="Phase" type="xs:unsignedByte" />
+                    <xs:element name="CurrentSCPackage" type="xs:unsignedByte" />
+                    <xs:element name="ReadOnly" type="xs:unsignedByte" />
+                    <xs:element name="Disabled" type="xs:unsignedByte" />
+                    <xs:element name="VAT" type="xs:unsignedByte" />
+                    <xs:element name="VatID" type="xs:unsignedByte" />
+                    <xs:element name="CU" type="xs:string" />
+                    <xs:element name="CU2" type="xs:string" />
+                    <xs:element name="DocDir" type="xs:string" />
+                    <xs:element name="ContractType">
+                      <xs:complexType>
+                        <xs:attribute name="ID" type="xs:unsignedByte" use="required" />
+                        <xs:attribute name="Desc" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

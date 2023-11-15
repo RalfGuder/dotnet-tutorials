@@ -1,0 +1,16 @@
+# Temporäre Dateien
+/**/~*
+# Root Verzeichnis
+/.settings/
+/.classpath
+/.project
+/[Tt]arget/
+/[Bb]in
+/[dD][eE]/
+
+
+
+# Verzeichnis 'scripts'
+/scripts/[dD][eE]/
+/scripts/[dD][eE]/
+

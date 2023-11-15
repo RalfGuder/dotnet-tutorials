@@ -1,0 +1,1384 @@
+<?xml version="1.0"?>
+<SPConnector>
+	<Prj>
+		<Product>iTWO_64 V11.0.613</Product>
+		<User>fritsch</User>
+		<Path>\Samples\M_Planen V1 P1</Path>
+		<Key>M_Planen</Key>
+		<Version>1</Version>
+		<Phase>1</Phase>
+		<Name>Musterprojekt Bauplanung (Auftraggeber/Planer)</Name>
+		<Mode>0</Mode>
+		<MasterProjectPath>\Master\DE V1 P1</MasterProjectPath>
+		<WICMasterProject>Muster\M_Planen</WICMasterProject>
+		<Sync>1</Sync>
+		<Desc>Musterprojekt für ARRIBA planen: M_PLANEN
+für Ausschreibende, Auftraggeber, Planer
+
+Dieses Musterprojekt zeigt beispielhaft den gesamten Durchlauf inklusive Datenmaterial für die Planung, Ausschreibung, Vergabe, Abrechnung und Bauüberwachung eines Zweifamilienhauses.
+
+In den einzelnen Vergabeeinheiten-Phasen und Projektvarianten haben Sie übrigens auch die einfache Möglichkeit der Einbindung von externen Dokumenten, so z.B. aus MS-Word, MS-Excel, u.a. Sie ziehen entweder die Dokumente von Ihrem Desktop aus per Drag&#x26;Drop auf die gewünschte Komponente oder verwenden hierzu das Menü &#x22;Einfügen&#x22; | &#x22;Externe Dokumente...&#x22;
+
+Besonders bei der Ausschreibung und Abrechnung sind ausreichende Fachkenntnisse von großem Nutzen. Ebenfalls erforderlich sind Fertigkeiten im Umgang mit Programmen für Windows 98, NT, ME, Windows 2000 oder XP.</Desc>
+		<Currency>EUR</Currency>
+		<SecondCurrency>USD</SecondCurrency>
+		<ForeignMode>0</ForeignMode>
+		<GermanCountryMode>0</GermanCountryMode>
+		<ProjectManager>Peter Peschel</ProjectManager>
+		<ProjectStart>2003-07-01</ProjectStart>
+		<ConstrStart>2004-03-19</ConstrStart>
+		<Status>in Ausführung</Status>
+		<ProjectCat>Neubau</ProjectCat>
+		<ProjectType>32</ProjectType>
+		<ProjectTypeName>Ein- und Zweifamilienhäuser</ProjectTypeName>
+		<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Documents\Samples\M_Planen_P1_V1</DocDir>
+		<DBName>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Databases\Samples\M_Planen.P1.V1.rpd</DBName>
+		<DBSize>37748736</DBSize>
+		<GFA>452.92</GFA>
+		<GRV>1406.16</GRV>
+		<UA>297.72</UA>
+		<LA>190</LA>
+		<UU>2</UU>
+		<UUText>Wohnungen</UUText>
+		<ConstrCosts>787553.11044416</ConstrCosts>
+		<CostSMGFA>1738.8349166391</CostSMGFA>
+		<CostCMGRV>560.07361213813</CostCMGRV>
+		<CostSMUA>2645.2811717189</CostSMUA>
+		<CostSMLA>4145.0163707587</CostSMLA>
+		<CostPerUU>393776.55522208</CostPerUU>
+		<Standard>0</Standard>
+		<Economy>0</Economy>
+		<Region>1</Region>
+		<CostAsOf>2001-12-30</CostAsOf>
+		<LastUse>2023-03-22T11:34:40</LastUse>
+		<RestoreDate>2023-01-11T10:27:46</RestoreDate>
+		<ModelCheckDate>2022-10-13T10:04:51</ModelCheckDate>
+		<DataLoadDate>2022-10-13T10:04:44</DataLoadDate>
+		<DataVerificationDate>2022-10-13T10:04:43</DataVerificationDate>
+		<Adress>
+			<Key>4467b181-3205-4b6d-a737-2352f5a69b18</Key>
+			<Disabled>0</Disabled>
+			<C1>Horn &#x26; Hirn</C1>
+			<C4>Software GmbH</C4>
+			<Str>In der Au 14</Str>
+			<Country>D</Country>
+			<Zip>88263</Zip>
+			<City>Horgenzell</City>
+			<Opening>Sehr geehrte Frau</Opening>
+			<Contact>Horn</Contact>
+			<Phone>0711 883063</Phone>
+			<Fax>0711 15135</Fax>
+			<Mail>HornundHirn@software.com</Mail>
+			<IDOrigin>FileImport</IDOrigin>
+			<AddIDs>
+				<AddID>
+					<IDOrigin>FileImport</IDOrigin>
+				</AddID>
+			</AddIDs>
+			<CountyName>Ravensburg</CountyName>
+			<MAC>0</MAC>
+			<SPTaxRate>0</SPTaxRate>
+			<Latitude>47.80571</Latitude>
+			<Longitude>9.49287</Longitude>
+			<Rev>0</Rev>
+			<LC>2021-12-14T18:03:45</LC>
+			<ConfVars>
+				<Var>
+					<Key>Nuts-Code Deutschland</Key>
+					<Val>DE111</Val>
+					<ValKey>DE111</ValKey>
+				</Var>
+			</ConfVars>
+		</Adress>
+		<Company>
+			<Adress>
+				<Key>ea4a9516-2039-4a5d-a49d-8c96d1df4d5b</Key>
+				<Disabled>0</Disabled>
+				<C1>Streit + Partner</C1>
+				<C2>Architekturbüro</C2>
+				<C4>Architekturbüro</C4>
+				<Str>Brühlstraße 9</Str>
+				<Country>BW</Country>
+				<Zip>73430</Zip>
+				<City>Aalen</City>
+				<Opening>Sehr geehrter Herr </Opening>
+				<Contact>Streit</Contact>
+				<Phone>24568/845631</Phone>
+				<Fax>24568/783465</Fax>
+				<Mail>Streit@sdf.de</Mail>
+				<Deb>10001</Deb>
+				<Cred>0002</Cred>
+				<IDOrigin>cobra Adress Plus 8</IDOrigin>
+				<AddIDs>
+					<AddID>
+						<IDOrigin>cobra Adress Plus 8</IDOrigin>
+					</AddID>
+				</AddIDs>
+				<TANr>1</TANr>
+				<TAName>Aalen</TAName>
+				<TaxNum>657569</TaxNum>
+				<VatID>4567</VatID>
+				<MAC>0</MAC>
+				<SPTaxRate>0</SPTaxRate>
+				<Latitude>48.837487</Latitude>
+				<Longitude>10.090187</Longitude>
+				<Rev>0</Rev>
+				<Bank1>LBBW</Bank1>
+				<BID1>60050101</BID1>
+				<Acc1>26374893</Acc1>
+				<LC>2021-12-14T18:03:45</LC>
+				<ConfVars>
+					<Var>
+						<Key>Nuts-Code Deutschland</Key>
+						<Val>DE111</Val>
+						<ValKey>DE111</ValKey>
+					</Var>
+				</ConfVars>
+			</Adress>
+			<BranchOffice>
+				<PropObj>
+					<Prop>
+						<Key>_Niederlassung_</Key>
+						<Type>Text</Type>
+					</Prop>
+					<PropItem/>
+				</PropObj>
+			</BranchOffice>
+			<Department>
+				<PropObj>
+					<Prop>
+						<Key>_Abteilung_</Key>
+						<Type>Text</Type>
+					</Prop>
+					<PropItem/>
+				</PropObj>
+			</Department>
+			<CostCenter>
+				<PropObj>
+					<Prop>
+						<Key>_Kostenstelle_</Key>
+						<Type>Text</Type>
+					</Prop>
+					<PropItem/>
+				</PropObj>
+			</CostCenter>
+		</Company>
+		<Vars>
+			<PropObj>
+				<Prop>
+					<Key>FT001</Key>
+					<Type>Text</Type>
+					<Desc>Art</Desc>
+				</Prop>
+				<PropItem>
+					<Value>Wohnungen</Value>
+				</PropItem>
+			</PropObj>
+			<PropObj>
+				<Prop>
+					<Key>FT002</Key>
+					<Type>Text</Type>
+					<Desc>Typ</Desc>
+				</Prop>
+				<PropItem>
+					<Value>Reihenhaus</Value>
+				</PropItem>
+			</PropObj>
+			<PropObj>
+				<Prop>
+					<Key>FK001</Key>
+					<Type>Sum</Type>
+					<Desc>HNF/VF</Desc>
+				</Prop>
+				<PropItem>
+					<Value>15.8</Value>
+					<Detail>15,800</Detail>
+				</PropItem>
+			</PropObj>
+			<PropObj>
+				<Prop>
+					<Key>FK002</Key>
+					<Type>Sum</Type>
+					<Desc>HNF/NNF</Desc>
+				</Prop>
+				<PropItem>
+					<Value>8.3</Value>
+					<Detail>8,300</Detail>
+				</PropItem>
+			</PropObj>
+		</Vars>
+		<FurtherAdrs>
+			<FurtherAdr>
+				<Desc>Vergabestelle</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>01381ca7-3c1d-4155-a107-7edd869a2a56</Key>
+					<Disabled>0</Disabled>
+					<C1>Vergabestelle XY</C1>
+					<C4>Vergabestelle XY, Waldstr. 25, 12345 Musterstadt</C4>
+					<Str>Waldstr. 25</Str>
+					<Country>DE</Country>
+					<Zip>12345</Zip>
+					<City>Musterstadt</City>
+					<Contact>Fr. Bauer</Contact>
+					<Phone>0123-4567</Phone>
+					<Fax>0123-45679</Fax>
+					<Mail>vergabestelle.xy@online.de</Mail>
+					<Web>www.vergabe-xy.de</Web>
+					<IDOrigin>FileImport</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>FileImport</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Rev>0</Rev>
+					<LC>2021-12-14T18:03:45</LC>
+					<ConfVars>
+						<Var>
+							<Key>Nuts-Code Deutschland</Key>
+							<Val>DE115</Val>
+							<ValKey>DE115</ValKey>
+						</Var>
+						<Var>
+							<Key>DstNr</Key>
+							<Val>786534</Val>
+						</Var>
+						<Var>
+							<Key>Submissionszimmer</Key>
+							<Val>Z.103</Val>
+						</Var>
+					</ConfVars>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Vergabekammer</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>1ae1851d-4365-4113-9909-35a2ae0a73bb</Key>
+					<Disabled>0</Disabled>
+					<C1>Vergabekammer Baden-Württemberg </C1>
+					<C2>beim Regierungspräsidium Karlsruhe</C2>
+					<Str>Schlossplatz</Str>
+					<Country>DE</Country>
+					<Zip>76247</Zip>
+					<City>Karlsruhe</City>
+					<Phone>0721 / 926-4049</Phone>
+					<Fax>0721 / 926-3985</Fax>
+					<IDOrigin>FileImport</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>FileImport</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<VatID>DE123456789</VatID>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Rev>0</Rev>
+					<LC>2021-12-14T18:03:45</LC>
+					<ConfVars>
+						<Var>
+							<Key>DstNr</Key>
+						</Var>
+						<Var>
+							<Key>Nuts-Code Deutschland</Key>
+							<Val>DE122</Val>
+							<ValKey>DE122</ValKey>
+						</Var>
+					</ConfVars>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Bekanntmachungsstelle</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>acd7bc38-81a0-449a-8f6e-eb48e1767a36</Key>
+					<Disabled>0</Disabled>
+					<C1>Bekanntmachungsstelle AB</C1>
+					<Str>Hauptstr. 10</Str>
+					<Country>DE</Country>
+					<Zip>12345</Zip>
+					<City>Musterstadt</City>
+					<IDOrigin>FileImport</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>FileImport</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Rev>0</Rev>
+					<LC>2010-10-04T12:28:18</LC>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Submissionsstelle</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>90228580-e3ba-42d8-b79f-1a0756bb7ed3</Key>
+					<Disabled>0</Disabled>
+					<C1>Submissionsstelle</C1>
+					<C2>beim RP xy</C2>
+					<Str>Hauptstr. 35</Str>
+					<Country>DE</Country>
+					<Zip>12347</Zip>
+					<City>Musterstadt</City>
+					<IDOrigin>FileImport</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>FileImport</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Rev>0</Rev>
+					<LC>2010-10-04T12:28:18</LC>
+					<ConfVars>
+						<Var>
+							<Key>Submissionszimmer</Key>
+							<Val>Z.125</Val>
+						</Var>
+					</ConfVars>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Auskunftsstelle</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>c094ec4c-9628-4e0a-b7a6-983d64aa89b5</Key>
+					<Disabled>0</Disabled>
+					<C1>RP xy</C1>
+					<C2>Abt. e2</C2>
+					<Str>Seeweg 10</Str>
+					<Country>DE</Country>
+					<Zip>12347</Zip>
+					<City>C-Stadt</City>
+					<Contact>Frau Kuhn</Contact>
+					<Phone>07234-12345</Phone>
+					<Fax>07234-12390</Fax>
+					<Mail>rp.xy.e2@online.de</Mail>
+					<Web>www.rp-rp.xy.de</Web>
+					<IDOrigin>FileImport</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>FileImport</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Rev>0</Rev>
+					<LC>2010-10-04T12:28:18</LC>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Vorankündigungsstelle</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>02ae3cb0-5f78-4cf1-a2af-e29adf2f85a4</Key>
+					<Disabled>0</Disabled>
+					<C1>RP xz</C1>
+					<C2>Abt. 12</C2>
+					<Str>Schillerring 6</Str>
+					<Country>DE</Country>
+					<Zip>12352</Zip>
+					<City>B-Stadt</City>
+					<IDOrigin>FileImport</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>FileImport</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<VatID>343210</VatID>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Rev>0</Rev>
+					<LC>2021-12-14T18:03:45</LC>
+					<ConfVars>
+						<Var>
+							<Key>Nuts-Code Deutschland</Key>
+							<Val>DE122</Val>
+							<ValKey>DE122</ValKey>
+						</Var>
+					</ConfVars>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Nachprüfungsstelle</Desc>
+				<Consortium>false</Consortium>
+				<Adress>
+					<Key>3e232217-3666-4802-bcf3-b5dc8005ff66</Key>
+					<Disabled>0</Disabled>
+					<C1>RP xz</C1>
+					<C2>Abt. 5</C2>
+					<Str>Schillerring 6</Str>
+					<Country>DE</Country>
+					<Zip>12352</Zip>
+					<City>B-Stadt</City>
+					<IDOrigin>FileImport</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>FileImport</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<VatID>360051</VatID>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Rev>0</Rev>
+					<LC>2021-12-14T18:03:45</LC>
+					<ConfVars>
+						<Var>
+							<Key>Nuts-Code Deutschland</Key>
+							<Val>DE122</Val>
+							<ValKey>DE122</ValKey>
+						</Var>
+					</ConfVars>
+				</Adress>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Rechtsbehelfsstelle</Desc>
+				<Consortium>false</Consortium>
+			</FurtherAdr>
+			<FurtherAdr>
+				<Desc>Schlichtungsstelle</Desc>
+				<Consortium>false</Consortium>
+			</FurtherAdr>
+		</FurtherAdrs>
+		<DataHistory>
+			<ID>1</ID>
+			<Date>2023-03-22</Date>
+		</DataHistory>
+		<Documents/>
+	</Prj>
+	<SP>
+		<Path>\Samples\M_Planen V1 P1\PAs\4\SPs\2.034-2</Path>
+		<Key>2.034</Key>
+		<Name>Maler- und Tapezierarbeiten</Name>
+		<Phase>2</Phase>
+		<CurrentSCPackage>1</CurrentSCPackage>
+		<ReadOnly>0</ReadOnly>
+		<Disabled>0</Disabled>
+		<VAT>19</VAT>
+		<VatID>19</VatID>
+		<CU>EUR</CU>
+		<CU2>USD</CU2>
+		<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Documents\Samples\M_Planen_P1_V1\4\SC\2.034_P3</DocDir>
+		<ContractType ID="2" Desc="With total order"/>
+		<BudgetNet>20200</BudgetNet>
+		<BudgetGross>24038</BudgetGross>
+		<CostPlanningNet>17155</CostPlanningNet>
+		<CostPlanningGross>20414.45</CostPlanningGross>
+		<ContractNet>17155</ContractNet>
+		<ContractGross>20414.45</ContractGross>
+		<ChgOrderApprNet>0</ChgOrderApprNet>
+		<ChgOrderApprGross>0</ChgOrderApprGross>
+		<ChgOrderNotApprNet>0</ChgOrderNotApprNet>
+		<ChgOrderNotApprGross>0</ChgOrderNotApprGross>
+		<ReserveNet>0</ReserveNet>
+		<ReserveGross>0</ReserveGross>
+		<TotalNet>17155</TotalNet>
+		<TotalGross>20414.45</TotalGross>
+		<Reference>8873</Reference>
+		<AwardNo>V-8856</AwardNo>
+		<AwardMethod>
+			<PropObj>
+				<Prop>
+					<Key>VergabeArt</Key>
+					<Type>Text</Type>
+				</Prop>
+				<PropItem>
+					<Value>04</Value>
+				</PropItem>
+			</PropObj>
+		</AwardMethod>
+		<ContractRegulation>
+			<PropObj>
+				<Prop>
+					<Key>_VTGGR_</Key>
+					<Type>Text</Type>
+				</Prop>
+				<PropItem>
+					<Value>VOB</Value>
+				</PropItem>
+			</PropObj>
+		</ContractRegulation>
+		<TenderOpening>2024-05-21T10:30:00</TenderOpening>
+		<AwardDeadline>2023-03-22</AwardDeadline>
+		<TenderLocation>
+			<PropObj>
+				<Prop>
+					<Key>_Abgabeort_</Key>
+					<Type>Text</Type>
+				</Prop>
+				<PropItem>
+					<Value>Stuttgart</Value>
+				</PropItem>
+			</PropObj>
+		</TenderLocation>
+		<Publication>2023-03-22</Publication>
+		<ContractDate>2020-05-20</ContractDate>
+		<ConstStartPlan>2004-09-30</ConstStartPlan>
+		<ConstEndPlan>2004-10-29</ConstEndPlan>
+		<Analysis>0</Analysis>
+		<AcceptanceMethod>Formlose Abnahme</AcceptanceMethod>
+		<WarrantyValue>5</WarrantyValue>
+		<WarrantyUnit>1</WarrantyUnit>
+		<PartnerType>Creditor</PartnerType>
+		<AwardFactor>98.7</AwardFactor>
+		<AwardTarget>19937.4</AwardTarget>
+		<LotWise>false</LotWise>
+		<PermitAlternativeTenders>true</PermitAlternativeTenders>
+		<AltTendersMode>1</AltTendersMode>
+		<WCs>
+			<CatElement>
+				<Key>053</Key>
+				<Desc>Lieferungen</Desc>
+			</CatElement>
+			<CatElement>
+				<Key>037</Key>
+				<Desc>Tapezierarbeiten</Desc>
+			</CatElement>
+			<CatElement>
+				<Key>034</Key>
+				<Desc>Maler- und Lackierarbeiten</Desc>
+			</CatElement>
+		</WCs>
+		<CPVs>
+			<PropObj>
+				<Prop>
+					<Key>_CPVNr_</Key>
+					<Type>CatRef</Type>
+					<CatRef Key="CPV" Desc="Common Procurement Vocabulary Stand 2008"/>
+				</Prop>
+				<PropItem/>
+			</PropObj>
+			<PropObj>
+				<Prop>
+					<Key>_CPVNr_</Key>
+					<Type>CatRef</Type>
+					<CatRef Key="CPV" Desc="Common Procurement Vocabulary Stand 2008"/>
+				</Prop>
+				<PropItem/>
+			</PropObj>
+		</CPVs>
+		<Client>
+			<Adress>
+				<Key>2d36ab93-28d9-43f7-aee3-00cc93a085af</Key>
+				<Disabled>0</Disabled>
+				<C1>Dr. König</C1>
+				<C4>Dr. König</C4>
+				<Str>Bergallee 34</Str>
+				<Country>D</Country>
+				<Zip>98321</Zip>
+				<City>Oberperchingen</City>
+				<Opening>Sehr geehrter Herr </Opening>
+				<Contact>Dr. König</Contact>
+				<Phone>08965 986532</Phone>
+				<Fax>08965 986578</Fax>
+				<IDOrigin>FileImport</IDOrigin>
+				<AddIDs>
+					<AddID>
+						<IDOrigin>FileImport</IDOrigin>
+					</AddID>
+				</AddIDs>
+				<MAC>0</MAC>
+				<SPTaxRate>0</SPTaxRate>
+				<Rev>0</Rev>
+				<LC>2010-07-21T11:50:40</LC>
+			</Adress>
+		</Client>
+		<Contractor>
+			<Consortium>false</Consortium>
+		</Contractor>
+		<CostCodes/>
+		<Billing>1</Billing>
+		<CB_Progress>
+			<ContractBasis>
+				<Item ID="n0" Type="16">
+					<OutlineText>Rechnungsbetrag</OutlineText>
+				</Item>
+				<Item ID="n1" Type="19">
+					<OutlineText>Abzgl. Zahl\Rech</OutlineText>
+				</Item>
+				<Item Level="0" ID="n2" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n3" Type="3" DMIsGross="0">
+					<DM>1</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>Abzug</OutlineText>
+				</Item>
+				<Item Level="0" ID="n4" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n5" Type="6" DMIsGross="0">
+					<DM>19</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>MwSt</OutlineText>
+				</Item>
+				<Item Level="0" ID="n6" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+			</ContractBasis>
+		</CB_Progress>
+		<CB_PartFinal>
+			<ContractBasis>
+				<Item ID="n0" Type="16">
+					<OutlineText>Rechnungsbetrag</OutlineText>
+				</Item>
+				<Item ID="n1" Type="19">
+					<OutlineText>Abzgl. Zahl\Rech</OutlineText>
+				</Item>
+				<Item Level="0" ID="n2" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n3" Type="3" DMIsGross="0">
+					<DM>1</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>Abzug</OutlineText>
+				</Item>
+				<Item Level="0" ID="n4" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n5" Type="6" DMIsGross="0">
+					<DM>19</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>MwSt</OutlineText>
+				</Item>
+				<Item Level="0" ID="n6" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+			</ContractBasis>
+		</CB_PartFinal>
+		<CB_Final>
+			<ContractBasis>
+				<Item ID="n0" Type="16">
+					<OutlineText>Rechnungsbetrag</OutlineText>
+				</Item>
+				<Item ID="n1" Type="19">
+					<OutlineText>Abzgl. Zahl\Rech</OutlineText>
+				</Item>
+				<Item Level="0" ID="n2" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n3" Type="3" DMIsGross="0">
+					<DM>1</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>Abzug</OutlineText>
+				</Item>
+				<Item Level="0" ID="n4" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+				<Item ID="n5" Type="6" DMIsGross="0">
+					<DM>19</DM>
+					<Percentage>1</Percentage>
+					<OutlineText>MwSt</OutlineText>
+				</Item>
+				<Item Level="0" ID="n6" Type="7">
+					<OutlineText>Summe</OutlineText>
+				</Item>
+			</ContractBasis>
+		</CB_Final>
+		<Guarantees>
+			<Guarantee>
+				<Type>Recieved</Type>
+				<Key>1</Key>
+				<Description>Vertragserfüllung</Description>
+				<OriginalAmount>0</OriginalAmount>
+				<CurrentAmount>0</CurrentAmount>
+				<CUR>EUR</CUR>
+			</Guarantee>
+			<Guarantee>
+				<Type>Recieved</Type>
+				<Key>2</Key>
+				<Description>Gewährleistung</Description>
+				<OriginalAmount>0</OriginalAmount>
+				<CurrentAmount>0</CurrentAmount>
+				<CUR>EUR</CUR>
+			</Guarantee>
+			<Guarantee>
+				<Type>Recieved</Type>
+				<OriginalAmount>0</OriginalAmount>
+				<CurrentAmount>0</CurrentAmount>
+				<CUR>EUR</CUR>
+			</Guarantee>
+			<Guarantee>
+				<Type>Recieved</Type>
+				<OriginalAmount>0</OriginalAmount>
+				<CurrentAmount>0</CurrentAmount>
+				<CUR>EUR</CUR>
+			</Guarantee>
+		</Guarantees>
+		<WBS>
+			<Path>\Samples\M_Planen V1 P1\PAs\4\SPs\2.034-2\BoQ 1</Path>
+			<Key>1</Key>
+			<Name>Maler- und Lackierarbeiten</Name>
+			<Structure>1122PPPPI</Structure>
+			<Type>0</Type>
+			<QTOType>0</QTOType>
+			<Sortmode>0</Sortmode>
+			<Cur>EUR</Cur>
+			<ItemTotal LSUM="0">17155</ItemTotal>
+			<ItempTotalDisc>17155</ItempTotalDisc>
+			<DataFile>C:\Users\fritsch\AppData\Local\Temp\1_8.X83</DataFile>
+		</WBS>
+		<SCApplicInvoice>
+			<Invoices>
+				<Invoice>
+					<Path>\Samples\M_Planen V1 P1\PAs\4\SPs\2.034-2\AppInvoice\Invoice_1</Path>
+					<ID>1</ID>
+					<Description>1. Abschlagsrechnung</Description>
+					<CUR>EUR</CUR>
+					<DestAcc>0</DestAcc>
+					<BPNo>1</BPNo>
+					<LastModified>2020-05-20T09:52:28</LastModified>
+					<ModifiedBy>mu</ModifiedBy>
+					<DataSource>Items</DataSource>
+					<Type>ProgressApplication</Type>
+					<Package>BoQ</Package>
+					<Direction>Incoming</Direction>
+					<Reversal>0</Reversal>
+					<Date>2020-05-20</Date>
+					<StartDate>2020-05-20</StartDate>
+					<StartDateBP>2020-05-20</StartDateBP>
+					<Printed>0</Printed>
+					<Original>
+						<DiscountBaseAmount>0</DiscountBaseAmount>
+						<TotalNet>0</TotalNet>
+						<TotalVAT>0</TotalVAT>
+						<TotalGross>0</TotalGross>
+						<ReleaseOfPaymentNet>0</ReleaseOfPaymentNet>
+						<ReleaseOfPaymentVAT>0</ReleaseOfPaymentVAT>
+						<ReleaseOfPaymentGross>0</ReleaseOfPaymentGross>
+						<UncheckedAmountNet>0</UncheckedAmountNet>
+						<UncheckedAmountVAT>0</UncheckedAmountVAT>
+						<UncheckedAmountGross>0</UncheckedAmountGross>
+						<ApplicationSummary>
+							<Row>
+								<ID>1</ID>
+								<Text>Rechnungsbetrag</Text>
+								<RowType>BaseAmount</RowType>
+								<Amount>0</Amount>
+								<ExToEnt>0</ExToEnt>
+								<EscalateDiscount>0</EscalateDiscount>
+								<Percent>0</Percent>
+								<DIVISION>-1</DIVISION>
+							</Row>
+							<Row>
+								<ID>2</ID>
+								<Text>Abzgl. Zahl\Rech</Text>
+								<RowType>MinusFormerInvoicesOrPayments</RowType>
+								<Amount>0</Amount>
+								<ExToEnt>0</ExToEnt>
+								<EscalateDiscount>0</EscalateDiscount>
+								<Percent>0</Percent>
+								<DIVISION>-1</DIVISION>
+							</Row>
+							<Row>
+								<ID>3</ID>
+								<Text>Summe</Text>
+								<RowType>SUM</RowType>
+								<Amount>0</Amount>
+								<ExToEnt>0</ExToEnt>
+								<EscalateDiscount>0</EscalateDiscount>
+								<Percent>0</Percent>
+								<DIVISION>0</DIVISION>
+							</Row>
+							<Row>
+								<ID>4</ID>
+								<Text>Abzug</Text>
+								<RowType>DiscountOnItem</RowType>
+								<Amount>0</Amount>
+								<ExToEnt>0</ExToEnt>
+								<EscalateDiscount>1</EscalateDiscount>
+								<Percent>1</Percent>
+								<DIVISION>-1</DIVISION>
+							</Row>
+							<Row>
+								<ID>5</ID>
+								<Text>Summe</Text>
+								<RowType>SUM</RowType>
+								<Amount>0</Amount>
+								<ExToEnt>0</ExToEnt>
+								<EscalateDiscount>0</EscalateDiscount>
+								<Percent>0</Percent>
+								<DIVISION>0</DIVISION>
+							</Row>
+							<Row>
+								<ID>6</ID>
+								<Text>MwSt</Text>
+								<RowType>VAT</RowType>
+								<Amount>0</Amount>
+								<ExToEnt>0</ExToEnt>
+								<EscalateDiscount>19</EscalateDiscount>
+								<Percent>1</Percent>
+								<DIVISION>-1</DIVISION>
+							</Row>
+							<Row>
+								<ID>7</ID>
+								<Text>Summe</Text>
+								<RowType>SUM</RowType>
+								<Amount>0</Amount>
+								<ExToEnt>0</ExToEnt>
+								<EscalateDiscount>0</EscalateDiscount>
+								<Percent>0</Percent>
+								<DIVISION>0</DIVISION>
+							</Row>
+						</ApplicationSummary>
+					</Original>
+					<RetentionEndDate>2025-05-20</RetentionEndDate>
+					<BPCount>1</BPCount>
+					<VATRate>19</VATRate>
+					<VatID>19</VatID>
+				</Invoice>
+			</Invoices>
+		</SCApplicInvoice>
+		<QTO>
+			<Path>\Samples\M_Planen V1 P1\PAs\4\SPs\2.034-2\1 </Path>
+			<Name>1</Name>
+			<Title>Maler- und Lackierarbeiten</Title>
+			<Type>1</Type>
+			<Norm>0</Norm>
+			<Winkelmass>1</Winkelmass>
+			<OZMaske>1122PPPPI</OZMaske>
+			<_RIB_AdressLaenge>4</_RIB_AdressLaenge>
+			<_RIB_BlattLaenge>2</_RIB_BlattLaenge>
+			<_RIB_AdressLaenge>6</_RIB_AdressLaenge>
+			<_RIB_FormelFrei>1</_RIB_FormelFrei>
+			<_RIB_Formel98>1</_RIB_Formel98>
+			<_RIB_NegativeWerte>0</_RIB_NegativeWerte>
+			<_RIB_BeliebigerUmbruch>0</_RIB_BeliebigerUmbruch>
+			<AufmassNorm>free</AufmassNorm>
+			<AufmassWinkelmass>GRAD</AufmassWinkelmass>
+			<Act>
+				<AzNr>1</AzNr>
+			</Act>
+		</QTO>
+	</SP>
+	<ObjContext>
+		<Obj>
+			<ID>2.034-2</ID>
+			<Name>2.034 (Auftr) Maler- und Tapezierarbeiten</Name>
+			<Title>\Muster\M_Planen V1 (Angebot) - 4 LPH 4-8 Ausführung - 2.034 (Auftr) Maler- und Tapezierarbeiten</Title>
+			<Path>\Samples\M_Planen V1 P1\PAs\4\SPs\2.034-2</Path>
+			<Class>VergabeEinheitCompItemDocItem</Class>
+			<GUID>bf5399ee-ad4c-4b2d-a083-88d53c59f2fe</GUID>
+			<User>fritsch</User>
+			<Computer>RIB-W1481</Computer>
+			<Time>2023-03-22T11:53:55</Time>
+			<TimeUTC>2023-03-22T10:53:55</TimeUTC>
+			<Dirs>
+				<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Documents\Samples\M_Planen_P1_V1\4\SC\2.034_P3</DocDir>
+				<Bin>C:\Program Files\RIB\iTWO_64\2022\Basic\Exe\iTWO\Bin</Bin>
+				<ConnectorData>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Configurations\Connectors</ConnectorData>
+				<ConnectorUserData>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Usersettings\fritsch\Configurations\Connectors</ConnectorUserData>
+				<ReportDescriptions>C:\Program Files\RIB\iTWO_64\2022\Basic\Exe\ReportWriter\ReportDescriptions\de</ReportDescriptions>
+				<Ribbons>C:\Program Files\RIB\iTWO_64\2022\Basic\Exe\iTWO\Components\Ribbons</Ribbons>
+				<Configurations>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Configurations</Configurations>
+				<Layout>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Templates\de</Layout>
+				<Favourites>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Usersettings\fritsch\Templates\de\Favorites</Favourites>
+				<Templates>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Templates\de</Templates>
+				<ReportTypes>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Templates\de</ReportTypes>
+				<UserTemplates>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Usersettings\fritsch\Templates\de</UserTemplates>
+				<UserReportTypes>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Usersettings\fritsch\Templates\de</UserReportTypes>
+				<UserPrintDirSettings>0</UserPrintDirSettings>
+			</Dirs>
+		</Obj>
+		<PrjManager>
+			<Path>\Samples</Path>
+			<Name>Samples</Name>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Documents\Samples</DocDir>
+			<DB>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Databases\Samples\Projectlist.rvd</DB>
+			<OpenProjects>1</OpenProjects>
+			<RelevantSTLKAnalysis>1</RelevantSTLKAnalysis>
+		</PrjManager>
+		<Prj>
+			<Product>iTWO_64 V11.0.613</Product>
+			<User>fritsch</User>
+			<Path>\Samples\M_Planen V1 P1</Path>
+			<Key>M_Planen</Key>
+			<Version>1</Version>
+			<Phase>1</Phase>
+			<Name>Musterprojekt Bauplanung (Auftraggeber/Planer)</Name>
+			<Mode>0</Mode>
+			<MasterProjectPath>\Master\DE V1 P1</MasterProjectPath>
+			<WICMasterProject>Muster\M_Planen</WICMasterProject>
+			<Sync>1</Sync>
+			<Desc>Musterprojekt für ARRIBA planen: M_PLANEN
+für Ausschreibende, Auftraggeber, Planer
+
+Dieses Musterprojekt zeigt beispielhaft den gesamten Durchlauf inklusive Datenmaterial für die Planung, Ausschreibung, Vergabe, Abrechnung und Bauüberwachung eines Zweifamilienhauses.
+
+In den einzelnen Vergabeeinheiten-Phasen und Projektvarianten haben Sie übrigens auch die einfache Möglichkeit der Einbindung von externen Dokumenten, so z.B. aus MS-Word, MS-Excel, u.a. Sie ziehen entweder die Dokumente von Ihrem Desktop aus per Drag&#x26;Drop auf die gewünschte Komponente oder verwenden hierzu das Menü &#x22;Einfügen&#x22; | &#x22;Externe Dokumente...&#x22;
+
+Besonders bei der Ausschreibung und Abrechnung sind ausreichende Fachkenntnisse von großem Nutzen. Ebenfalls erforderlich sind Fertigkeiten im Umgang mit Programmen für Windows 98, NT, ME, Windows 2000 oder XP.</Desc>
+			<Currency>EUR</Currency>
+			<SecondCurrency>USD</SecondCurrency>
+			<ForeignMode>0</ForeignMode>
+			<GermanCountryMode>0</GermanCountryMode>
+			<ProjectManager>Peter Peschel</ProjectManager>
+			<ProjectStart>2003-07-01</ProjectStart>
+			<ConstrStart>2004-03-19</ConstrStart>
+			<Status>in Ausführung</Status>
+			<ProjectCat>Neubau</ProjectCat>
+			<ProjectType>32</ProjectType>
+			<ProjectTypeName>Ein- und Zweifamilienhäuser</ProjectTypeName>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Documents\Samples\M_Planen_P1_V1</DocDir>
+			<DBName>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Databases\Samples\M_Planen.P1.V1.rpd</DBName>
+			<DBSize>37748736</DBSize>
+			<GFA>452.92</GFA>
+			<GRV>1406.16</GRV>
+			<UA>297.72</UA>
+			<LA>190</LA>
+			<UU>2</UU>
+			<UUText>Wohnungen</UUText>
+			<ConstrCosts>787553.11044416</ConstrCosts>
+			<CostSMGFA>1738.8349166391</CostSMGFA>
+			<CostCMGRV>560.07361213813</CostCMGRV>
+			<CostSMUA>2645.2811717189</CostSMUA>
+			<CostSMLA>4145.0163707587</CostSMLA>
+			<CostPerUU>393776.55522208</CostPerUU>
+			<Standard>0</Standard>
+			<Economy>0</Economy>
+			<Region>1</Region>
+			<CostAsOf>2001-12-30</CostAsOf>
+			<LastUse>2023-03-22T11:34:40</LastUse>
+			<RestoreDate>2023-01-11T10:27:46</RestoreDate>
+			<ModelCheckDate>2022-10-13T10:04:51</ModelCheckDate>
+			<DataLoadDate>2022-10-13T10:04:44</DataLoadDate>
+			<DataVerificationDate>2022-10-13T10:04:43</DataVerificationDate>
+			<Adress>
+				<Key>4467b181-3205-4b6d-a737-2352f5a69b18</Key>
+				<Disabled>0</Disabled>
+				<C1>Horn &#x26; Hirn</C1>
+				<C4>Software GmbH</C4>
+				<Str>In der Au 14</Str>
+				<Country>D</Country>
+				<Zip>88263</Zip>
+				<City>Horgenzell</City>
+				<Opening>Sehr geehrte Frau</Opening>
+				<Contact>Horn</Contact>
+				<Phone>0711 883063</Phone>
+				<Fax>0711 15135</Fax>
+				<Mail>HornundHirn@software.com</Mail>
+				<IDOrigin>FileImport</IDOrigin>
+				<AddIDs>
+					<AddID>
+						<IDOrigin>FileImport</IDOrigin>
+					</AddID>
+				</AddIDs>
+				<CountyName>Ravensburg</CountyName>
+				<MAC>0</MAC>
+				<SPTaxRate>0</SPTaxRate>
+				<Latitude>47.80571</Latitude>
+				<Longitude>9.49287</Longitude>
+				<Rev>0</Rev>
+				<LC>2021-12-14T18:03:45</LC>
+				<ConfVars>
+					<Var>
+						<Key>Nuts-Code Deutschland</Key>
+						<Val>DE111</Val>
+						<ValKey>DE111</ValKey>
+					</Var>
+				</ConfVars>
+			</Adress>
+			<Company>
+				<Adress>
+					<Key>ea4a9516-2039-4a5d-a49d-8c96d1df4d5b</Key>
+					<Disabled>0</Disabled>
+					<C1>Streit + Partner</C1>
+					<C2>Architekturbüro</C2>
+					<C4>Architekturbüro</C4>
+					<Str>Brühlstraße 9</Str>
+					<Country>BW</Country>
+					<Zip>73430</Zip>
+					<City>Aalen</City>
+					<Opening>Sehr geehrter Herr </Opening>
+					<Contact>Streit</Contact>
+					<Phone>24568/845631</Phone>
+					<Fax>24568/783465</Fax>
+					<Mail>Streit@sdf.de</Mail>
+					<Deb>10001</Deb>
+					<Cred>0002</Cred>
+					<IDOrigin>cobra Adress Plus 8</IDOrigin>
+					<AddIDs>
+						<AddID>
+							<IDOrigin>cobra Adress Plus 8</IDOrigin>
+						</AddID>
+					</AddIDs>
+					<TANr>1</TANr>
+					<TAName>Aalen</TAName>
+					<TaxNum>657569</TaxNum>
+					<VatID>4567</VatID>
+					<MAC>0</MAC>
+					<SPTaxRate>0</SPTaxRate>
+					<Latitude>48.837487</Latitude>
+					<Longitude>10.090187</Longitude>
+					<Rev>0</Rev>
+					<Bank1>LBBW</Bank1>
+					<BID1>60050101</BID1>
+					<Acc1>26374893</Acc1>
+					<LC>2021-12-14T18:03:45</LC>
+					<ConfVars>
+						<Var>
+							<Key>Nuts-Code Deutschland</Key>
+							<Val>DE111</Val>
+							<ValKey>DE111</ValKey>
+						</Var>
+					</ConfVars>
+				</Adress>
+				<BranchOffice>
+					<PropObj>
+						<Prop>
+							<Key>_Niederlassung_</Key>
+							<Type>Text</Type>
+						</Prop>
+						<PropItem/>
+					</PropObj>
+				</BranchOffice>
+				<Department>
+					<PropObj>
+						<Prop>
+							<Key>_Abteilung_</Key>
+							<Type>Text</Type>
+						</Prop>
+						<PropItem/>
+					</PropObj>
+				</Department>
+				<CostCenter>
+					<PropObj>
+						<Prop>
+							<Key>_Kostenstelle_</Key>
+							<Type>Text</Type>
+						</Prop>
+						<PropItem/>
+					</PropObj>
+				</CostCenter>
+			</Company>
+			<Vars>
+				<PropObj>
+					<Prop>
+						<Key>FT001</Key>
+						<Type>Text</Type>
+						<Desc>Art</Desc>
+					</Prop>
+					<PropItem>
+						<Value>Wohnungen</Value>
+					</PropItem>
+				</PropObj>
+				<PropObj>
+					<Prop>
+						<Key>FT002</Key>
+						<Type>Text</Type>
+						<Desc>Typ</Desc>
+					</Prop>
+					<PropItem>
+						<Value>Reihenhaus</Value>
+					</PropItem>
+				</PropObj>
+				<PropObj>
+					<Prop>
+						<Key>FK001</Key>
+						<Type>Sum</Type>
+						<Desc>HNF/VF</Desc>
+					</Prop>
+					<PropItem>
+						<Value>15.8</Value>
+						<Detail>15,800</Detail>
+					</PropItem>
+				</PropObj>
+				<PropObj>
+					<Prop>
+						<Key>FK002</Key>
+						<Type>Sum</Type>
+						<Desc>HNF/NNF</Desc>
+					</Prop>
+					<PropItem>
+						<Value>8.3</Value>
+						<Detail>8,300</Detail>
+					</PropItem>
+				</PropObj>
+			</Vars>
+			<FurtherAdrs>
+				<FurtherAdr>
+					<Desc>Vergabestelle</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>01381ca7-3c1d-4155-a107-7edd869a2a56</Key>
+						<Disabled>0</Disabled>
+						<C1>Vergabestelle XY</C1>
+						<C4>Vergabestelle XY, Waldstr. 25, 12345 Musterstadt</C4>
+						<Str>Waldstr. 25</Str>
+						<Country>DE</Country>
+						<Zip>12345</Zip>
+						<City>Musterstadt</City>
+						<Contact>Fr. Bauer</Contact>
+						<Phone>0123-4567</Phone>
+						<Fax>0123-45679</Fax>
+						<Mail>vergabestelle.xy@online.de</Mail>
+						<Web>www.vergabe-xy.de</Web>
+						<IDOrigin>FileImport</IDOrigin>
+						<AddIDs>
+							<AddID>
+								<IDOrigin>FileImport</IDOrigin>
+							</AddID>
+						</AddIDs>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Rev>0</Rev>
+						<LC>2021-12-14T18:03:45</LC>
+						<ConfVars>
+							<Var>
+								<Key>Nuts-Code Deutschland</Key>
+								<Val>DE115</Val>
+								<ValKey>DE115</ValKey>
+							</Var>
+							<Var>
+								<Key>DstNr</Key>
+								<Val>786534</Val>
+							</Var>
+							<Var>
+								<Key>Submissionszimmer</Key>
+								<Val>Z.103</Val>
+							</Var>
+						</ConfVars>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Vergabekammer</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>1ae1851d-4365-4113-9909-35a2ae0a73bb</Key>
+						<Disabled>0</Disabled>
+						<C1>Vergabekammer Baden-Württemberg </C1>
+						<C2>beim Regierungspräsidium Karlsruhe</C2>
+						<Str>Schlossplatz</Str>
+						<Country>DE</Country>
+						<Zip>76247</Zip>
+						<City>Karlsruhe</City>
+						<Phone>0721 / 926-4049</Phone>
+						<Fax>0721 / 926-3985</Fax>
+						<IDOrigin>FileImport</IDOrigin>
+						<AddIDs>
+							<AddID>
+								<IDOrigin>FileImport</IDOrigin>
+							</AddID>
+						</AddIDs>
+						<VatID>DE123456789</VatID>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Rev>0</Rev>
+						<LC>2021-12-14T18:03:45</LC>
+						<ConfVars>
+							<Var>
+								<Key>DstNr</Key>
+							</Var>
+							<Var>
+								<Key>Nuts-Code Deutschland</Key>
+								<Val>DE122</Val>
+								<ValKey>DE122</ValKey>
+							</Var>
+						</ConfVars>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Bekanntmachungsstelle</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>acd7bc38-81a0-449a-8f6e-eb48e1767a36</Key>
+						<Disabled>0</Disabled>
+						<C1>Bekanntmachungsstelle AB</C1>
+						<Str>Hauptstr. 10</Str>
+						<Country>DE</Country>
+						<Zip>12345</Zip>
+						<City>Musterstadt</City>
+						<IDOrigin>FileImport</IDOrigin>
+						<AddIDs>
+							<AddID>
+								<IDOrigin>FileImport</IDOrigin>
+							</AddID>
+						</AddIDs>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Rev>0</Rev>
+						<LC>2010-10-04T12:28:18</LC>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Submissionsstelle</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>90228580-e3ba-42d8-b79f-1a0756bb7ed3</Key>
+						<Disabled>0</Disabled>
+						<C1>Submissionsstelle</C1>
+						<C2>beim RP xy</C2>
+						<Str>Hauptstr. 35</Str>
+						<Country>DE</Country>
+						<Zip>12347</Zip>
+						<City>Musterstadt</City>
+						<IDOrigin>FileImport</IDOrigin>
+						<AddIDs>
+							<AddID>
+								<IDOrigin>FileImport</IDOrigin>
+							</AddID>
+						</AddIDs>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Rev>0</Rev>
+						<LC>2010-10-04T12:28:18</LC>
+						<ConfVars>
+							<Var>
+								<Key>Submissionszimmer</Key>
+								<Val>Z.125</Val>
+							</Var>
+						</ConfVars>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Auskunftsstelle</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>c094ec4c-9628-4e0a-b7a6-983d64aa89b5</Key>
+						<Disabled>0</Disabled>
+						<C1>RP xy</C1>
+						<C2>Abt. e2</C2>
+						<Str>Seeweg 10</Str>
+						<Country>DE</Country>
+						<Zip>12347</Zip>
+						<City>C-Stadt</City>
+						<Contact>Frau Kuhn</Contact>
+						<Phone>07234-12345</Phone>
+						<Fax>07234-12390</Fax>
+						<Mail>rp.xy.e2@online.de</Mail>
+						<Web>www.rp-rp.xy.de</Web>
+						<IDOrigin>FileImport</IDOrigin>
+						<AddIDs>
+							<AddID>
+								<IDOrigin>FileImport</IDOrigin>
+							</AddID>
+						</AddIDs>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Rev>0</Rev>
+						<LC>2010-10-04T12:28:18</LC>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Vorankündigungsstelle</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>02ae3cb0-5f78-4cf1-a2af-e29adf2f85a4</Key>
+						<Disabled>0</Disabled>
+						<C1>RP xz</C1>
+						<C2>Abt. 12</C2>
+						<Str>Schillerring 6</Str>
+						<Country>DE</Country>
+						<Zip>12352</Zip>
+						<City>B-Stadt</City>
+						<IDOrigin>FileImport</IDOrigin>
+						<AddIDs>
+							<AddID>
+								<IDOrigin>FileImport</IDOrigin>
+							</AddID>
+						</AddIDs>
+						<VatID>343210</VatID>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Rev>0</Rev>
+						<LC>2021-12-14T18:03:45</LC>
+						<ConfVars>
+							<Var>
+								<Key>Nuts-Code Deutschland</Key>
+								<Val>DE122</Val>
+								<ValKey>DE122</ValKey>
+							</Var>
+						</ConfVars>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Nachprüfungsstelle</Desc>
+					<Consortium>false</Consortium>
+					<Adress>
+						<Key>3e232217-3666-4802-bcf3-b5dc8005ff66</Key>
+						<Disabled>0</Disabled>
+						<C1>RP xz</C1>
+						<C2>Abt. 5</C2>
+						<Str>Schillerring 6</Str>
+						<Country>DE</Country>
+						<Zip>12352</Zip>
+						<City>B-Stadt</City>
+						<IDOrigin>FileImport</IDOrigin>
+						<AddIDs>
+							<AddID>
+								<IDOrigin>FileImport</IDOrigin>
+							</AddID>
+						</AddIDs>
+						<VatID>360051</VatID>
+						<MAC>0</MAC>
+						<SPTaxRate>0</SPTaxRate>
+						<Rev>0</Rev>
+						<LC>2021-12-14T18:03:45</LC>
+						<ConfVars>
+							<Var>
+								<Key>Nuts-Code Deutschland</Key>
+								<Val>DE122</Val>
+								<ValKey>DE122</ValKey>
+							</Var>
+						</ConfVars>
+					</Adress>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Rechtsbehelfsstelle</Desc>
+					<Consortium>false</Consortium>
+				</FurtherAdr>
+				<FurtherAdr>
+					<Desc>Schlichtungsstelle</Desc>
+					<Consortium>false</Consortium>
+				</FurtherAdr>
+			</FurtherAdrs>
+			<DataHistory>
+				<ID>1</ID>
+				<Date>2023-03-22</Date>
+			</DataHistory>
+			<ID>M_Planen</ID>
+			<Integration/>
+		</Prj>
+		<PA>
+			<Path>\Samples\M_Planen V1 P1\PAs\4</Path>
+			<Key>4</Key>
+			<Name>LPH 4-8 Ausführung</Name>
+			<Remarks>Projektvariante 4, LPH 4-8 Ausführung
+
+Kostenberechnung bis zur dritten Ebene der Kostengliederung nach DIN 276. Die Kostenelemente wurden nach ihrer Zuordnung zu den Kostengruppen der Kostengliederung DIN 276 benannt. 
+
+Kleinaufträge, Nebenkosten, nicht LV-basierte Aufträge, etc. werden im Dokument Kostenkontrolleinheiten verwaltet.
+
+Das Raumbuch bildet die funktionalen Zusammenhänge des 
+Gebäudes ab. Einzelne Räume sind mit Elementen der Kostenermittlung verknüpft, so dass die Räume Maße an die Kostenelemente (=Bauelemente) übergeben. Das Kostenelement (oder das DBD-Bauteil) reicht Maße weiter an hinterlegte Teilleistungen (Rezeptur).
+
+Aus der Kostenermittlung wurde ein Budget-LV erstellt, dessen Teil-Budgets über die Vergabezuordnung mit den Vergabe-LVs verknüpft sind. Die Vergabe LVs, die ebenfalls aus der Kostenermittlung erstellt sind, haben ihre Mengen direkt aus dem Raumbuch erhalten.
+Die einzelnen Vergabeeinheiten sind teilweise bereits in die Vergabe- bzw. Auftragsphase überführt und abgerechnet worden.</Remarks>
+			<VAT>19</VAT>
+			<VatID>19</VatID>
+			<CU>EUR</CU>
+			<CU2>USD</CU2>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Documents\Samples\M_Planen_P1_V1\4</DocDir>
+			<CPIDir>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Documents\Samples\M_Planen_P1_V1\4\CPI\CPI_Input</CPIDir>
+		</PA>
+		<SP>
+			<Path>\Samples\M_Planen V1 P1\PAs\4\SPs\2.034-2</Path>
+			<Key>2.034</Key>
+			<Name>Maler- und Tapezierarbeiten</Name>
+			<Phase>2</Phase>
+			<CurrentSCPackage>1</CurrentSCPackage>
+			<ReadOnly>0</ReadOnly>
+			<Disabled>0</Disabled>
+			<VAT>19</VAT>
+			<VatID>19</VatID>
+			<CU>EUR</CU>
+			<CU2>USD</CU2>
+			<DocDir>C:\Users\Public\Documents\RIB\iTWO_64\2022\iTWOBauen\Documents\Samples\M_Planen_P1_V1\4\SC\2.034_P3</DocDir>
+			<ContractType ID="2" Desc="With total order"/>
+		</SP>
+	</ObjContext>
+</SPConnector>
